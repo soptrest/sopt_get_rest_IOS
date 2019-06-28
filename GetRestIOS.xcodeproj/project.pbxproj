@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101C8AB8252B5C2981990F9D /* Pods_GetRestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */; };
 		4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EEE22C614E300930582 /* AppDelegate.swift */; };
 		4BB47EF122C614E300930582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EF022C614E300930582 /* ViewController.swift */; };
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00D5413CD194F992CD511BF0 /* Pods-GetRestIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRestIOS.debug.xcconfig"; path = "Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRestIOS.release.xcconfig"; path = "Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS.release.xcconfig"; sourceTree = "<group>"; };
 		4BB47EEB22C614E300930582 /* GetRestIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRestIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB47EEE22C614E300930582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB47EF022C614E300930582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		4BB47EF522C614E400930582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101C8AB8252B5C2981990F9D /* Pods_GetRestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193846A04E6E8BD8BFAECBFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4BB47EE222C614E300930582 = {
 			isa = PBXGroup;
 			children = (
 				4BB47EED22C614E300930582 /* GetRestIOS */,
 				4BB47EEC22C614E300930582 /* Products */,
+				C2036DBADAFF485771B4063C /* Pods */,
+				193846A04E6E8BD8BFAECBFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,80 @@
 		4BB47EED22C614E300930582 /* GetRestIOS */ = {
 			isa = PBXGroup;
 			children = (
+				4BB47F0C22C6194A00930582 /* Controllers */,
+				4BB47F0B22C6194400930582 /* Views */,
+				4BB47F0A22C6193A00930582 /* Models */,
+				4BB47F0922C6193000930582 /* APIServices */,
+				4BB47F0822C6192700930582 /* Extensions */,
+				4BB47F0722C6191E00930582 /* Storyboards */,
+				4BB47F0622C6191300930582 /* Resources */,
 				4BB47EEE22C614E300930582 /* AppDelegate.swift */,
-				4BB47EF022C614E300930582 /* ViewController.swift */,
-				4BB47EF222C614E300930582 /* Main.storyboard */,
-				4BB47EF522C614E400930582 /* Assets.xcassets */,
-				4BB47EF722C614E400930582 /* LaunchScreen.storyboard */,
 				4BB47EFA22C614E400930582 /* Info.plist */,
 			);
 			path = GetRestIOS;
+			sourceTree = "<group>";
+		};
+		4BB47F0622C6191300930582 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BB47EF522C614E400930582 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4BB47F0722C6191E00930582 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4BB47EF222C614E300930582 /* Main.storyboard */,
+				4BB47EF722C614E400930582 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4BB47F0822C6192700930582 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4BB47F0922C6193000930582 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		4BB47F0A22C6193A00930582 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4BB47F0B22C6194400930582 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4BB47F0C22C6194A00930582 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BB47EF022C614E300930582 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C2036DBADAFF485771B4063C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00D5413CD194F992CD511BF0 /* Pods-GetRestIOS.debug.xcconfig */,
+				48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BB47EFD22C614E400930582 /* Build configuration list for PBXNativeTarget "GetRestIOS" */;
 			buildPhases = (
+				3B036585342125DDAE86B78A /* [CP] Check Pods Manifest.lock */,
 				4BB47EE722C614E300930582 /* Sources */,
 				4BB47EE822C614E300930582 /* Frameworks */,
 				4BB47EE922C614E300930582 /* Resources */,
+				DB4B8A7AE801B4A759DBE9A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +212,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B036585342125DDAE86B78A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetRestIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB4B8A7AE801B4A759DBE9A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4BB47EE722C614E300930582 /* Sources */ = {
@@ -280,6 +416,7 @@
 		};
 		4BB47EFE22C614E400930582 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D5413CD194F992CD511BF0 /* Pods-GetRestIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,13 +427,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ios.GetRestIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		4BB47EFF22C614E400930582 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,7 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ios.GetRestIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
