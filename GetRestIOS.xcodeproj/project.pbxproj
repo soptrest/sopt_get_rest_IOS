@@ -17,6 +17,9 @@
 		C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */; };
 		C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */; };
 		C5ACDCA222C8A4F200837653 /* Recruit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDCA122C8A4F200837653 /* Recruit.storyboard */; };
+		C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACDCA322C8D73900837653 /* UIColor+Extensions.swift */; };
+		C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACDCA522C8DC5600837653 /* UIView+Extensions.swift */; };
+		C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
 		C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyResume.storyboard; sourceTree = "<group>"; };
 		C5ACDCA122C8A4F200837653 /* Recruit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recruit.storyboard; sourceTree = "<group>"; };
+		C5ACDCA322C8D73900837653 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "GetRestIOS/Storyboards/UIColor+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		C5ACDCA522C8DC5600837653 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +120,8 @@
 		4BB47F0822C6192700930582 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C5ACDCA522C8DC5600837653 /* UIView+Extensions.swift */,
+				C5ACDCA322C8D73900837653 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				4BB47EF022C614E300930582 /* ViewController.swift */,
+				C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BB47EF122C614E300930582 /* ViewController.swift in Sources */,
+				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
+				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
+				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
