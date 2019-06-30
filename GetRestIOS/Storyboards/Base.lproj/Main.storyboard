@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wzR-z7-eUp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,157 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--홈-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetRestIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmB-WX-I8G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="kqZ-HA-SqC" kind="embed" id="OZT-NM-G4P"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" id="46O-gb-a68"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1188" y="-126.38680659670166"/>
+        </scene>
+        <!--HomeView-->
+        <scene sceneID="MXd-DW-SDV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeView" id="kqZ-HA-SqC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcT-Jd-HWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2059" y="-127"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4vA-vC-eZ4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wzR-z7-eUp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HoU-7n-yMo">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="GGO-JV-Xzs"/>
+                        <segue destination="Rjn-yB-feK" kind="relationship" relationship="viewControllers" id="A2M-dA-1fh"/>
+                        <segue destination="rTc-DD-ApS" kind="relationship" relationship="viewControllers" id="N1J-7V-qRb"/>
+                        <segue destination="s7k-oy-Mmj" kind="relationship" relationship="viewControllers" id="ebX-QN-TSv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tnL-iB-MF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1345" y="949"/>
+        </scene>
+        <!--포트폴리오-->
+        <scene sceneID="ZsV-2N-v9J">
+            <objects>
+                <viewController id="Rjn-yB-feK" customClass="ViewController" customModule="GetRestIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XxC-je-c8q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w2P-vv-Dg9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="VJn-BS-vFY" kind="embed" id="qPw-ed-yWr"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Atw-2f-yK7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="포트폴리오" id="NwR-P8-bSe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdc-qt-akn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="667"/>
+        </scene>
+        <!--PortfolioView-->
+        <scene sceneID="9xD-b6-fDH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Portfolio" referencedIdentifier="PortfolioView" id="VJn-BS-vFY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeB-aO-FXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1997" y="666"/>
+        </scene>
+        <!--채용 정보-->
+        <scene sceneID="xoM-j0-zqS">
+            <objects>
+                <viewController id="rTc-DD-ApS" customClass="ViewController" customModule="GetRestIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IOT-W4-nJW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBz-8N-JcR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="Ma1-2h-d3Y" kind="embed" id="wiu-x1-aMx"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="dvh-5q-o7l"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="채용 정보" id="uYa-P1-3je"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZK-lu-6hl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="1465"/>
+        </scene>
+        <!--MyResumeView-->
+        <scene sceneID="Ngw-b2-f7x">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyResume" referencedIdentifier="MyResumeView" id="Ma1-2h-d3Y" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPr-qv-c7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940" y="1464"/>
+        </scene>
+        <!--나의 자소서-->
+        <scene sceneID="ZDB-Qd-u56">
+            <objects>
+                <viewController id="s7k-oy-Mmj" customClass="ViewController" customModule="GetRestIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7K9-ki-aEc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-7j-Z1k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="nth-20-eLV" kind="embed" id="j0A-cA-XYg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="RSc-a4-ZG4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="나의 자소서" id="r5m-rK-aWE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Fv-Rl-jlW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="2276"/>
+        </scene>
+        <!--RecruitView-->
+        <scene sceneID="gVR-1R-bg8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recruit" referencedIdentifier="RecruitView" id="nth-20-eLV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1n7-Hd-LJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2020" y="2275"/>
         </scene>
     </scenes>
 </document>

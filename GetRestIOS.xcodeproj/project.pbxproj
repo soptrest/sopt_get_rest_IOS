@@ -13,6 +13,10 @@
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
 		4BB47EF622C614E400930582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF522C614E400930582 /* Assets.xcassets */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
+		C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9722C89B4300837653 /* Home.storyboard */; };
+		C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */; };
+		C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */; };
+		C5ACDCA222C8A4F200837653 /* Recruit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDCA122C8A4F200837653 /* Recruit.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		4BB47EF522C614E400930582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5ACDC9822C89B4300837653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
+		C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyResume.storyboard; sourceTree = "<group>"; };
+		C5ACDCA122C8A4F200837653 /* Recruit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recruit.storyboard; sourceTree = "<group>"; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,7 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				4BB47EF222C614E300930582 /* Main.storyboard */,
+				C5ACDCA122C8A4F200837653 /* Recruit.storyboard */,
+				C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */,
 				4BB47EF722C614E400930582 /* LaunchScreen.storyboard */,
+				C5ACDC9722C89B4300837653 /* Home.storyboard */,
+				C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -141,7 +153,6 @@
 				00D5413CD194F992CD511BF0 /* Pods-GetRestIOS.debug.xcconfig */,
 				48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -205,9 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5ACDCA222C8A4F200837653 /* Recruit.storyboard in Resources */,
 				4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */,
+				C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */,
 				4BB47EF622C614E400930582 /* Assets.xcassets in Resources */,
 				4BB47EF422C614E300930582 /* Main.storyboard in Resources */,
+				C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */,
+				C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +308,14 @@
 				4BB47EF822C614E400930582 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C5ACDC9722C89B4300837653 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5ACDC9822C89B4300837653 /* Base */,
+			);
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
