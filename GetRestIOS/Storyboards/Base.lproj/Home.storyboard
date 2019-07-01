@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dbh-T3-jyo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozv-Mi-7BV">
@@ -32,13 +32,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.60784313729999995" green="0.79607843140000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5A-JU-GiJ">
+                                <rect key="frame" x="16" y="208" width="343" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Pdi-aD-jQF"/>
                     </view>
                     <navigationItem key="navigationItem" id="nae-TG-Aja"/>
                     <connections>
-                        <outlet property="TopSideLabel" destination="Ozv-Mi-7BV" id="J2l-Vt-cAW"/>
+                        <outlet property="graphView" destination="a5A-JU-GiJ" id="O7w-Dy-deL"/>
+                        <outlet property="topSideLabel" destination="Ozv-Mi-7BV" id="C64-hy-Rdz"/>
                         <outlet property="topSideView" destination="dbh-T3-jyo" id="dJi-D3-dyS"/>
                     </connections>
                 </viewController>
