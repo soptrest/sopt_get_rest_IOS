@@ -15,6 +15,9 @@ class MainHomeViewController: UIViewController {
     var xAxisLabels: [String] = ["1" ,"2","3", "4", "1" ,"2","3", "4", "1" ,"2","3", "4",]
     var graphDetailList : [HomeGraphDetailModel] = [
         HomeGraphDetailModel("솝트", "2019.03 ~ 2019.07"),
+        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
+        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
+        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
         HomeGraphDetailModel("매디", "2018.01 ~ 2019.12")
     ]
     
@@ -43,13 +46,16 @@ class MainHomeViewController: UIViewController {
         
         self.graphDetailTableView.delegate = self
         self.graphDetailTableView.dataSource = self
-        self.graphDetailTableView.register(HomeGraphDetailTableViewCell.self,
-                                  forCellReuseIdentifier: "graphDetailTableViewCell")
+        self.graphDetailTableView.estimatedRowHeight = 94
+        self.graphDetailTableView.rowHeight = UITableView.automaticDimension
+        self.graphDetailTableView.backgroundColor = UIColor.clear
+        self.graphDetailTableView.separatorColor = UIColor.mainBackgroudGray
+        self.graphDetailTableView.alwaysBounceVertical = false;
+//        self.graphDetailTableView.register(HomeGraphDetailTableViewCell.self,  forCellReuseIdentifier: "graphDetailTableViewCell")
         
         setNavigationBar()
         setTopSideView()
-        graphView.roundCorners(corners: [.allCorners], radius: 5)
-        graphView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -138,6 +144,8 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         barGraphView.addPlot(plot: barPlot)
         
         containerView.addSubview(barGraphView)
+        containerView.roundCorners(corners: [.allCorners], radius: 5)
+        containerView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
     }
     
     func drawReferenceLine(_ containerView: UIView){
@@ -146,78 +154,32 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
 }
 
 extension MainHomeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
 }
 
 extension MainHomeViewController : UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return graphDetailList.count
     }
-
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100.0;
+    }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "graphDetailTableViewCell") as! HomeGraphDetailTableViewCell
+        
+        cell.contentView.backgroundColor = UIColor.mainBackgroudGray
+
         cell.portfolioTitle?.text = graphDetailList[indexPath.row].portfolioTitle!
         cell.portfolioDuration?.text = graphDetailList[indexPath.row].portfolioDuration!
         
-     
      return cell
      }
-    
-    
-    /*
-      Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-      Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-      Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-      Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-      Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-      Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-      Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-      Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-      MARK: - Navigation
-     
-      In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      Get the new view controller using segue.destination.
-      Pass the selected object to the new view controller.
-     }
-     */
     
 }
 

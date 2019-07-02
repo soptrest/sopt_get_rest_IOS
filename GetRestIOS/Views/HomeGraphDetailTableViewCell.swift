@@ -14,4 +14,8 @@ class HomeGraphDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var portfolioDuration: UILabel!
 //    @IBOutlet weak var portfolioHashTags: UICollectionView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
 }
