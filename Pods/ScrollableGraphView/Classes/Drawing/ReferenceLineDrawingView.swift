@@ -97,7 +97,6 @@ internal class ReferenceLineDrawingView : UIView {
         case .absolute:
             createReferenceLines(in: initialRect, atAbsolutePositions: self.settings.absolutePositions, forPath: referenceLinePath)
         }
-        
         return referenceLinePath
     }
     
@@ -150,21 +149,21 @@ internal class ReferenceLineDrawingView : UIView {
     }
     
     private func createReferenceLineFrom(from lineStart: CGPoint, to lineEnd: CGPoint, in path: UIBezierPath) {
-        if(self.settings.shouldAddLabelsToIntermediateReferenceLines) {
-            
-            let value = calculateYAxisValue(for: lineStart)
-            let numberFormatter = referenceNumberFormatter()
-            var valueString = numberFormatter.string(from: value as NSNumber)!
-            
-            if(self.settings.shouldAddUnitsToIntermediateReferenceLineLabels) {
-                valueString += " \(units)"
-            }
-            
-            addLine(withTag: valueString, from: lineStart, to: lineEnd, in: path)
-            
-        } else {
+//        if(self.settings.shouldAddLabelsToIntermediateReferenceLines) {
+//
+//            let value = calculateYAxisValue(for: lineStart)
+//            let numberFormatter = referenceNumberFormatter()
+//            var valueString = numberFormatter.string(from: value as NSNumber)!
+//
+//            if(self.settings.shouldAddUnitsToIntermediateReferenceLineLabels) {
+//                valueString += " \(units)"
+//            }
+//
+//            addLine(withTag: valueString, from: lineStart, to: lineEnd, in: path)
+//
+//        } else {
             addLine(from: lineStart, to: lineEnd, in: path)
-        }
+//        }
     }
     
     private func addLine(withTag tag: String, from: CGPoint, to: CGPoint, in path: UIBezierPath) {

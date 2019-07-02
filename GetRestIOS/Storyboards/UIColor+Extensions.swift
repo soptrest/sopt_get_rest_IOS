@@ -12,7 +12,7 @@ extension UIColor {
     
     //  Usage : UIColor.mainGreen
     @nonobjc class var mainGreen: UIColor {
-        return UIColor(red: 155.0/255.0, green: 203.0/255.0, blue: 125.0/255.0, alpha: 1.0)
+        return UIColor(red: 130.0/255.0, green: 191.0/255.0, blue: 89.0/255.0, alpha: 1.0)
     }
     
     @nonobjc class var graphBackgroundWhite: UIColor {
