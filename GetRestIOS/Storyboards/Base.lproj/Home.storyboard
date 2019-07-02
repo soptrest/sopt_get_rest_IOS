@@ -23,11 +23,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dbh-T3-jyo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozv-Mi-7BV">
-                                                <rect key="frame" x="30" y="46" width="278" height="88"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="박경선님의 기록을 살펴볼까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozv-Mi-7BV">
+                                                <rect key="frame" x="30" y="46" width="281" height="88"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,9 +42,51 @@
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-Zy-ChJ">
-                                        <rect key="frame" x="0.0" y="372" width="375" height="297"/>
+                                        <rect key="frame" x="16" y="371" width="343" height="232"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="graphDetailTableViewCell" rowHeight="94" id="7fp-3Y-ZC9" customClass="HomeGraphDetailTableViewCell" customModule="GetRestIOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="343" height="94"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7fp-3Y-ZC9" id="wpD-K7-arw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="93.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="솝트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrZ-jI-UIi">
+                                                            <rect key="frame" x="16" y="8" width="238" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="238" id="JPM-NP-Oq8"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <color key="textColor" red="0.11764705882352941" green="0.18823529411764706" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019.03 ~ 2019.07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAp-SQ-YE1">
+                                                            <rect key="frame" x="16" y="37" width="238" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="238" id="2TO-ea-c84"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.1176470588" green="0.18823529410000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="OAp-SQ-YE1" secondAttribute="trailing" constant="89" id="5Eb-Qz-O6q"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PrZ-jI-UIi" secondAttribute="trailing" constant="89" id="Ftq-Sk-ZLn"/>
+                                                        <constraint firstItem="PrZ-jI-UIi" firstAttribute="leading" secondItem="wpD-K7-arw" secondAttribute="leading" constant="16" id="POI-Nm-Cj7"/>
+                                                        <constraint firstItem="PrZ-jI-UIi" firstAttribute="top" secondItem="wpD-K7-arw" secondAttribute="top" constant="8" id="ZXY-lh-ZfW"/>
+                                                        <constraint firstItem="OAp-SQ-YE1" firstAttribute="leading" secondItem="wpD-K7-arw" secondAttribute="leading" constant="16" id="c0h-0n-gWJ"/>
+                                                        <constraint firstItem="OAp-SQ-YE1" firstAttribute="top" secondItem="PrZ-jI-UIi" secondAttribute="bottom" constant="5" id="cYT-yM-uAo"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="portfolioDuration" destination="OAp-SQ-YE1" id="PsC-RN-KQy"/>
+                                                    <outlet property="portfolioTitle" destination="PrZ-jI-UIi" id="LEH-9b-k86"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
                                 </subviews>
                             </scrollView>
@@ -52,11 +94,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Pdi-aD-jQF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nae-TG-Aja"/>
+                    <navigationItem key="navigationItem" id="nae-TG-Aja">
+                        <barButtonItem key="leftBarButtonItem" image="icMainLogoGetRest" style="done" id="3bv-AD-aKm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="graphDetailTableView" destination="dwC-Zy-ChJ" id="xqO-eI-ThJ"/>
                         <outlet property="graphView" destination="a5A-JU-GiJ" id="O7w-Dy-deL"/>
+                        <outlet property="leftBarButton" destination="3bv-AD-aKm" id="auT-5A-Txc"/>
                         <outlet property="scrollView" destination="yi3-Qp-rVj" id="5dO-kj-dtI"/>
-                        <outlet property="tableView" destination="dwC-Zy-ChJ" id="rWe-Ix-d7D"/>
                         <outlet property="topSideLabel" destination="Ozv-Mi-7BV" id="C64-hy-Rdz"/>
                         <outlet property="topSideView" destination="dbh-T3-jyo" id="dJi-D3-dyS"/>
                     </connections>
@@ -84,4 +131,8 @@
             <point key="canvasLocation" x="-1183.2" y="-769.56521739130437"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icMainLogoGetRest" width="47" height="24"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

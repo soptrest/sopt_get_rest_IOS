@@ -20,7 +20,8 @@
 		C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACDCA322C8D73900837653 /* UIColor+Extensions.swift */; };
 		C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACDCA522C8DC5600837653 /* UIView+Extensions.swift */; };
 		C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */; };
-		C5DC86CC22CB8F1B000C247F /* HomeGraphTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC86CB22CB8F1B000C247F /* HomeGraphTableView.swift */; };
+		C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */; };
+		C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,8 @@
 		C5ACDCA322C8D73900837653 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "GetRestIOS/Storyboards/UIColor+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		C5ACDCA522C8DC5600837653 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
-		C5DC86CB22CB8F1B000C247F /* HomeGraphTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGraphTableView.swift; sourceTree = "<group>"; };
+		C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGraphDetailTableViewCell.swift; sourceTree = "<group>"; };
+		C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeGraphDetailModel.swift; path = GetRestIOS/Storyboards/HomeGraphDetailModel.swift; sourceTree = SOURCE_ROOT; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 		4BB47F0A22C6193A00930582 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,7 +148,7 @@
 		4BB47F0B22C6194400930582 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C5DC86CB22CB8F1B000C247F /* HomeGraphTableView.swift */,
+				C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,7 +293,8 @@
 				4BB47EF122C614E300930582 /* ViewController.swift in Sources */,
 				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
-				C5DC86CC22CB8F1B000C247F /* HomeGraphTableView.swift in Sources */,
+				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
+				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
 			);

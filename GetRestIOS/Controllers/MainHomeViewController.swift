@@ -13,41 +13,43 @@ class MainHomeViewController: UIViewController {
     var barPlotData: [Double] = [ 2, 4, 3, 6, 3, 7, 3, 4, 3, 2, 1, 4]
     //    var xAxisLabels: [String] = ["1분기" ,"2분기","3분기", "4분기", "1분기" ,"2분기","3분기", "4분기", "1분기" ,"2분기","3분기", "4분기",]
     var xAxisLabels: [String] = ["1" ,"2","3", "4", "1" ,"2","3", "4", "1" ,"2","3", "4",]
+    var graphDetailList : [HomeGraphDetailModel] = [
+        HomeGraphDetailModel("솝트", "2019.03 ~ 2019.07"),
+        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12")
+    ]
     
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var topSideView: UIView!
+    @IBOutlet weak var topSideView: UIImageView!
     @IBOutlet weak var topSideLabel: UILabel!
     @IBOutlet weak var graphView: UIView!
+    @IBOutlet weak var leftBarButton: UIBarButtonItem!
+    @IBOutlet weak var graphDetailTableView: UITableView!
     
-   
+    let navigationBarHeight = 44 as CGFloat
     var username: String = "박경선"
     
     
-    //    let fontSize = UIFont.boldSystemFont(ofSize: 30)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navigationBarHeight = 64 as CGFloat
-        
-        let scrollViewContentWidth = view.frame.width as CGFloat
-        let scrollViewContentHeight = tableView.frame.height + topSideView.frame.height + graphView.frame.height + navigationBarHeight + 44 as CGFloat
-        
-        scrollView.bounces = false
         
         view.backgroundColor = UIColor.mainBackgroudGray
-//        let scrollView = UIScrollView(frame: view.bounds)
-//        view.addSubview(scrollView)
+        
+        let scrollViewContentWidth = view.frame.width as CGFloat
+//        let scrollViewContentHeight = tableView.frame.height + topSideView.frame.height + graphView.frame.height + navigationBarHeight + 44 as CGFloat
+        let scrollViewContentHeight = 1200 as CGFloat
+        scrollView.bounces = false
         scrollView.contentSize = CGSize(width: scrollViewContentWidth, height: scrollViewContentHeight)
-//        view.addSubview(topSideView)
+        
+        self.graphDetailTableView.delegate = self
+        self.graphDetailTableView.dataSource = self
+        self.graphDetailTableView.register(HomeGraphDetailTableViewCell.self,
+                                  forCellReuseIdentifier: "graphDetailTableViewCell")
         
         setNavigationBar()
         setTopSideView()
         graphView.roundCorners(corners: [.allCorners], radius: 5)
         graphView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
-//        graphView.addSubview(setGraph())
-//        setGraph(containerView: graphView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,6 +58,7 @@ class MainHomeViewController: UIViewController {
     }
     
     func setNavigationBar(){
+        navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: navigationBarHeight)
         navigationController?.navigationBar.barTintColor = UIColor.mainGreen
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -64,7 +67,7 @@ class MainHomeViewController: UIViewController {
     
     
     func setTopSideView(){
-        topSideView.backgroundColor = UIColor.mainGreen
+        topSideView.backgroundColor = UIColor(patternImage: UIImage(named: "homeTopSideViewImg")!)
         topSideView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 28)
         
         topSideLabel.text = "\(username)님의\n기록을 살펴볼까요?"
@@ -134,61 +137,87 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         barGraphView.addReferenceLines(referenceLines: referenceLines)
         barGraphView.addPlot(plot: barPlot)
         
-        barGraphView.roundCorners(corners: [.allCorners], radius: 5)
-        barGraphView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
         containerView.addSubview(barGraphView)
     }
     
     func drawReferenceLine(_ containerView: UIView){
         
     }
-    
-//    private func addLine(from: CGPoint, to: CGPoint, withGaps gaps: [(start: CGFloat, end: CGFloat)], in path: UIBezierPath) {
-//
-//        // If there are no gaps, just add a single line.
-//        if(gaps.count <= 0) {
-//            addLine(from: from, to: to, in: path)
-//        }
-//            // If there is only 1 gap, it's just two lines.
-//        else if (gaps.count == 1) {
-//
-//            let gapLeft = CGPoint(x: gaps.first!.start, y: from.y)
-//            let gapRight = CGPoint(x: gaps.first!.end, y: from.y)
-//
-//            addLine(from: from, to: gapLeft, in: path)
-//            addLine(from: gapRight, to: to, in: path)
-//        }
-//            // If there are many gaps, we have a series of intermediate lines.
-//        else {
-//
-//            let firstGap = gaps.first!
-//            let lastGap = gaps.last!
-//
-//            let firstGapLeft = CGPoint(x: firstGap.start, y: from.y)
-//            let lastGapRight = CGPoint(x: lastGap.end, y: to.y)
-//
-//            // Add the first line to the start of the first gap
-//            addLine(from: from, to: firstGapLeft, in: path)
-//
-//            // Add lines between all intermediate gaps
-//            for i in 0 ..< gaps.count - 1 {
-//
-//                let startGapEnd = gaps[i].end
-//                let endGapStart = gaps[i + 1].start
-//
-//                let lineStart = CGPoint(x: startGapEnd, y: from.y)
-//                let lineEnd = CGPoint(x: endGapStart, y: from.y)
-//
-//                addLine(from: lineStart, to: lineEnd, in: path)
-//            }
-//
-//            // Add the final line to the end
-//            addLine(from: lastGapRight, to: to, in: path)
-//        }
-//    }
-//
-//    private func addLine(from: CGPoint, to: CGPoint, in path: UIBezierPath) {
-//        path.move(to: from)
-//        path.addLine(to: to)
-//    }
 }
+
+extension MainHomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension MainHomeViewController : UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return graphDetailList.count
+    }
+
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "graphDetailTableViewCell") as! HomeGraphDetailTableViewCell
+        cell.portfolioTitle?.text = graphDetailList[indexPath.row].portfolioTitle!
+        cell.portfolioDuration?.text = graphDetailList[indexPath.row].portfolioDuration!
+        
+     
+     return cell
+     }
+    
+    
+    /*
+      Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+      Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
+    /*
+      Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+      Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+      Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
+    /*
+      Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
+    /*
+      Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+      Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
+    /*
+      MARK: - Navigation
+     
+      In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      Get the new view controller using segue.destination.
+      Pass the selected object to the new view controller.
+     }
+     */
+    
+}
+
