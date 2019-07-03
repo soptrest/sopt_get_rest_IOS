@@ -79,16 +79,47 @@
                                                                     <color key="textColor" red="0.11764705882352941" green="0.18823529411764706" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uuc-fn-em1">
+                                                                    <rect key="frame" x="16" y="56" width="307" height="27"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="27" id="n6Z-kz-Ngz"/>
+                                                                    </constraints>
+                                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vnp-Ia-1gj">
+                                                                        <size key="itemSize" width="47" height="26"/>
+                                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                    </collectionViewFlowLayout>
+                                                                    <cells/>
+                                                                </collectionView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKs-3P-eiW">
+                                                                    <rect key="frame" x="290" y="0.0" width="53" height="93"/>
+                                                                    <state key="normal" image="icGoPortfolioButton">
+                                                                        <color key="titleColor" red="0.1176470588" green="0.18823529410000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="goPortfolioPageAction:" destination="7fp-3Y-ZC9" eventType="touchUpInside" id="A9z-Vu-8s1"/>
+                                                                        <action selector="goPortfolioPageAction:" destination="JfR-hh-s9p" eventType="touchUpInside" id="gjw-U4-UoZ"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="PrZ-jI-UIi" firstAttribute="leading" secondItem="JfR-hh-s9p" secondAttribute="leading" constant="16" id="7Wf-1O-3Nq"/>
+                                                                <constraint firstAttribute="bottom" secondItem="LKs-3P-eiW" secondAttribute="bottom" id="AR0-Rh-kv9"/>
                                                                 <constraint firstItem="PrZ-jI-UIi" firstAttribute="top" secondItem="JfR-hh-s9p" secondAttribute="top" constant="13" id="Fe0-mt-tjw"/>
                                                                 <constraint firstItem="OAp-SQ-YE1" firstAttribute="top" secondItem="PrZ-jI-UIi" secondAttribute="bottom" id="GTe-W3-f3P"/>
+                                                                <constraint firstAttribute="bottom" secondItem="uuc-fn-em1" secondAttribute="bottom" constant="10" id="IFz-DX-dkj"/>
                                                                 <constraint firstItem="OAp-SQ-YE1" firstAttribute="leading" secondItem="JfR-hh-s9p" secondAttribute="leading" constant="16" id="IbR-Sy-xCJ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="LKs-3P-eiW" secondAttribute="trailing" id="Ndd-fY-uMr"/>
+                                                                <constraint firstAttribute="bottom" secondItem="OAp-SQ-YE1" secondAttribute="bottom" constant="41" id="Pyr-MD-dPK"/>
+                                                                <constraint firstAttribute="trailing" secondItem="uuc-fn-em1" secondAttribute="trailing" constant="20" id="UkE-Ge-dZU"/>
+                                                                <constraint firstItem="LKs-3P-eiW" firstAttribute="leading" secondItem="JfR-hh-s9p" secondAttribute="leading" constant="290" id="VtU-8G-GRJ"/>
                                                                 <constraint firstAttribute="trailing" secondItem="PrZ-jI-UIi" secondAttribute="trailing" constant="89" id="aCG-c6-zaU"/>
                                                                 <constraint firstAttribute="trailing" secondItem="OAp-SQ-YE1" secondAttribute="trailing" constant="89" id="o62-1J-7ri"/>
-                                                                <constraint firstAttribute="bottom" secondItem="OAp-SQ-YE1" secondAttribute="bottom" constant="41" id="u5d-ek-2SO"/>
+                                                                <constraint firstItem="LKs-3P-eiW" firstAttribute="top" secondItem="JfR-hh-s9p" secondAttribute="top" id="rta-LU-Ohx"/>
+                                                                <constraint firstItem="uuc-fn-em1" firstAttribute="leading" secondItem="JfR-hh-s9p" secondAttribute="leading" constant="16" id="yXG-3N-Vmp"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -151,16 +182,18 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <outlet property="hashTagsCollectionView" destination="uuc-fn-em1" id="Dw0-7R-DqE"/>
                                                     <outlet property="portfolioDuration" destination="OAp-SQ-YE1" id="PsC-RN-KQy"/>
                                                     <outlet property="portfolioTitle" destination="PrZ-jI-UIi" id="LEH-9b-k86"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <sections/>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2019 1분기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2r-mt-PWP">
-                                        <rect key="frame" x="16" y="379" width="70" height="17"/>
+                                        <rect key="frame" x="16" y="379" width="67" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.1176470588" green="0.18823529410000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -208,6 +241,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icGoPortfolioButton" width="24" height="24"/>
         <image name="icMainLogoGetRest" width="47" height="24"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

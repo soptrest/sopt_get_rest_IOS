@@ -11,8 +11,10 @@
 		4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EEE22C614E300930582 /* AppDelegate.swift */; };
 		4BB47EF122C614E300930582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EF022C614E300930582 /* ViewController.swift */; };
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
-		4BB47EF622C614E400930582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF522C614E400930582 /* Assets.xcassets */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
+		C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */; };
+		C56EE51122CD063F0062F072 /* HashTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */; };
+		C56EE51322CD204B0062F072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51222CD204B0062F072 /* Assets.xcassets */; };
 		C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9722C89B4300837653 /* Home.storyboard */; };
 		C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */; };
 		C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */; };
@@ -32,9 +34,11 @@
 		4BB47EEE22C614E300930582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB47EF022C614E300930582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BB47EF322C614E300930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4BB47EF522C614E400930582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashTagCollectionViewCell.xib; sourceTree = "<group>"; };
+		C56EE51222CD204B0062F072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5ACDC9822C89B4300837653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
 		C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyResume.storyboard; sourceTree = "<group>"; };
@@ -105,7 +109,7 @@
 		4BB47F0622C6191300930582 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4BB47EF522C614E400930582 /* Assets.xcassets */,
+				C56EE51222CD204B0062F072 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -152,6 +156,7 @@
 			children = (
 				C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */,
 				C5DC86D322CBF8D4000C247F /* CardView.swift */,
+				C56EE50F22CCE5F50062F072 /* HashTagView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +177,15 @@
 				48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C56EE50F22CCE5F50062F072 /* HashTagView */ = {
+			isa = PBXGroup;
+			children = (
+				C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */,
+				C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */,
+			);
+			path = HashTagView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +251,10 @@
 				C5ACDCA222C8A4F200837653 /* Recruit.storyboard in Resources */,
 				4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */,
 				C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */,
-				4BB47EF622C614E400930582 /* Assets.xcassets in Resources */,
 				4BB47EF422C614E300930582 /* Main.storyboard in Resources */,
+				C56EE51122CD063F0062F072 /* HashTagCollectionViewCell.xib in Resources */,
 				C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */,
+				C56EE51322CD204B0062F072 /* Assets.xcassets in Resources */,
 				C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +311,7 @@
 				4BB47EF122C614E300930582 /* ViewController.swift in Sources */,
 				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
+				C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */,
 				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,

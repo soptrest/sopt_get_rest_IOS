@@ -27,4 +27,7 @@ class CardView: UIView {
         layer.shadowOpacity = shadowOpacity
         layer.shadowPath = shadowPath.cgPath
     }
+    @IBAction func goPortfolioPageAction(_ sender: UIButton) {
+        layer.backgroundColor = UIColor.mainColorBlue.cgColor
+    }
 }
