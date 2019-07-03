@@ -21,7 +21,6 @@ class MainHomeViewController: UIViewController {
         HomeGraphDetailModel("매디", "2018.01 ~ 2019.12")
     ]
     
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var topSideView: UIImageView!
     @IBOutlet weak var topSideLabel: UILabel!
@@ -30,32 +29,47 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var graphDetailTableView: UITableView!
     
     let navigationBarHeight = 44 as CGFloat
+    var tableHeight = 1000 as CGFloat
+    let tableCellHeight = 94 as CGFloat
+    var scrollViewContentHeight = 1200 as CGFloat
     var username: String = "박경선"
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.mainBackgroudGray
-        
-        let scrollViewContentWidth = view.frame.width as CGFloat
-//        let scrollViewContentHeight = tableView.frame.height + topSideView.frame.height + graphView.frame.height + navigationBarHeight + 44 as CGFloat
-        let scrollViewContentHeight = 1200 as CGFloat
-        scrollView.bounces = false
-        scrollView.contentSize = CGSize(width: scrollViewContentWidth, height: scrollViewContentHeight)
-        
-        self.graphDetailTableView.delegate = self
-        self.graphDetailTableView.dataSource = self
-        self.graphDetailTableView.estimatedRowHeight = 94
-        self.graphDetailTableView.rowHeight = UITableView.automaticDimension
-        self.graphDetailTableView.backgroundColor = UIColor.clear
-        self.graphDetailTableView.separatorColor = UIColor.mainBackgroudGray
-        self.graphDetailTableView.alwaysBounceVertical = false;
 //        self.graphDetailTableView.register(HomeGraphDetailTableViewCell.self,  forCellReuseIdentifier: "graphDetailTableViewCell")
-        
+        view.backgroundColor = UIColor.mainBackgroudGray
+        setTableView()
         setNavigationBar()
         setTopSideView()
 
+    }
+    
+    func setTableView() {
+        
+        let indexCount = self.graphDetailList.count + 1
+        let cardViewGap: CGFloat = 10
+        
+        self.tableHeight = (tableCellHeight * CGFloat(indexCount)) + ((cardViewGap) * CGFloat(indexCount))
+        self.graphDetailTableView.frame.size.height = tableHeight
+        self.graphDetailTableView.delegate = self
+        self.graphDetailTableView.dataSource = self
+        self.graphDetailTableView.estimatedRowHeight = tableCellHeight
+        self.graphDetailTableView.rowHeight = UITableView.automaticDimension
+        self.graphDetailTableView.backgroundColor = UIColor.clear
+        self.graphDetailTableView.separatorColor = UIColor.mainBackgroudGray
+        self.graphDetailTableView.alwaysBounceVertical = false
+        self.graphDetailTableView.isScrollEnabled = false
+        
+        updateScrollView()
+    }
+    
+    func updateScrollView(){
+        let scrollViewContentWidth = view.frame.width as CGFloat
+        scrollViewContentHeight = topSideView.frame.height + 22 + graphView.frame.height + 55 + tableHeight
+        scrollView.contentSize = CGSize(width: scrollViewContentWidth, height: scrollViewContentHeight)
+        scrollView.bounces = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,8 +95,7 @@ class MainHomeViewController: UIViewController {
     }
     
     func attributedText(withString string: String, boldString: String, font: UIFont) -> String {
-        let attributedString = NSMutableAttributedString(string: string,
-                                                         attributes: [NSAttributedString.Key.font: font])
+        let attributedString = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.font: font])
         let boldFontAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: font.pointSize)]
         let range = (string as NSString).range(of: boldString)
         attributedString.addAttributes(boldFontAttribute, range: range)
@@ -149,7 +162,6 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
     }
     
     func drawReferenceLine(_ containerView: UIView){
-        
     }
 }
 
@@ -157,29 +169,21 @@ extension MainHomeViewController: UITableViewDelegate {
 }
 
 extension MainHomeViewController : UITableViewDataSource {
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return graphDetailList.count
     }
-    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100.0;
     }
-    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "graphDetailTableViewCell") as! HomeGraphDetailTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "graphDetailTableViewCell") as! HomeGraphDetailTableViewCell
         cell.contentView.backgroundColor = UIColor.mainBackgroudGray
-
         cell.portfolioTitle?.text = graphDetailList[indexPath.row].portfolioTitle!
         cell.portfolioDuration?.text = graphDetailList[indexPath.row].portfolioDuration!
-        
      return cell
-     }
-    
+    }
 }
 
