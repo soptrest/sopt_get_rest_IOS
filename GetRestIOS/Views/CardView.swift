@@ -28,6 +28,6 @@ class CardView: UIView {
         layer.shadowPath = shadowPath.cgPath
     }
     @IBAction func goPortfolioPageAction(_ sender: UIButton) {
-        layer.backgroundColor = UIColor.mainColorBlue.cgColor
+        layer.backgroundColor = UIColor.mainGreen.cgColor
     }
 }

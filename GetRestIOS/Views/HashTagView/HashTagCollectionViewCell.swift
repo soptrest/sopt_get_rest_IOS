@@ -17,8 +17,9 @@ class HashTagCollectionViewCell: UICollectionViewCell {
         
         if let hashTagLabel = hashTagLabel {
             hashTagLabel.layer.cornerRadius = hashTagLabel.frame.size.height/2
-            hashTagLabel.layer.borderColor = UIColor.mainColorBlue.cgColor
-            hashTagLabel.layer.borderWidth = 0.5
+            hashTagLabel.layer.backgroundColor = UIColor.mainGreen.cgColor
+//            hashTagLabel.layer.borderColor = UIColor.mainColorBlue.cgColor
+//            hashTagLabel.layer.borderWidth = 0.5
         }
     }
 }

@@ -19,6 +19,10 @@ extension UIColor {
         return UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
     }
     
+    @nonobjc class var graphBarGray: UIColor {
+        return UIColor(red: 219.0/255.0, green: 219.0/255.0, blue: 219.0/255.0, alpha: 1.0)
+    }
+    
     @nonobjc class var graphLineGray: UIColor {
         return UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 1.0)
     }
