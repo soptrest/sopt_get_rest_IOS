@@ -18,24 +18,11 @@ class PortfolioDetailTableViewController: UITableViewController {
     @IBOutlet weak var hashTagsCollectionView: UICollectionView!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var contentView: UIView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setData()
+        setTableData()
         setCollectionView()
-        
-        var frame = self.contentTextView.frame
-        frame.size.height = self.contentTextView.contentSize.height
-        self.contentTextView.frame = frame
-        
-        contentView.frame.size.height = contentTextView.frame.height + 40
-        contentTextView.isScrollEnabled = false
-        
-        let tableViewImageView = UIImageView(image: UIImage(named: "portfolioTestImg"))
-        tableViewImageView.contentMode = .top
-        self.tableView.backgroundView = tableViewImageView
-        self.tableView.estimatedRowHeight = 174
-        self.tableView.rowHeight = UITableView.automaticDimension
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,24 +35,35 @@ class PortfolioDetailTableViewController: UITableViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarWithLogo"), for: .default)
     }
     
-    
-    func setNavigationBar(){
-        let backItem = UIBarButtonItem()
-        backItem.title = "기록보기"
-        navigationItem.backBarButtonItem = backItem
-        navigationItem.backBarButtonItem?.tintColor = UIColor.mainGreen
-        
-//        navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 44)
-        navigationController?.navigationBar.barTintColor = UIColor.white
+    func setNavigationBar() {
+        navigationController?.navigationBar.backItem?.backBarButtonItem?.title = "기록보기"
+        navigationController?.navigationBar.barTintColor = UIColor.mainGreen
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
     }
-    func setData(){
+    
+    func setTableData(){
         self.categoryLabel.text = portfolioDetail.portfolioCategory
         self.titleLabel.text = portfolioDetail.portfolioTitle
         self.durationLabel.text = portfolioDetail.portfolioDuration
         self.contentTextView.text = portfolioDetail.portfolioContent
+        
+        // 내용에 따라 테이블 셀 높이 지정  ( 40은 gap )
+        contentView.frame.size.height = contentTextView.frame.height + 40
+        contentTextView.isScrollEnabled = false
+        
+        var frame = self.contentTextView.frame
+        frame.size.height = self.contentTextView.contentSize.height
+        self.contentTextView.frame = frame
+        
+        // 테이블 뷰 크기 조정
+        let tableViewImageView = UIImageView(image: UIImage(named: "portfolioTestImg"))
+        tableViewImageView.contentMode = .top
+        self.tableView.backgroundView = tableViewImageView
+        self.tableView.estimatedRowHeight = 174
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
+    
     func setCollectionView(){
         let nibName = UINib(nibName: "HashTagCollectionViewCell", bundle: nil)
         self.hashTagsCollectionView.delegate = self

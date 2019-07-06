@@ -10,7 +10,7 @@ import UIKit
 import ScrollableGraphView
 
 class MainHomeViewController: UIViewController {
-    var barPlotData: [Double] = [ 2, 4, 3, 6, 3, 7, 3, 4, 3, 2, 1, 4]
+    var barPlotData: [Double] = [ 7, 4, 7, 6, 3, 7, 3, 4, 3, 2, 7, 4]
     var xAxisLabels: [String] = ["1" ,"2","3", "4", "1" ,"2","3", "4", "1" ,"2","3", "4",]
     var graphDetailList : [HomeGraphDetailModel] = [
         HomeGraphDetailModel("솝트", "2019.03 ~ 2019.07"),
@@ -25,6 +25,9 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var topSideLabel: UILabel!
     @IBOutlet weak var graphView: UIView!
     @IBOutlet weak var graphDetailTableView: UITableView!
+    @IBOutlet weak var firstSectionView: UIView!
+    @IBOutlet weak var secondSectionView: UIView!
+    
     
     var scrollViewContentHeight = 1200 as CGFloat
     let navigationBarHeight = 64 as CGFloat
@@ -38,20 +41,17 @@ class MainHomeViewController: UIViewController {
         view.backgroundColor = UIColor.mainBackgroudGray
         setTableView()
         setTopSideView()
-        setNavigationBar()
+        setGraph(containerView: graphView)
+        graphDetailTableView.reloadData()
+        let attributedString = NSMutableAttributedString()
+            .bold(username, fontSize: 23)
+            .normal("님의 \n기록을 살펴 볼까요?", fontSize: 23)
+        topSideLabel.attributedText = attributedString
+        firstSectionView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
+        secondSectionView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//    }
-    
     func setTableView() {
-        let indexCount = self.graphDetailList.count + 1
-        let cardViewGap: CGFloat = 10
-        
-        self.tableHeight = (tableCellHeight * CGFloat(indexCount)) + ((cardViewGap) * CGFloat(indexCount))
-        self.graphDetailTableView.frame.size.height = tableHeight
         self.graphDetailTableView.delegate = self
         self.graphDetailTableView.dataSource = self
 //        self.graphDetailTableView.estimatedRowHeight = tableCellHeight
@@ -59,33 +59,21 @@ class MainHomeViewController: UIViewController {
         self.graphDetailTableView.backgroundColor = UIColor.white
         self.graphDetailTableView.separatorColor = UIColor.mainBackgroudGray
         self.graphDetailTableView.alwaysBounceVertical = false
-        self.graphDetailTableView.isScrollEnabled = false
+//        self.graphDetailTableView.isScrollEnabled = false
         
-        updateScrollView()
     }
     
-    func updateScrollView(){
-        let scrollViewContentWidth = view.frame.width as CGFloat
-        let tabBarHeight: CGFloat = 49
-        let upperHeight: CGFloat = topSideView.frame.height + 22 + graphView.frame.height
-        let lowerHeight: CGFloat = 55 + tableHeight + tabBarHeight
-        scrollViewContentHeight = upperHeight + lowerHeight + 5
-        scrollView.contentSize = CGSize(width: scrollViewContentWidth, height: scrollViewContentHeight)
-        scrollView.bounces = false
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setGraph(containerView: graphView)
-        graphDetailTableView.reloadData()
+        setNavigationBar()
     }
-    
     func setNavigationBar(){
-//        navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: navigationBarHeight)
         navigationController?.navigationBar.barTintColor = UIColor.mainGreen
+        // 불투명하게 만들기
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarWithLogo"), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
     }
     
     func setTopSideView(){
@@ -127,21 +115,21 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         let barGraphView = ScrollableGraphView(frame: frame, dataSource: self)
         let barPlot = BarPlot(identifier: "bar")
         
-        barPlot.barWidth = 10
+        barPlot.barWidth = 12
         barPlot.barLineWidth = 0
-        barPlot.barColor = UIColor.mainColorGreen
+        barPlot.barColor = UIColor.graphBarGray
         
 //        barPlot.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
 //        barPlot.animationDuration = 1.5
-        barGraphView.topMargin = 16
-        barGraphView.bottomMargin = 26
+        barGraphView.topMargin = 0
+        barGraphView.bottomMargin = 16
         barGraphView.dataPointSpacing = 27
         
         barGraphView.leftmostPointPadding = 20
         let referenceLines = ReferenceLines()
         
 //        referenceLines.referenceLineLabelFont = UIFont.boldSystemFont(ofSize: 7)
-        referenceLines.dataPointLabelFont = UIFont.boldSystemFont(ofSize: 14)
+        referenceLines.dataPointLabelFont = UIFont.systemFont(ofSize: 14)
         referenceLines.referenceLineColor = UIColor.graphLineGray
         referenceLines.referenceLineLabelColor = UIColor.mainColorBlue
         referenceLines.dataPointLabelColor = UIColor.mainColorBlue
@@ -159,8 +147,6 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         barGraphView.addPlot(plot: barPlot)
         
         containerView.addSubview(barGraphView)
-        containerView.roundCorners(corners: [.allCorners], radius: 5)
-        containerView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
     }
     
     func drawReferenceLine(_ containerView: UIView){
@@ -183,5 +169,19 @@ extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension NSMutableAttributedString {
+    
+    func bold(_ text: String, fontSize: CGFloat) -> NSMutableAttributedString {
+        let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: fontSize)]
+        self.append(NSMutableAttributedString(string: text, attributes: attrs))
+        return self
+    }
+    
+    func normal(_ text: String, fontSize: CGFloat) -> NSMutableAttributedString {
+        let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: fontSize)]
+        self.append(NSMutableAttributedString(string: text, attributes: attrs))
+        return self
+    }
+}
 
 
