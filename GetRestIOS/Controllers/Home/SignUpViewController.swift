@@ -28,7 +28,6 @@ class SignUpViewController: UIViewController {
         setTextFieldCheck()
         setNavigationBar()
         alert = UILabel()
-        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "signUpBackground")
         backgroundImage.contentMode = UIView.ContentMode.bottom
