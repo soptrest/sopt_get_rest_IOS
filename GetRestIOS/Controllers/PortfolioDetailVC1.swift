@@ -25,6 +25,7 @@ class PortfolioDetailVC1: UIViewController, IndicatorInfoProvider {
         
         let nibName = UINib(nibName: "PortfolioTableViewCell", bundle: nil)
         portfolioTableView.register(nibName, forCellReuseIdentifier: "PortfolioCell")
+
         setData()
     }
     
@@ -59,13 +60,14 @@ extension PortfolioDetailVC1: UITableViewDelegate, UITableViewDataSource {
         
         let data = list[indexPath.row]
         
-        if indexPath.row == 1 {
-            cell.backgroundColor = .black
-            
-        }
+//        if indexPath.row == 1 {
+//            cell.backgroundColor = .black
+//
+//        }
         cell.portfolioTitle.text = data.pfTitle
         cell.portfolioDate.text = data.pfDate
         cell.portfolioImg.image = data.pfImg
+//        cell.separatorInset = UIEdgeInsets.zero
 //        cell.portfolioTitle.sizeToFit()
         
         return cell
