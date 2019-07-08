@@ -8,14 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		101C8AB8252B5C2981990F9D /* Pods_GetRestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */; };
+		4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */; };
+		4B3F935122D08C21004919B1 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */; };
+		4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */; };
+		4B63B05222CFFFF7005F52D7 /* PortfolioDetailVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B05122CFFFF7005F52D7 /* PortfolioDetailVC1.swift */; };
+		4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B05322D011A1005F52D7 /* PortfolioDetailVC2.swift */; };
+		4B63B05B22D02E58005F52D7 /* ChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B05922D02E58005F52D7 /* ChipCollectionViewCell.swift */; };
+		4B63B05C22D02E58005F52D7 /* ChipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B63B05A22D02E58005F52D7 /* ChipCollectionViewCell.xib */; };
+		4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67C17F22D1D9C900B9F546 /* PortfolioModel.swift */; };
 		4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EEE22C614E300930582 /* AppDelegate.swift */; };
-		4BB47EF122C614E300930582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EF022C614E300930582 /* ViewController.swift */; };
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
 		C51EAD5B22CF49E100C836A7 /* bubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51EAD5A22CF49E100C836A7 /* bubbleTransition.swift */; };
 		C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */; };
 		C56EE51122CD063F0062F072 /* HashTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */; };
 		C56EE51322CD204B0062F072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51222CD204B0062F072 /* Assets.xcassets */; };
+		4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */; };
 		C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9722C89B4300837653 /* Home.storyboard */; };
 		C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */; };
 		C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */; };
@@ -34,9 +42,16 @@
 /* Begin PBXFileReference section */
 		00D5413CD194F992CD511BF0 /* Pods-GetRestIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRestIOS.debug.xcconfig"; path = "Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRestIOS.release.xcconfig"; path = "Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS.release.xcconfig"; sourceTree = "<group>"; };
+		4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
+		4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
+		4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
+		4B63B05122CFFFF7005F52D7 /* PortfolioDetailVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailVC1.swift; sourceTree = "<group>"; };
+		4B63B05322D011A1005F52D7 /* PortfolioDetailVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailVC2.swift; sourceTree = "<group>"; };
+		4B63B05922D02E58005F52D7 /* ChipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCollectionViewCell.swift; sourceTree = "<group>"; };
+		4B63B05A22D02E58005F52D7 /* ChipCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChipCollectionViewCell.xib; sourceTree = "<group>"; };
+		4B67C17F22D1D9C900B9F546 /* PortfolioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioModel.swift; sourceTree = "<group>"; };
 		4BB47EEB22C614E300930582 /* GetRestIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRestIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB47EEE22C614E300930582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BB47EF022C614E300930582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BB47EF322C614E300930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +59,7 @@
 		C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		C56EE51222CD204B0062F072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		C5ACDC9822C89B4300837653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
 		C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyResume.storyboard; sourceTree = "<group>"; };
@@ -157,6 +173,7 @@
 			children = (
 				C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */,
 				C5D6DE9822CE0A9700A7EB0E /* PortfolioDetailModel.swift */,
+				4B67C17F22D1D9C900B9F546 /* PortfolioModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +185,10 @@
 				C5DC86D322CBF8D4000C247F /* CardView.swift */,
 				C5D6DE9C22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift */,
 				C56EE50F22CCE5F50062F072 /* HashTagView */,
+				4B63B05922D02E58005F52D7 /* ChipCollectionViewCell.swift */,
+				4B63B05A22D02E58005F52D7 /* ChipCollectionViewCell.xib */,
+				4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */,
+				4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,9 +196,12 @@
 		4BB47F0C22C6194A00930582 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4BB47EF022C614E300930582 /* ViewController.swift */,
 				C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */,
 				C5D6DE9622CE021800A7EB0E /* PortfolioDetailViewController.swift */,
+				4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */,
+				4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */,
+				4B63B05122CFFFF7005F52D7 /* PortfolioDetailVC1.swift */,
+				4B63B05322D011A1005F52D7 /* PortfolioDetailVC2.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,11 +287,14 @@
 				C5ACDCA222C8A4F200837653 /* Recruit.storyboard in Resources */,
 				4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */,
 				C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */,
+				4B3F935122D08C21004919B1 /* PortfolioTableViewCell.xib in Resources */,
+				4BB47EF622C614E400930582 /* Assets.xcassets in Resources */,
 				4BB47EF422C614E300930582 /* Main.storyboard in Resources */,
 				C56EE51122CD063F0062F072 /* HashTagCollectionViewCell.xib in Resources */,
 				C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */,
 				C56EE51322CD204B0062F072 /* Assets.xcassets in Resources */,
 				C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */,
+				4B63B05C22D02E58005F52D7 /* ChipCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,9 +331,26 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -324,15 +368,22 @@
 				C5D6DE9D22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift in Sources */,
 				4BB47EF122C614E300930582 /* ViewController.swift in Sources */,
 				C51EAD5B22CF49E100C836A7 /* bubbleTransition.swift in Sources */,
+				4B63B05222CFFFF7005F52D7 /* PortfolioDetailVC1.swift in Sources */,
+				4B63B05B22D02E58005F52D7 /* ChipCollectionViewCell.swift in Sources */,
+				4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */,
 				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
+				4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */,
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
 				C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */,
 				C5D6DE9722CE021800A7EB0E /* PortfolioDetailViewController.swift in Sources */,
 				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
+				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
+				4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */,
+				4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

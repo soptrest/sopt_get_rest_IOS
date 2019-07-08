@@ -47,6 +47,24 @@ extension UIColor {
         return UIColor(red: 30.0/255.0, green: 48.0/255.0, blue: 91.0/255.0, alpha: 1.0)
     }
     
+    @nonobjc class var btnBarBackgroundColor: UIColor {
+        return UIColor(red: 248.0/255.0, green: 249.0/255.0, blue: 249.0/255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var btnBarItemTitleColor: UIColor {
+        return UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var selectedBtnBarColor: UIColor {
+        return UIColor(red: 30.0/255.0, green: 48.0/255.0, blue: 91.0/255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var barMainGreen: UIColor {
+        return UIColor(red: 130.0/255.0, green: 191.0/255.0, blue: 89.0/255.0, alpha: 1.0)
+    }
+    
+    
+    
 
     
     
