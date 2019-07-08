@@ -170,10 +170,10 @@
 		4BB47F0B22C6194400930582 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5C6279A22D379B60045298D /* SignIn */,
 				C5FCEA2922D23DC70083D515 /* Home */,
 				C5DC86D322CBF8D4000C247F /* CardView.swift */,
 				C56EE50F22CCE5F50062F072 /* HashTagView */,
-				C5C6279422D36DA00045298D /* CheckBox.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +181,7 @@
 		4BB47F0C22C6194A00930582 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C5C6279922D379390045298D /* SignIn */,
 				C5FCEA2622D23BAE0083D515 /* Home */,
 			);
 			path = Controllers;
@@ -204,13 +205,28 @@
 			path = HashTagView;
 			sourceTree = "<group>";
 		};
+		C5C6279922D379390045298D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C56880C122D3326C00A0BE2F /* SignInViewController.swift */,
+				C5FCEA2C22D23E820083D515 /* SignUpViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		C5C6279A22D379B60045298D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C5C6279422D36DA00045298D /* CheckBox.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		C5FCEA2622D23BAE0083D515 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */,
 				C5D6DE9622CE021800A7EB0E /* PortfolioDetailViewController.swift */,
-				C56880C122D3326C00A0BE2F /* SignInViewController.swift */,
-				C5FCEA2C22D23E820083D515 /* SignUpViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
