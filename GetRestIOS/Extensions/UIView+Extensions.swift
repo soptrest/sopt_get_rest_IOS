@@ -31,7 +31,7 @@ extension UIView {
         // 그림자의 blur 설정
         layer.shadowRadius = radius
         // 구글링 해보세요!
-        layer.masksToBounds = false
+        layer.masksToBounds = true
     }
     
     // Set UIView's Border

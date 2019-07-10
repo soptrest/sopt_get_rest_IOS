@@ -5,12 +5,16 @@ PODS:
     - ObjectMapper (~> 3.4)
   - Kingfisher (4.10.1)
   - ObjectMapper (3.4.2)
+  - ScrollableGraphView (4.0.6)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
   - AlamofireObjectMapper (~> 5.2.0)
   - Kingfisher (~> 4.10.1)
   - ObjectMapper (~> 3.4.2)
+  - ScrollableGraphView
+  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -18,13 +22,17 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - Kingfisher
     - ObjectMapper
+    - ScrollableGraphView
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  ScrollableGraphView: 4af35d4ea9ecdec665d34a74da51da161ddff8ac
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 66eb3c51d45025db9eb25be3040e5f5c144134de
+PODFILE CHECKSUM: 1b37073836683472ca008485d68210d5dc2b9d89
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.4
