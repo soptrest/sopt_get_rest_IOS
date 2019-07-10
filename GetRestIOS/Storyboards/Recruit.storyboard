@@ -519,6 +519,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eO6-LP-kKg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1b-Es-VDe">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </scrollView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URa-Xv-3tc">
                                         <rect key="frame" x="20" y="453" width="162" height="40"/>
                                         <color key="backgroundColor" red="0.89411764705882346" green="0.93333333333333335" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -789,6 +793,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gNc-NP-keo"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="academicLabel" destination="by2-GK-b7g" id="8EO-O3-eLa"/>
                         <outlet property="areaLabel" destination="JCh-bE-Fkg" id="lSG-yD-tJ0"/>
