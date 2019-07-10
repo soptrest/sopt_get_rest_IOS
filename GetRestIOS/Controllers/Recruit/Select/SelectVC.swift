@@ -42,7 +42,7 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.askTV.dequeueReusableCell(withIdentifier: "QuestionCell") as! QuestionCell
-//        cell.heigth
+//        cell.
         cell.askLabel.lineBreakMode = .byWordWrapping
         cell.askLabel.numberOfLines = 0
         cell.askLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -64,10 +64,11 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         print("넘 카운트")
         return num.count;
     }
-    
-//    private func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) ->     UITableViewCell! {
-//
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("여기 한번오나?")
+        let cell = self.askTV.dequeueReusableCell(withIdentifier: "QuestionCell") as! QuestionCell
+        return CGFloat(90+(125+20) * (cell.data.count+1))
+    }
 }
 
 
