@@ -54,23 +54,23 @@ class MainHomeViewController: UIViewController {
     func setTableView() {
         self.graphDetailTableView.delegate = self
         self.graphDetailTableView.dataSource = self
-//        self.graphDetailTableView.estimatedRowHeight = tableCellHeight
-//        self.graphDetailTableView.rowHeight = UITableView.automaticDimension
         self.graphDetailTableView.backgroundColor = UIColor.white
         self.graphDetailTableView.separatorColor = UIColor.mainBackgroudGray
         self.graphDetailTableView.alwaysBounceVertical = false
-//        self.graphDetailTableView.isScrollEnabled = false
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setNavigationBar()
+        graphDetailTableView.reloadData()
+//        tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     func setNavigationBar(){
         navigationController?.navigationBar.barTintColor = UIColor.mainGreen
         // 불투명하게 만들기
         navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarWithLogo"), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
@@ -79,17 +79,7 @@ class MainHomeViewController: UIViewController {
     func setTopSideView(){
         topSideView.backgroundColor = UIColor(patternImage: UIImage(named: "homeTopSideViewImg")!)
         topSideView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 28)
-        
-        topSideLabel.text = "\(username)님의\n기록을 살펴볼까요?"
         topSideLabel.numberOfLines = 0
-    }
-    
-    func attributedText(withString string: String, boldString: String, font: UIFont) -> String {
-        let attributedString = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.font: font])
-        let boldFontAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: font.pointSize)]
-        let range = (string as NSString).range(of: boldString)
-        attributedString.addAttributes(boldFontAttribute, range: range)
-        return attributedString.string
     }
 }
 
@@ -124,6 +114,7 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         barGraphView.topMargin = 0
         barGraphView.bottomMargin = 16
         barGraphView.dataPointSpacing = 27
+        barGraphView.isScrollEnabled = false
         
         barGraphView.leftmostPointPadding = 20
         let referenceLines = ReferenceLines()
@@ -157,9 +148,11 @@ extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return graphDetailList.count
     }
+    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "graphDetailTableViewCell") as! HomeGraphDetailTableViewCell
         cell.contentView.backgroundColor = UIColor.white
@@ -167,6 +160,13 @@ extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
         cell.portfolioDuration?.text = graphDetailList[indexPath.row].portfolioDuration!
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dvc = self.storyboard!.instantiateViewController(withIdentifier: "homeDetailView")
+        self.navigationController?.pushViewController(dvc, animated: true)
+        
+    }
+    
 }
 
 extension NSMutableAttributedString {

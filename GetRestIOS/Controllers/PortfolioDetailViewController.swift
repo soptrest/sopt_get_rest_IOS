@@ -18,11 +18,16 @@ class PortfolioDetailTableViewController: UITableViewController {
     @IBOutlet weak var hashTagsCollectionView: UICollectionView!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var contentView: UIView!
+    
+    var height: CGFloat = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setTableData()
         setCollectionView()
+        height = contentTextView.contentSize.height
+        setHeight()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,13 +38,17 @@ class PortfolioDetailTableViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarWithLogo"), for: .default)
+        
     }
     
     func setNavigationBar() {
-        navigationController?.navigationBar.backItem?.backBarButtonItem?.title = "기록보기"
-        navigationController?.navigationBar.barTintColor = UIColor.mainGreen
+        self.navigationItem.title = "기록보기"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.mainGreen]
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.tintColor = UIColor.mainGreen
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.backgroundColor = UIColor.white
     }
     
     func setTableData(){
@@ -51,7 +60,7 @@ class PortfolioDetailTableViewController: UITableViewController {
         // 내용에 따라 테이블 셀 높이 지정  ( 40은 gap )
         contentView.frame.size.height = contentTextView.frame.height + 40
         contentTextView.isScrollEnabled = false
-        
+        contentTextView.isEditable = false
         var frame = self.contentTextView.frame
         frame.size.height = self.contentTextView.contentSize.height
         self.contentTextView.frame = frame
@@ -62,6 +71,11 @@ class PortfolioDetailTableViewController: UITableViewController {
         self.tableView.backgroundView = tableViewImageView
         self.tableView.estimatedRowHeight = 174
         self.tableView.rowHeight = UITableView.automaticDimension
+        
+        contentTextView.delegate = self
+        contentTextView.translatesAutoresizingMaskIntoConstraints = true
+        contentTextView.sizeToFit()
+        contentTextView.isScrollEnabled = false
     }
     
     func setCollectionView(){
@@ -73,18 +87,35 @@ class PortfolioDetailTableViewController: UITableViewController {
         hashTagsCVFlowLayout.estimatedItemSize = CGSize(width: 64, height: 27)
     }
     
-//    func calculationContentHeight(setLabel: UILabel) -> CGFloat {
-//        let widthSizeMinus: CGFloat = 102
-//        let maxLabelSize: CGSize = CGSize(width: self.view.frame.size.width - widthSizeMinus, height: CGFloat(9999))
-////        let options: NSStringDrawingOptions = [.UsersLineFragmentOrigin]
-//        let contentNSString = setLabel.text! as NSString
-//        let expectedabelSize = contentNSString.boundingRect(with: maxLabelSize, context: nil)
-//        return expectedabelSize.size.height
-//    }
-    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.roundCorners(corners: [.topLeft, .topRight], radius: 15)
         cell.frame.size.height = 1000
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension PortfolioDetailTableViewController : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        contentTextView.sizeToFit()
+        let gap = contentTextView.contentSize.height - height
+        if (gap == 0){
+            height = contentTextView.contentSize.height
+            contentView.frame.size.height = contentView.frame.height + gap
+            tableView.reloadData()
+        }
+    }
+    
+    func setHeight(){
+        contentTextView.sizeToFit()
+        contentView.frame.size.height = contentTextView.contentSize.height + 50
+        tableView.reloadData()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        tableView.reloadData()
     }
 }
 
