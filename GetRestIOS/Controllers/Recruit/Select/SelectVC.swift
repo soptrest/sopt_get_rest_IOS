@@ -42,7 +42,7 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.askTV.dequeueReusableCell(withIdentifier: "QuestionCell") as! QuestionCell
-        cell.heigth
+//        cell.heigth
         cell.askLabel.lineBreakMode = .byWordWrapping
         cell.askLabel.numberOfLines = 0
         cell.askLabel.translatesAutoresizingMaskIntoConstraints = false
