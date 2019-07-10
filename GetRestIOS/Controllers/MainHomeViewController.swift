@@ -14,10 +14,9 @@ class MainHomeViewController: UIViewController {
     var xAxisLabels: [String] = ["1" ,"2","3", "4", "1" ,"2","3", "4", "1" ,"2","3", "4",]
     var graphDetailList : [HomeGraphDetailModel] = [
         HomeGraphDetailModel("솝트", "2019.03 ~ 2019.07"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12")
+        HomeGraphDetailModel("문화교류 연합동아리 매디", "2018.01 ~ 2019.12"),
+        HomeGraphDetailModel("삼성전자 나눔 봉사단", "2018.01 ~ 2019.12"),
+        HomeGraphDetailModel("멋쟁이 사자처럼", "2018.01 ~ 2019.12")
     ]
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -27,7 +26,6 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var graphDetailTableView: UITableView!
     @IBOutlet weak var firstSectionView: UIView!
     @IBOutlet weak var secondSectionView: UIView!
-    
     
     var scrollViewContentHeight = 1200 as CGFloat
     let navigationBarHeight = 64 as CGFloat
@@ -41,7 +39,6 @@ class MainHomeViewController: UIViewController {
         view.backgroundColor = UIColor.mainBackgroudGray
         setTableView()
         setTopSideView()
-        setGraph(containerView: graphView)
         graphDetailTableView.reloadData()
         let attributedString = NSMutableAttributedString()
             .bold(username, fontSize: 23)
@@ -49,47 +46,40 @@ class MainHomeViewController: UIViewController {
         topSideLabel.attributedText = attributedString
         firstSectionView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
         secondSectionView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
+//        graphView.addGestureRecognizer(<#T##gestureRecognizer: UIGestureRecognizer##UIGestureRecognizer#>)
     }
     
     func setTableView() {
         self.graphDetailTableView.delegate = self
         self.graphDetailTableView.dataSource = self
-//        self.graphDetailTableView.estimatedRowHeight = tableCellHeight
-//        self.graphDetailTableView.rowHeight = UITableView.automaticDimension
+        //        self.graphDetailTableView.estimatedRowHeight = tableCellHeight
+        //        self.graphDetailTableView.rowHeight = UITableView.automaticDimension
         self.graphDetailTableView.backgroundColor = UIColor.white
         self.graphDetailTableView.separatorColor = UIColor.mainBackgroudGray
         self.graphDetailTableView.alwaysBounceVertical = false
-//        self.graphDetailTableView.isScrollEnabled = false
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setNavigationBar()
+        setGraph(containerView: graphView)
     }
+    
     func setNavigationBar(){
         navigationController?.navigationBar.barTintColor = UIColor.mainGreen
         // 불투명하게 만들기
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarWithLogo"), for: .default)
+        navigationController?.navigationBar.setBackgroundImage(
+            UIImage(named: "navigationBarWithLogo"), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        
     }
     
     func setTopSideView(){
         topSideView.backgroundColor = UIColor(patternImage: UIImage(named: "homeTopSideViewImg")!)
         topSideView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 28)
-        
         topSideLabel.text = "\(username)님의\n기록을 살펴볼까요?"
         topSideLabel.numberOfLines = 0
-    }
-    
-    func attributedText(withString string: String, boldString: String, font: UIFont) -> String {
-        let attributedString = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.font: font])
-        let boldFontAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: font.pointSize)]
-        let range = (string as NSString).range(of: boldString)
-        attributedString.addAttributes(boldFontAttribute, range: range)
-        return attributedString.string
     }
 }
 
@@ -107,7 +97,6 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
     }
     
     func setGraph(containerView: UIView)  {
-        drawReferenceLine(containerView)
         let frame : CGRect = CGRect(x: 0,
                                     y: 0,
                                     width: self.graphView.frame.width,
@@ -117,39 +106,38 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         
         barPlot.barWidth = 12
         barPlot.barLineWidth = 0
-        barPlot.barColor = UIColor.graphBarGray
-        
-//        barPlot.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
-//        barPlot.animationDuration = 1.5
         barGraphView.topMargin = 0
         barGraphView.bottomMargin = 16
-        barGraphView.dataPointSpacing = 27
+        barGraphView.isScrollEnabled = false
+        barGraphView.leftmostPointPadding = 0 + ( barPlot.barWidth / 2 )
+        barGraphView.dataPointSpacing = caculateDataPointSpacing(frameWidth: frame.width,
+                                                                 count: barPlotData.count,
+                                                                 barWidth: barPlot.barWidth)
+        barGraphView.backgroundFillColor = UIColor(white: 1.0, alpha: 0.0)
         
-        barGraphView.leftmostPointPadding = 20
+        barPlot.barColor = UIColor.graphBarGray
         let referenceLines = ReferenceLines()
         
-//        referenceLines.referenceLineLabelFont = UIFont.boldSystemFont(ofSize: 7)
         referenceLines.dataPointLabelFont = UIFont.systemFont(ofSize: 14)
         referenceLines.referenceLineColor = UIColor.graphLineGray
-        referenceLines.referenceLineLabelColor = UIColor.mainColorBlue
-        referenceLines.dataPointLabelColor = UIColor.mainColorBlue
-//        referenceLines.shouldShowReferenceLines = false
+        referenceLines.referenceLineLabelColor = UIColor.ticksDarkGray
+        referenceLines.dataPointLabelColor = UIColor.ticksDarkGray
         referenceLines.shouldAddLabelsToIntermediateReferenceLines = false
         referenceLines.shouldAddUnitsToIntermediateReferenceLineLabels = false
-        
-        barGraphView.backgroundFillColor = UIColor.graphBackgroundWhite
-        barGraphView.shouldAnimateOnStartup = false
         
         barGraphView.rangeMax = barPlotData.max()!
         barGraphView.rangeMin = 0
         
-        barGraphView.addReferenceLines(referenceLines: referenceLines)
         barGraphView.addPlot(plot: barPlot)
-        
+        barGraphView.addReferenceLines(referenceLines: referenceLines)
         containerView.addSubview(barGraphView)
+        
     }
     
-    func drawReferenceLine(_ containerView: UIView){
+    func caculateDataPointSpacing(frameWidth: CGFloat, count: Int, barWidth: CGFloat) -> CGFloat {
+        let barTotalWidth: CGFloat =  barWidth * CGFloat( count )
+        let dataSpacing = ( frameWidth - barTotalWidth ) / CGFloat( count - 1 )
+        return dataSpacing + barWidth
     }
 }
 
@@ -160,7 +148,7 @@ extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return graphDetailList.count
     }
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "graphDetailTableViewCell") as! HomeGraphDetailTableViewCell
         cell.contentView.backgroundColor = UIColor.white
         cell.portfolioTitle?.text = graphDetailList[indexPath.row].portfolioTitle!
