@@ -117,7 +117,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="Ma1-2h-d3Y" kind="embed" id="wiu-x1-aMx"/>
+                                    <segue destination="nth-20-eLV" kind="embed" id="1VQ-F5-skT"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -136,7 +136,7 @@
                 <viewControllerPlaceholder storyboardName="MyResume" referencedIdentifier="MyResumeView" id="Ma1-2h-d3Y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPr-qv-c7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="1464"/>
+            <point key="canvasLocation" x="1852" y="2325"/>
         </scene>
         <!--나의 자소서-->
         <scene sceneID="ZDB-Qd-u56">
@@ -150,7 +150,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="nth-20-eLV" kind="embed" id="j0A-cA-XYg"/>
+                                    <segue destination="Ma1-2h-d3Y" kind="embed" id="AMq-40-bHa"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -169,7 +169,7 @@
                 <viewControllerPlaceholder storyboardName="Recruit" referencedIdentifier="RecruitView" id="nth-20-eLV" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1n7-Hd-LJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="2275"/>
+            <point key="canvasLocation" x="1998" y="1421"/>
         </scene>
     </scenes>
     <resources>

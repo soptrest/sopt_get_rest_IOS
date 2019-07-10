@@ -182,6 +182,13 @@ extension NSMutableAttributedString {
         self.append(NSMutableAttributedString(string: text, attributes: attrs))
         return self
     }
+    
+    func color(_ text: String, color: UIColor, fontSize: CGFloat) -> NSMutableAttributedString {
+        var attrs: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: fontSize)]
+        attrs[.foregroundColor] = color
+        self.append(NSMutableAttributedString(string: text, attributes: attrs))
+        return self
+    }
 }
 
 

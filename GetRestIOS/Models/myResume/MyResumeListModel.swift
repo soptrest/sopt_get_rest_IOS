@@ -2,15 +2,15 @@
 //  MyResumeListModel.swift
 //  GetRestIOS
 //
-//  Created by 박경선 on 09/07/2019.
+//  Created by 박경선 on 10/07/2019.
 //  Copyright © 2019 최리안. All rights reserved.
 //
 
-import Foundation
 struct MyResumeListModel : Codable {
-    var date : String?
-    var resumeTitle : String?
-    var resumeSubTitle : String?
+    var date : Int?
+    var jobTitle : String?
+    var jobType : String?
+    var expireCheck: Bool?
     
     //    enum CodingKeys: String, CodingKey {
     //        case userIdx = "userIdx"
@@ -24,10 +24,10 @@ struct MyResumeListModel : Codable {
     //        portfolioDuration = try values.decodeIfPresent(String.self, forKey: .portfolioDuration)
     //        portfolioHashTags = try values.decodeIfPresent(String.self, forKey: .portfolioHashTags)
     //    }
-    init(_ date: String, _ title: String, _ subTitle: String){
+    init(_ date: Int, _ title: String, _ type: String){
         self.date = date
-        self.resumeTitle = title
-        self.resumeSubTitle = subTitle
+        self.jobTitle = title
+        self.jobType = type
     }
     
 }

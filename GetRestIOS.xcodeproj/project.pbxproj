@@ -38,6 +38,10 @@
 		C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */; };
 		C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */; };
 		C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DC86D322CBF8D4000C247F /* CardView.swift */; };
+		C5DD751122D61B5500402FF8 /* MyResumeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751022D61B5500402FF8 /* MyResumeDetailModel.swift */; };
+		C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */; };
+		C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */; };
+		C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +79,10 @@
 		C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGraphDetailTableViewCell.swift; sourceTree = "<group>"; };
 		C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeGraphDetailModel.swift; path = GetRestIOS/Storyboards/HomeGraphDetailModel.swift; sourceTree = SOURCE_ROOT; };
 		C5DC86D322CBF8D4000C247F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C5DD751022D61B5500402FF8 /* MyResumeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeDetailModel.swift; sourceTree = "<group>"; };
+		C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeListModel.swift; sourceTree = "<group>"; };
+		C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeTableViewCell.swift; sourceTree = "<group>"; };
+		C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeDetailTVC.swift; sourceTree = "<group>"; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +181,7 @@
 		4BB47F0A22C6193A00930582 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C5DD750F22D61B4500402FF8 /* myResume */,
 				C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */,
 				C5D6DE9822CE0A9700A7EB0E /* PortfolioDetailModel.swift */,
 				4B67C17F22D1D9C900B9F546 /* PortfolioModel.swift */,
@@ -183,6 +192,7 @@
 		4BB47F0B22C6194400930582 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5DD751422D61C0900402FF8 /* myResume */,
 				C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */,
 				C5DC86D322CBF8D4000C247F /* CardView.swift */,
 				C5D6DE9C22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift */,
@@ -230,9 +240,27 @@
 		C5C6279B22D37C7A0045298D /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
+				C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */,
 				C5C6279C22D37CD20045298D /* MyResumeListViewController.swift */,
 			);
 			path = MyResume;
+			sourceTree = "<group>";
+		};
+		C5DD750F22D61B4500402FF8 /* myResume */ = {
+			isa = PBXGroup;
+			children = (
+				C5DD751022D61B5500402FF8 /* MyResumeDetailModel.swift */,
+				C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */,
+			);
+			path = myResume;
+			sourceTree = "<group>";
+		};
+		C5DD751422D61C0900402FF8 /* myResume */ = {
+			isa = PBXGroup;
+			children = (
+				C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */,
+			);
+			path = myResume;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,11 +405,13 @@
 				C5D6DE9922CE0A9700A7EB0E /* PortfolioDetailModel.swift in Sources */,
 				C5D6DE9D22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift in Sources */,
 				C5C6279D22D37CD20045298D /* MyResumeListViewController.swift in Sources */,
+				C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */,
 				C51EAD5B22CF49E100C836A7 /* bubbleTransition.swift in Sources */,
 				4B63B05222CFFFF7005F52D7 /* PortfolioDetailVC1.swift in Sources */,
 				4B63B05B22D02E58005F52D7 /* ChipCollectionViewCell.swift in Sources */,
 				4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */,
 				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
+				C5DD751122D61B5500402FF8 /* MyResumeDetailModel.swift in Sources */,
 				4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */,
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
 				C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */,
@@ -389,8 +419,10 @@
 				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
+				C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */,
+				C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
 				4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */,
 				4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */,
