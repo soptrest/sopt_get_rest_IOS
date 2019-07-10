@@ -117,7 +117,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="Ma1-2h-d3Y" kind="embed" id="wiu-x1-aMx"/>
+                                    <segue destination="nth-20-eLV" kind="embed" id="2MZ-d4-avF"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -150,7 +150,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="nth-20-eLV" kind="embed" id="j0A-cA-XYg"/>
+                                    <segue destination="Ma1-2h-d3Y" kind="embed" id="xh5-Fc-O8a"/>
                                 </connections>
                             </containerView>
                         </subviews>
