@@ -10,9 +10,13 @@ import UIKit
 
 class AddCell: UITableViewCell {
 
+    @IBOutlet var addBtnVIew: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        addBtnVIew.roundCorners(corners: .allCorners, radius: 5)
+        addBtnVIew.setBorder(borderColor: .black, borderWidth: 1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

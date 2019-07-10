@@ -13,9 +13,11 @@ class SelectCell: UITableViewCell {
     @IBOutlet var pfImg: UIImageView!
     @IBOutlet var pfTitle: UILabel!
     @IBOutlet var pfDate: UILabel!
+    @IBOutlet var addBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        pfImg.roundCorners(corners: .allCorners, radius: 5)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

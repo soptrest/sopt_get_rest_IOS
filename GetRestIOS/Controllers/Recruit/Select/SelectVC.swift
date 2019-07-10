@@ -19,6 +19,9 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let cell = self.askTV.dequeueReusableCell(withIdentifier: "QuestionCell") as! QuestionCell
+//        askTV.rowHeight = UITableView.automaticDimension
+//        askTV.estimatedRowHeight = CGFloat(cell.data.count)
         askTV.delegate = self
         askTV.dataSource = self
 //        askTV.register(QuestionCell.self, forCellReuseIdentifier: "QuestionCell")
@@ -29,9 +32,17 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
     }
+    private func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    private func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.askTV.dequeueReusableCell(withIdentifier: "QuestionCell") as! QuestionCell
+        cell.heigth
         cell.askLabel.lineBreakMode = .byWordWrapping
         cell.askLabel.numberOfLines = 0
         cell.askLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +51,10 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.askLabel.text = q[indexPath.row]
         cell.askNum.text = "문항\(indexPath.row+1)"
         cell.askNum.sizeToFit()
+        
+        cell.selectTV.frame.size.height = CGFloat(1000)
+        
+//        cell.selectTV.frame.size.height = CGFloat((118+20)*cell.data.count)
 //        cell.askLabel.sizeToFit()
         print("여기3")
         return cell
@@ -54,3 +69,5 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //
 //    }
 }
+
+

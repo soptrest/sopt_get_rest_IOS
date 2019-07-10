@@ -20,6 +20,7 @@ class RecruitDetailVC: UIViewController {
     @IBOutlet var positionLabel: UILabel!
     @IBOutlet var areaLabel: UILabel!
     @IBOutlet var detailBackground: UIView!
+    @IBOutlet var corporImg: UIImageView!
     
     
     
