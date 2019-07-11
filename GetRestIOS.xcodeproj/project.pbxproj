@@ -45,6 +45,7 @@
 		C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */; };
 		C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */; };
 		C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */; };
+		C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeListModel.swift; sourceTree = "<group>"; };
 		C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeTableViewCell.swift; sourceTree = "<group>"; };
 		C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeDetailTVC.swift; sourceTree = "<group>"; };
+		C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageChangePwViewController.swift; path = GetRestIOS/Controllers/Home/MyPageChangePwViewController.swift; sourceTree = SOURCE_ROOT; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -239,6 +241,7 @@
 				C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */,
 				C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */,
 				C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */,
+				C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */,
 				C568D17F22D6A2AF00C5E1F3 /* MyPageRuleViewController.swift */,
 				C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */,
 			);
@@ -422,6 +425,7 @@
 				C5D6DE9922CE0A9700A7EB0E /* PortfolioDetailModel.swift in Sources */,
 				C5D6DE9D22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift in Sources */,
 				C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */,
+				C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */,
 				C5C6279D22D37CD20045298D /* MyResumeListViewController.swift in Sources */,
 				C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */,
 				4B63B05222CFFFF7005F52D7 /* PortfolioDetailVC1.swift in Sources */,

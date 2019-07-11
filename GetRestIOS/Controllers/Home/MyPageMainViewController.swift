@@ -23,6 +23,7 @@ class MyPageMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
         topSideView.backgroundColor = UIColor(patternImage: UIImage(named: "imgMyPage")!)
         topSideView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 28)
         topSideLabel.attributedText = NSMutableAttributedString()
@@ -37,34 +38,32 @@ class MyPageMainViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.backgroundColor = UIColor.white
         
-
-        border.borderColor = UIColor(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1.0).cgColor
-        border.frame = CGRect(x: 0, y: nameTextField.frame.size.height - width, width:  nameTextField.frame.size.width, height: nameTextField.frame.size.height)
-        border.borderWidth = width
-        nameTextField.layer.addSublayer(border)
-        nameTextField.borderStyle = .none
-        nameTextField.layer.masksToBounds = true
+        nameTextField.setBorder(border: border, color: UIColor.borderColor.cgColor)
         nameTextField.text = username
-        nameTextField.tintColor = .black
     }
+    
+    @IBAction func goPasswordChangeView(_ sender: Any) {
+        let dvc = (self.storyboard?.instantiateViewController(withIdentifier: "pwdChangeView"))!
+        self.navigationController?.pushViewController(dvc, animated: true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
 
 extension MyPageMainViewController : UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         border.removeFromSuperlayer()
-        border.borderColor = UIColor.mainGreen.cgColor
-        border.frame = CGRect(x: 0, y: nameTextField.frame.size.height - width, width:  nameTextField.frame.size.width, height: nameTextField.frame.size.height)
-        border.borderWidth = width
-        nameTextField.layer.addSublayer(border)
-        
+        textField.setBorder(border: border, color: UIColor.mainGreen.cgColor)
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         border.removeFromSuperlayer()
-        border.borderColor =  UIColor(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1.0).cgColor
-        border.frame = CGRect(x: 0, y: nameTextField.frame.height - width, width:  nameTextField.frame.width, height: nameTextField.frame.height)
-        border.borderWidth = width
-        nameTextField.layer.addSublayer(border)
+        textField.setBorder(border: border, color: UIColor.borderColor.cgColor)
     }
 }
+
+
