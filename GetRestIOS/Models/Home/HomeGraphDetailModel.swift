@@ -9,9 +9,10 @@
 import Foundation
 
 struct HomeGraphDetailModel : Codable {
+    let portfolioIdx: String?
     let portfolioTitle : String?
-    let portfolioDuration : String?
-    let portfolioHashTags : [String]?
+    let portfolioStartDate : String?
+    let portfolioExpireDate: String?
     
 //    enum CodingKeys: String, CodingKey {
 //        case userIdx = "userIdx"
@@ -25,10 +26,11 @@ struct HomeGraphDetailModel : Codable {
 //        portfolioDuration = try values.decodeIfPresent(String.self, forKey: .portfolioDuration)
 //        portfolioHashTags = try values.decodeIfPresent(String.self, forKey: .portfolioHashTags)
 //    }
-    init(_ title: String, _ duration: String, _ hashTag: [String] = []){
+    init(_ idx: String, _ title: String, _ startDate: String, _ endDate: String){
+        self.portfolioIdx = idx
         self.portfolioTitle = title
-        self.portfolioDuration = duration
-        self.portfolioHashTags = hashTag
+        self.portfolioStartDate = startDate
+        self.portfolioExpireDate = endDate
     }
     
 }

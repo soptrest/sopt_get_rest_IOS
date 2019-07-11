@@ -20,7 +20,10 @@
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
 		4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */; };
-		C51EAD5B22CF49E100C836A7 /* bubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51EAD5A22CF49E100C836A7 /* bubbleTransition.swift */; };
+		C568D17822D68C2400C5E1F3 /* MyPageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */; };
+		C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */; };
+		C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */; };
+		C568D18022D6A2AF00C5E1F3 /* MyPageRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17F22D6A2AF00C5E1F3 /* MyPageRuleViewController.swift */; };
 		C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */; };
 		C56EE51122CD063F0062F072 /* HashTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */; };
 		C56EE51322CD204B0062F072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51222CD204B0062F072 /* Assets.xcassets */; };
@@ -42,6 +45,15 @@
 		C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */; };
 		C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */; };
 		C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */; };
+		C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */; };
+		C5FD1B9122D76C650044ECAF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9022D76C650044ECAF /* NetworkResult.swift */; };
+		C5FD1B9322D76C890044ECAF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9222D76C890044ECAF /* APIConstants.swift */; };
+		C5FD1B9522D76E2E0044ECAF /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9422D76E2E0044ECAF /* ResponseArray.swift */; };
+		C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9622D76E530044ECAF /* DefaultRes.swift */; };
+		C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */; };
+		C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */; };
+		C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */; };
+		C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1BA322D787630044ECAF /* ResponseResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +73,10 @@
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
-		C51EAD5A22CF49E100C836A7 /* bubbleTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bubbleTransition.swift; sourceTree = "<group>"; };
+		C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainViewController.swift; sourceTree = "<group>"; };
+		C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
+		C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageTheEndViewController.swift; path = GetRestIOS/Controllers/Home/MyPageTheEndViewController.swift; sourceTree = SOURCE_ROOT; };
+		C568D17F22D6A2AF00C5E1F3 /* MyPageRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRuleViewController.swift; sourceTree = "<group>"; };
 		C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		C56EE51222CD204B0062F072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,12 +92,21 @@
 		C5D6DE9822CE0A9700A7EB0E /* PortfolioDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PortfolioDetailModel.swift; path = GetRestIOS/Storyboards/PortfolioDetailModel.swift; sourceTree = SOURCE_ROOT; };
 		C5D6DE9C22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailTableViewCell.swift; sourceTree = "<group>"; };
 		C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGraphDetailTableViewCell.swift; sourceTree = "<group>"; };
-		C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeGraphDetailModel.swift; path = GetRestIOS/Storyboards/HomeGraphDetailModel.swift; sourceTree = SOURCE_ROOT; };
+		C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeGraphDetailModel.swift; path = GetRestIOS/Models/Home/HomeGraphDetailModel.swift; sourceTree = SOURCE_ROOT; };
 		C5DC86D322CBF8D4000C247F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C5DD751022D61B5500402FF8 /* MyResumeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeDetailModel.swift; sourceTree = "<group>"; };
 		C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeListModel.swift; sourceTree = "<group>"; };
 		C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeTableViewCell.swift; sourceTree = "<group>"; };
 		C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeDetailTVC.swift; sourceTree = "<group>"; };
+		C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageChangePwViewController.swift; path = GetRestIOS/Controllers/Home/MyPageChangePwViewController.swift; sourceTree = SOURCE_ROOT; };
+		C5FD1B9022D76C650044ECAF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		C5FD1B9222D76C890044ECAF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		C5FD1B9422D76E2E0044ECAF /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
+		C5FD1B9622D76E530044ECAF /* DefaultRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRes.swift; sourceTree = "<group>"; };
+		C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainService.swift; sourceTree = "<group>"; };
+		C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGraphModel.swift; sourceTree = "<group>"; };
+		C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableService.swift; sourceTree = "<group>"; };
+		C5FD1BA322D787630044ECAF /* ResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -166,7 +190,6 @@
 			children = (
 				C5ACDCA522C8DC5600837653 /* UIView+Extensions.swift */,
 				C5ACDCA322C8D73900837653 /* UIColor+Extensions.swift */,
-				C51EAD5A22CF49E100C836A7 /* bubbleTransition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +197,7 @@
 		4BB47F0922C6193000930582 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				C5FD1B9822D76EB30044ECAF /* HomeService */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -181,8 +205,9 @@
 		4BB47F0A22C6193A00930582 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C5FD1B8F22D76C3B0044ECAF /* Network */,
+				C568D17622D68BA100C5E1F3 /* Home */,
 				C5DD750F22D61B4500402FF8 /* myResume */,
-				C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */,
 				C5D6DE9822CE0A9700A7EB0E /* PortfolioDetailModel.swift */,
 				4B67C17F22D1D9C900B9F546 /* PortfolioModel.swift */,
 			);
@@ -192,8 +217,8 @@
 		4BB47F0B22C6194400930582 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C568D17522D68B8C00C5E1F3 /* Home */,
 				C5DD751422D61C0900402FF8 /* myResume */,
-				C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */,
 				C5DC86D322CBF8D4000C247F /* CardView.swift */,
 				C5D6DE9C22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift */,
 				C56EE50F22CCE5F50062F072 /* HashTagView */,
@@ -208,8 +233,8 @@
 		4BB47F0C22C6194A00930582 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C568D17422D68B7B00C5E1F3 /* Home */,
 				C5C6279B22D37C7A0045298D /* MyResume */,
-				C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */,
 				C5D6DE9622CE021800A7EB0E /* PortfolioDetailViewController.swift */,
 				4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */,
 				4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */,
@@ -226,6 +251,36 @@
 				48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C568D17422D68B7B00C5E1F3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */,
+				C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */,
+				C5ACDCA722C8E04900837653 /* MainHomeViewController.swift */,
+				C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */,
+				C568D17F22D6A2AF00C5E1F3 /* MyPageRuleViewController.swift */,
+				C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C568D17522D68B8C00C5E1F3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C5DC86CB22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C568D17622D68BA100C5E1F3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */,
+				C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		C56EE50F22CCE5F50062F072 /* HashTagView */ = {
@@ -261,6 +316,27 @@
 				C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */,
 			);
 			path = myResume;
+			sourceTree = "<group>";
+		};
+		C5FD1B8F22D76C3B0044ECAF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C5FD1B9022D76C650044ECAF /* NetworkResult.swift */,
+				C5FD1B9222D76C890044ECAF /* APIConstants.swift */,
+				C5FD1B9422D76E2E0044ECAF /* ResponseArray.swift */,
+				C5FD1B9622D76E530044ECAF /* DefaultRes.swift */,
+				C5FD1BA322D787630044ECAF /* ResponseResult.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C5FD1B9822D76EB30044ECAF /* HomeService */ = {
+			isa = PBXGroup;
+			children = (
+				C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */,
+				C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */,
+			);
+			path = HomeService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,11 +461,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C568D17822D68C2400C5E1F3 /* MyPageMainViewController.swift in Sources */,
 				C5D6DE9922CE0A9700A7EB0E /* PortfolioDetailModel.swift in Sources */,
 				C5D6DE9D22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift in Sources */,
+				C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */,
+				C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */,
 				C5C6279D22D37CD20045298D /* MyResumeListViewController.swift in Sources */,
 				C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */,
-				C51EAD5B22CF49E100C836A7 /* bubbleTransition.swift in Sources */,
 				4B63B05222CFFFF7005F52D7 /* PortfolioDetailVC1.swift in Sources */,
 				4B63B05B22D02E58005F52D7 /* ChipCollectionViewCell.swift in Sources */,
 				4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */,
@@ -397,16 +475,26 @@
 				C5DD751122D61B5500402FF8 /* MyResumeDetailModel.swift in Sources */,
 				4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */,
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
+				C568D18022D6A2AF00C5E1F3 /* MyPageRuleViewController.swift in Sources */,
 				C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */,
+				C5FD1B9522D76E2E0044ECAF /* ResponseArray.swift in Sources */,
+				C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */,
 				C5D6DE9722CE021800A7EB0E /* PortfolioDetailViewController.swift in Sources */,
 				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
+				C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
+				C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */,
+				C5FD1B9122D76C650044ECAF /* NetworkResult.swift in Sources */,
 				C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */,
+				C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */,
 				C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */,
+				C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */,
+				C5FD1B9322D76C890044ECAF /* APIConstants.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
+				C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */,
 				4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */,
 				4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */,
 			);

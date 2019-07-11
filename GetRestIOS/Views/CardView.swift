@@ -29,13 +29,4 @@ class CardView: UIView {
         layer.shadowOpacity = shadowOpacity
         layer.shadowPath = shadowPath.cgPath
     }
-    
-    @IBAction func goPortfolioPageAction(_ sender: UIButton) {
-        layer.backgroundColor = UIColor.mainGreen.cgColor
-//        let bubble: BubbleTransition = BubbleTransition()
-//        bubble.startingPoint = sender.center
-//        bubble.transitionMode = TransitionMode.Present
-//        bubble.bubbleColor = UIColor.mainGreen
-        
-    }
 }

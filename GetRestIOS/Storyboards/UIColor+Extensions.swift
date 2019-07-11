@@ -63,12 +63,11 @@ extension UIColor {
         return UIColor(red: 130.0/255.0, green: 191.0/255.0, blue: 89.0/255.0, alpha: 1.0)
     }
     
+    @nonobjc class var borderColor: UIColor {
+        return UIColor(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1.0)
+    }
     
-    
-
-    
-    
-    
-    
-    
+    @nonobjc class var buttonInactiveColor: UIColor {
+        return UIColor(red: 195.0/255.0, green: 195.0/255.0, blue: 195.0/255.0, alpha: 1.0)
+    }
 }
