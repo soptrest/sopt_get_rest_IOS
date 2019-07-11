@@ -1,4 +1,4 @@
-
+xcschememanagement.plist
 # Created by https://www.gitignore.io/api/swift
 # Edit at https://www.gitignore.io/?templates=swift
 
@@ -51,7 +51,7 @@ playground.xcworkspace
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 # Pods/
 # Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+ *.xcworkspace
 
 # Carthage
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
