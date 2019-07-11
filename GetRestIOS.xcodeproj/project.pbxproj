@@ -29,11 +29,14 @@
 		4B67C19D22D5183700B9F546 /* SelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67C19C22D5183700B9F546 /* SelectVC.swift */; };
 		4B67C19F22D518A900B9F546 /* SelectTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67C19E22D518A900B9F546 /* SelectTVC.swift */; };
 		4B67C1A122D518C500B9F546 /* SelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67C1A022D518C500B9F546 /* SelectCell.swift */; };
-		4B67C1A322D518D000B9F546 /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67C1A222D518D000B9F546 /* AddCell.swift */; };
 		4B67C1A522D5199000B9F546 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67C1A422D5199000B9F546 /* QuestionCell.swift */; };
 		4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EEE22C614E300930582 /* AppDelegate.swift */; };
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
+		4BC0DD6A22D6672600517324 /* PortfolioSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC0DD6922D6672600517324 /* PortfolioSelectVC.swift */; };
+		4BC0DD6C22D6697500517324 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC0DD6B22D6697500517324 /* PopUp.storyboard */; };
+		4BC0DD7022D694E300517324 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC0DD6F22D694E300517324 /* CategoryCell.swift */; };
+		4BC0DD7222D6953100517324 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC0DD7122D6953100517324 /* CategoryVC.swift */; };
 		4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */; };
 		C51EAD5B22CF49E100C836A7 /* bubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51EAD5A22CF49E100C836A7 /* bubbleTransition.swift */; };
 		C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */; };
@@ -78,13 +81,16 @@
 		4B67C19C22D5183700B9F546 /* SelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectVC.swift; sourceTree = "<group>"; };
 		4B67C19E22D518A900B9F546 /* SelectTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTVC.swift; sourceTree = "<group>"; };
 		4B67C1A022D518C500B9F546 /* SelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCell.swift; sourceTree = "<group>"; };
-		4B67C1A222D518D000B9F546 /* AddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCell.swift; sourceTree = "<group>"; };
 		4B67C1A422D5199000B9F546 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		4BB47EEB22C614E300930582 /* GetRestIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRestIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB47EEE22C614E300930582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB47EF322C614E300930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BC0DD6922D6672600517324 /* PortfolioSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSelectVC.swift; sourceTree = "<group>"; };
+		4BC0DD6B22D6697500517324 /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
+		4BC0DD6F22D694E300517324 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		4BC0DD7122D6953100517324 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		C51EAD5A22CF49E100C836A7 /* bubbleTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bubbleTransition.swift; sourceTree = "<group>"; };
 		C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 				4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */,
 				4B63B05122CFFFF7005F52D7 /* PortfolioDetailVC1.swift */,
 				4B63B05322D011A1005F52D7 /* PortfolioDetailVC2.swift */,
+				4BC0DD6F22D694E300517324 /* CategoryCell.swift */,
+				4BC0DD7122D6953100517324 /* CategoryVC.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -177,7 +185,7 @@
 				4B67C19E22D518A900B9F546 /* SelectTVC.swift */,
 				4B67C1A422D5199000B9F546 /* QuestionCell.swift */,
 				4B67C1A022D518C500B9F546 /* SelectCell.swift */,
-				4B67C1A222D518D000B9F546 /* AddCell.swift */,
+				4BC0DD6922D6672600517324 /* PortfolioSelectVC.swift */,
 			);
 			path = Select;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				4BB47EF722C614E400930582 /* LaunchScreen.storyboard */,
 				C5ACDC9722C89B4300837653 /* Home.storyboard */,
 				C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */,
+				4BC0DD6B22D6697500517324 /* PopUp.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -377,6 +386,7 @@
 				C56EE51122CD063F0062F072 /* HashTagCollectionViewCell.xib in Resources */,
 				C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */,
 				C56EE51322CD204B0062F072 /* Assets.xcassets in Resources */,
+				4BC0DD6C22D6697500517324 /* PopUp.storyboard in Resources */,
 				C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */,
 				4B63B05C22D02E58005F52D7 /* ChipCollectionViewCell.xib in Resources */,
 			);
@@ -458,7 +468,6 @@
 				4B67C1A522D5199000B9F546 /* QuestionCell.swift in Sources */,
 				4B63B05B22D02E58005F52D7 /* ChipCollectionViewCell.swift in Sources */,
 				4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */,
-				4B67C1A322D518D000B9F546 /* AddCell.swift in Sources */,
 				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
 				4B67C19922D4E1D800B9F546 /* SearchVC.swift in Sources */,
 				4B67C1A122D518C500B9F546 /* SelectCell.swift in Sources */,
@@ -473,10 +482,13 @@
 				4B67C18F22D41C7400B9F546 /* NotificationNameExtension.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				4B67C18D22D4055300B9F546 /* DatePickerVC.swift in Sources */,
+				4BC0DD7022D694E300517324 /* CategoryCell.swift in Sources */,
 				4B67C19F22D518A900B9F546 /* SelectTVC.swift in Sources */,
 				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
+				4BC0DD6A22D6672600517324 /* PortfolioSelectVC.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */,
+				4BC0DD7222D6953100517324 /* CategoryVC.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
 				4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */,
 				4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */,

@@ -11,4 +11,5 @@ import Foundation
 extension Notification.Name {
     static let RecruitDate = Notification.Name(rawValue: "RecruitDate")
     static let PortfolioDate = Notification.Name(rawValue: "PortfolioDate")
+    static let CategoryData = Notification.Name(rawValue: "CategoryData")
 }

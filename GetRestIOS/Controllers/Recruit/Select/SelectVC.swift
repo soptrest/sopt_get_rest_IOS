@@ -27,6 +27,12 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //        askTV.register(QuestionCell.self, forCellReuseIdentifier: "QuestionCell")
         print("뷰로드")
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if let index = askTV.indexPathForSelectedRow {
+            askTV.deselectRow(at: index, animated: true)
+        }
+    }
     
     
     private func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
@@ -51,11 +57,6 @@ class SelectVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.askLabel.text = q[indexPath.row]
         cell.askNum.text = "문항\(indexPath.row+1)"
         cell.askNum.sizeToFit()
-        
-        cell.selectTV.frame.size.height = CGFloat(1000)
-        
-//        cell.selectTV.frame.size.height = CGFloat((118+20)*cell.data.count)
-//        cell.askLabel.sizeToFit()
         print("여기3")
         return cell
     }

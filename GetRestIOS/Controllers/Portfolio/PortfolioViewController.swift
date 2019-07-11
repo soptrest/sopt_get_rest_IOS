@@ -82,7 +82,7 @@ class PortfolioViewController:  ButtonBarPagerTabStripViewController {
     
     @IBAction func addBtn(_ sender: Any) {
         
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "AddPortfolio") as? AddPortfolioViewController
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "AddPortfolioViewController") as? AddPortfolioViewController
             else {
                 return
         }

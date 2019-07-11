@@ -20,26 +20,12 @@ class QuestionCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate 
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        selectTV.frame.size.height = CGFloat((118+20)*data.count)
+//        selectTV.frame.size.height = CGFloat((118+20)*data.count)
         selectTV.delegate = self
         selectTV.dataSource = self
         
         // Initialization code
     }
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style , reuseIdentifier: reuseIdentifier)
-//        self.selectTV.delegate = self
-//        self.selectTV.dataSource = self
-//        self.selectTV.rowHeight = UITableView.automaticDimension
-//    }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//        self.selectTV.delegate = self
-//        self.selectTV.dataSource = self
-//        self.selectTV.rowHeight = UITableView.automaticDimension
-//    }
-    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -48,20 +34,14 @@ class QuestionCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        print(data[indexPath.row])
-//        print(indexPath.row)
-//        print(data.count)
         
         let cell = selectTV.dequeueReusableCell(withIdentifier: "SelectCell") as! SelectCell
         
         if indexPath.row == data.count  {
             print("외부?")
             
-            cell.pfImg.backgroundColor = .gray
+            cell.pfImg.backgroundColor = .lightGray
             cell.pfImg.roundCorners(corners: .allCorners, radius: 5)
-//            cell.pfImg.setBorder(borderColor: .black, borderWidth: 0.5)
-//            cell.pfImg.clipsToBounds = true
-//            cell.pfImg.layer.masksToBounds = true
             cell.addBtn.setImage(UIImage(named: "icAddPortfolio"), for: .normal)
             cell.pfDate.text = ""
             cell.pfTitle.text = ""
