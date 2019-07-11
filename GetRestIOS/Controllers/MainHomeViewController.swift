@@ -9,15 +9,16 @@
 import UIKit 
 import ScrollableGraphView
 
+
 class MainHomeViewController: UIViewController {
     var barPlotData: [Double] = [ 7, 4, 7, 6, 3, 7, 3, 4, 3, 2, 7, 4]
     var xAxisLabels: [String] = ["1" ,"2","3", "4", "1" ,"2","3", "4", "1" ,"2","3", "4",]
     var graphDetailList : [HomeGraphDetailModel] = [
-        HomeGraphDetailModel("솝트", "2019.03 ~ 2019.07"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12")
+//        HomeGraphDetailModel("솝트", "2019.03 ~ 2019.07"),
+//        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
+//        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
+//        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
+//        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12")
     ]
     
     @IBOutlet weak var scrollView: UIScrollView!
