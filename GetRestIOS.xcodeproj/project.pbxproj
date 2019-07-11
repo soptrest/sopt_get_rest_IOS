@@ -46,6 +46,14 @@
 		C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */; };
 		C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */; };
 		C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */; };
+		C5FD1B9122D76C650044ECAF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9022D76C650044ECAF /* NetworkResult.swift */; };
+		C5FD1B9322D76C890044ECAF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9222D76C890044ECAF /* APIConstants.swift */; };
+		C5FD1B9522D76E2E0044ECAF /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9422D76E2E0044ECAF /* ResponseArray.swift */; };
+		C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9622D76E530044ECAF /* DefaultRes.swift */; };
+		C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */; };
+		C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */; };
+		C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */; };
+		C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1BA322D787630044ECAF /* ResponseResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +99,14 @@
 		C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeTableViewCell.swift; sourceTree = "<group>"; };
 		C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeDetailTVC.swift; sourceTree = "<group>"; };
 		C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageChangePwViewController.swift; path = GetRestIOS/Controllers/Home/MyPageChangePwViewController.swift; sourceTree = SOURCE_ROOT; };
+		C5FD1B9022D76C650044ECAF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		C5FD1B9222D76C890044ECAF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		C5FD1B9422D76E2E0044ECAF /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
+		C5FD1B9622D76E530044ECAF /* DefaultRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRes.swift; sourceTree = "<group>"; };
+		C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainService.swift; sourceTree = "<group>"; };
+		C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGraphModel.swift; sourceTree = "<group>"; };
+		C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableService.swift; sourceTree = "<group>"; };
+		C5FD1BA322D787630044ECAF /* ResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,6 +197,7 @@
 		4BB47F0922C6193000930582 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				C5FD1B9822D76EB30044ECAF /* HomeService */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -188,6 +205,7 @@
 		4BB47F0A22C6193A00930582 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C5FD1B8F22D76C3B0044ECAF /* Network */,
 				C568D17622D68BA100C5E1F3 /* Home */,
 				C5DD750F22D61B4500402FF8 /* myResume */,
 				C5D6DE9822CE0A9700A7EB0E /* PortfolioDetailModel.swift */,
@@ -260,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				C5DC86D122CBDC4B000C247F /* HomeGraphDetailModel.swift */,
+				C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -297,6 +316,27 @@
 				C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */,
 			);
 			path = myResume;
+			sourceTree = "<group>";
+		};
+		C5FD1B8F22D76C3B0044ECAF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C5FD1B9022D76C650044ECAF /* NetworkResult.swift */,
+				C5FD1B9222D76C890044ECAF /* APIConstants.swift */,
+				C5FD1B9422D76E2E0044ECAF /* ResponseArray.swift */,
+				C5FD1B9622D76E530044ECAF /* DefaultRes.swift */,
+				C5FD1BA322D787630044ECAF /* ResponseResult.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C5FD1B9822D76EB30044ECAF /* HomeService */ = {
+			isa = PBXGroup;
+			children = (
+				C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */,
+				C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */,
+			);
+			path = HomeService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,16 +477,24 @@
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
 				C568D18022D6A2AF00C5E1F3 /* MyPageRuleViewController.swift in Sources */,
 				C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */,
+				C5FD1B9522D76E2E0044ECAF /* ResponseArray.swift in Sources */,
+				C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */,
 				C5D6DE9722CE021800A7EB0E /* PortfolioDetailViewController.swift in Sources */,
 				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
+				C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
 				C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */,
+				C5FD1B9122D76C650044ECAF /* NetworkResult.swift in Sources */,
 				C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */,
+				C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */,
 				C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */,
+				C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */,
+				C5FD1B9322D76C890044ECAF /* APIConstants.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
+				C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */,
 				4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */,
 				4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */,
 			);

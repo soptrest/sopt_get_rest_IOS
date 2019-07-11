@@ -13,12 +13,14 @@ class MainHomeViewController: UIViewController {
     var barPlotData: [Double] = [ 7, 4, 7, 6, 3, 7, 3, 4, 3, 2, 7, 4]
     var xAxisLabels: [String] = ["1" ,"2","3", "4", "1" ,"2","3", "4", "1" ,"2","3", "4",]
     var graphDetailList : [HomeGraphDetailModel] = [
-        HomeGraphDetailModel("솝트", "2019.03 ~ 2019.07"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12"),
-        HomeGraphDetailModel("매디", "2018.01 ~ 2019.12")
+        HomeGraphDetailModel("솝트", "2019.03", "2019.07"),
+        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
+        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
+        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
+        HomeGraphDetailModel("매디", "2018.01", "2019.12")
     ]
+    var homeGraphData: [HomeGraphModel] = []
+    let jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjozMSwidXNlckVtYWlsIjoiMDcxMUBuYXZlci5jb20iLCJpYXQiOjE1NjI4MzA4ODgsImV4cCI6MTU2MjkxNzI4OCwiaXNzIjoic2FuZ3l1bkxFRSJ9.xWjmBLrADRLggowhsa-dvfneuEnGLjdaUTl5bga9TYM"
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var topSideView: UIImageView!
@@ -38,10 +40,12 @@ class MainHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("homeGraphData  :  " , homeGraphData)
         view.backgroundColor = UIColor.mainBackgroudGray
         setTableView()
         setTopSideView()
-        setGraph(containerView: graphView)
+        getGraphData()
+//        setGraph(containerView: graphView)
         graphDetailTableView.reloadData()
         let attributedString = NSMutableAttributedString()
             .bold(username, fontSize: 23)
@@ -81,15 +85,50 @@ class MainHomeViewController: UIViewController {
         topSideView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 28)
         topSideLabel.numberOfLines = 0
     }
+    
+    func getGrapghDetailTable(){
+        
+    }
+    
+    func getGraphData() {
+        HomeMainService.shared.getGraphData(authorization: jwt) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            switch data {
+            case .success(let res):
+                self.homeGraphData = res as! [HomeGraphModel]
+                self.setGraph(containerView: self.graphView)
+                break
+            case .requestErr(let err):
+                print(".requestErr(\(err))")
+                break
+            case .pathErr:
+                // 대체로 경로를 잘못 쓴 경우입니다.
+                // 오타를 확인해보세요.
+                print("경로 에러")
+                break
+            case .serverErr:
+                // 서버의 문제인 경우입니다.
+                // 여기에서 동작할 행동을 정의해주시면 됩니다.
+                print("서버 에러")
+                break
+            case .networkFail:
+//                self.simpleAlert(title: "통신 실패", message: "네트워크 상태를 확인하세요.")
+                break
+            }
+        }
+    }
 }
 
 extension MainHomeViewController : ScrollableGraphViewDataSource {
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        return barPlotData[pointIndex]
+        return Double(homeGraphData[pointIndex].count!)
     }
     
     func label(atIndex pointIndex: Int) -> String {
-        return xAxisLabels[pointIndex]
+        return homeGraphData[pointIndex].date!
     }
     
     func numberOfPoints() -> Int {
@@ -97,7 +136,6 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
     }
     
     func setGraph(containerView: UIView)  {
-        drawReferenceLine(containerView)
         let frame : CGRect = CGRect(x: 0,
                                     y: 0,
                                     width: self.graphView.frame.width,
@@ -139,10 +177,8 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         
         containerView.addSubview(barGraphView)
     }
-    
-    func drawReferenceLine(_ containerView: UIView){
-    }
 }
+
 
 extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -166,7 +202,6 @@ extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.pushViewController(dvc, animated: true)
         
     }
-    
 }
 
 extension NSMutableAttributedString {
@@ -190,5 +225,6 @@ extension NSMutableAttributedString {
         return self
     }
 }
+
 
 

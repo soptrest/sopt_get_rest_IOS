@@ -176,7 +176,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yGJ-BC-vBl">
-                                    <rect key="frame" x="16" y="21" width="343" height="163"/>
+                                    <rect key="frame" x="16" y="21" width="343" height="161"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <attributedString key="attributedText">
                                         <fragment>
@@ -191,14 +191,14 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlI-LZ-Dq0">
-                                    <rect key="frame" x="16" y="206" width="343" height="1"/>
+                                    <rect key="frame" x="16" y="204" width="343" height="1"/>
                                     <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="hcf-HF-iD5"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공백포함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlC-dT-s0N">
-                                    <rect key="frame" x="226" y="222" width="42" height="14.5"/>
+                                    <rect key="frame" x="226" y="220" width="42" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="42" id="hpm-Vu-n58"/>
                                     </constraints>
@@ -207,7 +207,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600자/1784자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sl6-ih-gfO">
-                                    <rect key="frame" x="279" y="222" width="80" height="16"/>
+                                    <rect key="frame" x="279" y="220" width="80" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="FqO-rF-C4K"/>
                                     </constraints>
@@ -215,15 +215,15 @@
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdZ-Me-emy">
-                                    <rect key="frame" x="335" y="242" width="24" height="22"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdZ-Me-emy">
+                                    <rect key="frame" x="335" y="240" width="24" height="24"/>
                                     <state key="normal" image="btnResumeRightActive"/>
                                     <connections>
                                         <action selector="rightButtonAction:" destination="vVP-z4-v8P" eventType="touchUpInside" id="YLM-Yg-zof"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQm-0V-RRr">
-                                    <rect key="frame" x="295" y="242" width="24" height="22"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQm-0V-RRr">
+                                    <rect key="frame" x="295" y="240" width="24" height="24"/>
                                     <state key="normal" image="btnResumeLeft"/>
                                     <connections>
                                         <action selector="leftButtonAction:" destination="vVP-z4-v8P" eventType="touchUpInside" id="CRE-f7-QCk"/>
@@ -250,6 +250,7 @@
                                 <constraint firstAttribute="trailing" secondItem="HdZ-Me-emy" secondAttribute="trailing" constant="16" id="maC-9k-rRt"/>
                                 <constraint firstAttribute="trailing" secondItem="nlI-LZ-Dq0" secondAttribute="trailing" constant="16" id="mfv-mG-EzA"/>
                                 <constraint firstItem="gQm-0V-RRr" firstAttribute="leading" secondItem="xyI-ML-RKg" secondAttribute="leading" constant="295" id="sOR-on-hU4"/>
+                                <constraint firstItem="gQm-0V-RRr" firstAttribute="top" secondItem="hlC-dT-s0N" secondAttribute="bottom" constant="5.5" id="tsb-c5-f5b"/>
                             </constraints>
                         </view>
                         <sections>
@@ -312,21 +313,21 @@
                                                         <constraint firstItem="Q0f-5s-zmS" firstAttribute="top" secondItem="dJB-eI-H3u" secondAttribute="top" constant="6" id="d5y-eE-LbL"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LK0-Ti-zoE">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LK0-Ti-zoE">
                                                     <rect key="frame" x="253" y="148.5" width="24" height="24"/>
                                                     <state key="normal" image="btnResumeLeft"/>
                                                     <connections>
                                                         <action selector="leftButtonAction:" destination="vVP-z4-v8P" eventType="touchUpInside" id="RzZ-3S-fg4"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5Z-ED-bkd">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5Z-ED-bkd">
                                                     <rect key="frame" x="321" y="148.5" width="24" height="24"/>
                                                     <state key="normal" image="btnResumeRightActive"/>
                                                     <connections>
                                                         <action selector="rightButtonAction:" destination="vVP-z4-v8P" eventType="touchUpInside" id="6er-vk-7mX"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="833-uM-61r">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="833-uM-61r">
                                                     <rect key="frame" x="281" y="153.5" width="36" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="36" id="9kL-es-w7f"/>

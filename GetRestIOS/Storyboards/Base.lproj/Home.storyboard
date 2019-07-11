@@ -539,46 +539,7 @@
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name="AppleSDGothicNeo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="28">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="56">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="84">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="112">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="140">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="168">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="196">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="224">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="252">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="280">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="308">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="336">
-                                                        <options/>
-                                                    </textTab>
-                                                </tabStops>
-                                            </paragraphStyle>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1484,13 +1445,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9rk-No-2p1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1820"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rk-No-2p1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lbe-yb-lvq">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbe-yb-lvq">
                                         <rect key="frame" x="16" y="20" width="343" height="1804"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">개인정보처리방침
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1804" id="f79-VX-rRI"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">개인정보처리방침
 1. 개인정보의 처리 목적 (‘https://starrryni8ht.wixsite.com/getrest’이하 ‘쉬자’) 은(는) 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.
 - 고객 가입의사 확인, 고객에 대한 서비스 제공에 따른 본인 식별.인증, 회원자격 유지.관리, 물품 또는 서비스 공급에 따른 금액 결제, 물품 또는 서비스의 공급.배송 등  
 
@@ -1551,7 +1517,11 @@
   1. 개인정보의 암호화
 이용자의 개인정보는 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.
 </string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -1561,6 +1531,9 @@
                                     <constraint firstAttribute="bottom" secondItem="lbe-yb-lvq" secondAttribute="bottom" constant="-4" id="FDW-DS-Pup"/>
                                     <constraint firstItem="lbe-yb-lvq" firstAttribute="top" secondItem="9rk-No-2p1" secondAttribute="top" constant="20" id="JD0-Dm-8Q3"/>
                                     <constraint firstAttribute="trailing" secondItem="lbe-yb-lvq" secondAttribute="trailing" constant="16" id="SPt-pK-C7y"/>
+                                    <constraint firstAttribute="height" constant="603" id="ant-I4-J4L"/>
+                                    <constraint firstAttribute="width" constant="375" id="nvh-2z-tqR"/>
+                                    <constraint firstItem="lbe-yb-lvq" firstAttribute="width" secondItem="9rk-No-2p1" secondAttribute="height" multiplier="343:603" id="odl-pQ-eMp"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -1574,6 +1547,9 @@
                         <viewLayoutGuide key="safeArea" id="u0b-WR-t3e"/>
                     </view>
                     <navigationItem key="navigationItem" id="lOJ-b6-VZo"/>
+                    <connections>
+                        <outlet property="textView" destination="lbe-yb-lvq" id="jZz-ig-9iX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a81-nu-ZXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
