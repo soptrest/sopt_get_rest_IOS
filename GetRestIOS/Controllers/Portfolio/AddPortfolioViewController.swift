@@ -3,7 +3,7 @@
 //  GetRestIOS
 //
 //  Created by 최리안 on 06/07/2019.
-//  Copyright © 2019 최리안. All rights reserved.
+//  Copyright © 2019 최리안. All rights reserved. ㄴㄴ
 //
 
 import UIKit
