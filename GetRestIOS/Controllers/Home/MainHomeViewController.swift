@@ -12,13 +12,13 @@ import ScrollableGraphView
 class MainHomeViewController: UIViewController {
     var barPlotData: [Double] = [ 7, 4, 7, 6, 3, 7, 3, 4, 3, 2, 7, 4]
     var xAxisLabels: [String] = ["1" ,"2","3", "4", "1" ,"2","3", "4", "1" ,"2","3", "4",]
-    var graphDetailList : [HomeGraphDetailModel] = [
-        HomeGraphDetailModel("솝트", "2019.03", "2019.07"),
-        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
-        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
-        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
-        HomeGraphDetailModel("매디", "2018.01", "2019.12")
-    ]
+    var graphDetailList : [HomeGraphDetailModel] = []
+//        HomeGraphDetailModel("솝트", "2019.03", "2019.07"),
+//        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
+//        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
+//        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
+//        HomeGraphDetailModel("매디", "2018.01", "2019.12")
+//    ]
     var homeGraphData: [HomeGraphModel] = []
     let jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjozMSwidXNlckVtYWlsIjoiMDcxMUBuYXZlci5jb20iLCJpYXQiOjE1NjI4MzA4ODgsImV4cCI6MTU2MjkxNzI4OCwiaXNzIjoic2FuZ3l1bkxFRSJ9.xWjmBLrADRLggowhsa-dvfneuEnGLjdaUTl5bga9TYM"
     
@@ -192,8 +192,8 @@ extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "graphDetailTableViewCell") as! HomeGraphDetailTableViewCell
         cell.contentView.backgroundColor = UIColor.white
-        cell.portfolioTitle?.text = graphDetailList[indexPath.row].portfolioTitle!
-        cell.portfolioDuration?.text = graphDetailList[indexPath.row].portfolioDuration!
+//        cell.portfolioTitle?.text = graphDetailList[indexPath.row].portfolioTitle!
+//        cell.portfolioDuration?.text = graphDetailList[indexPath.row].portfolioDuration!
         return cell
     }
     

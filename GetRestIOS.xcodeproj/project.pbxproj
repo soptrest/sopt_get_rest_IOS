@@ -27,6 +27,8 @@
 		C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */; };
 		C56EE51122CD063F0062F072 /* HashTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */; };
 		C56EE51322CD204B0062F072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51222CD204B0062F072 /* Assets.xcassets */; };
+		C598B3E522D7CCA2009D2D13 /* SignInUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C598B3E422D7CCA2009D2D13 /* SignInUp.storyboard */; };
+		C598B3E722D7CD5B009D2D13 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3E622D7CD5B009D2D13 /* SignInViewController.swift */; };
 		C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9722C89B4300837653 /* Home.storyboard */; };
 		C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */; };
 		C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */; };
@@ -45,6 +47,7 @@
 		C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */; };
 		C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */; };
 		C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */; };
+		C5F90ACF22D7948300C360B4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F90ACE22D7948300C360B4 /* SignUpViewController.swift */; };
 		C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */; };
 		C5FD1B9122D76C650044ECAF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9022D76C650044ECAF /* NetworkResult.swift */; };
 		C5FD1B9322D76C890044ECAF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9222D76C890044ECAF /* APIConstants.swift */; };
@@ -80,6 +83,8 @@
 		C56EE50B22CCE5540062F072 /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		C56EE51022CD063F0062F072 /* HashTagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		C56EE51222CD204B0062F072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C598B3E422D7CCA2009D2D13 /* SignInUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInUp.storyboard; sourceTree = "<group>"; };
+		C598B3E622D7CD5B009D2D13 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C5ACDC9822C89B4300837653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
 		C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyResume.storyboard; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 		C5DD751222D61B6700402FF8 /* MyResumeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeListModel.swift; sourceTree = "<group>"; };
 		C5DD751522D61C7400402FF8 /* MyResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeTableViewCell.swift; sourceTree = "<group>"; };
 		C5DD751722D622EA00402FF8 /* myResumeDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myResumeDetailTVC.swift; sourceTree = "<group>"; };
+		C5F90ACE22D7948300C360B4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageChangePwViewController.swift; path = GetRestIOS/Controllers/Home/MyPageChangePwViewController.swift; sourceTree = SOURCE_ROOT; };
 		C5FD1B9022D76C650044ECAF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		C5FD1B9222D76C890044ECAF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 				4BB47EF722C614E400930582 /* LaunchScreen.storyboard */,
 				C5ACDC9722C89B4300837653 /* Home.storyboard */,
 				C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */,
+				C598B3E422D7CCA2009D2D13 /* SignInUp.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 		4BB47F0C22C6194A00930582 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C5F90ACD22D7945F00C360B4 /* SignIn */,
 				C568D17422D68B7B00C5E1F3 /* Home */,
 				C5C6279B22D37C7A0045298D /* MyResume */,
 				C5D6DE9622CE021800A7EB0E /* PortfolioDetailViewController.swift */,
@@ -318,6 +326,15 @@
 			path = myResume;
 			sourceTree = "<group>";
 		};
+		C5F90ACD22D7945F00C360B4 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C5F90ACE22D7948300C360B4 /* SignUpViewController.swift */,
+				C598B3E622D7CD5B009D2D13 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		C5FD1B8F22D76C3B0044ECAF /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C598B3E522D7CCA2009D2D13 /* SignInUp.storyboard in Resources */,
 				C5ACDCA222C8A4F200837653 /* Recruit.storyboard in Resources */,
 				4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */,
 				C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */,
@@ -489,6 +507,7 @@
 				C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */,
+				C598B3E722D7CD5B009D2D13 /* SignInViewController.swift in Sources */,
 				C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */,
 				C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */,
 				C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */,
@@ -497,6 +516,7 @@
 				C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */,
 				4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */,
 				4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */,
+				C5F90ACF22D7948300C360B4 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
