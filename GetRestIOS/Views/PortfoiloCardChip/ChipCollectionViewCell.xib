@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Chip" id="gTV-IL-0wX" customClass="ChipCollectionViewCell" customModule="GetRestIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="167" height="29"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="167" height="29"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0v-hO-Cg3">
+                        <rect key="frame" x="0.0" y="0.0" width="167" height="27"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="UI 디자인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mua-16-l0I">
+                                <rect key="frame" x="59" y="0.0" width="50" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="44x-32-tIT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="Cua-0L-haJ"/>
+                            <constraint firstItem="mua-16-l0I" firstAttribute="centerY" secondItem="S0v-hO-Cg3" secondAttribute="centerY" id="QOq-WH-A5p"/>
+                            <constraint firstItem="mua-16-l0I" firstAttribute="centerX" secondItem="S0v-hO-Cg3" secondAttribute="centerX" id="y7T-VN-K0N"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="S0v-hO-Cg3" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="E6s-OP-e1v"/>
+                <constraint firstItem="S0v-hO-Cg3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Fm3-LF-EP0"/>
+                <constraint firstItem="S0v-hO-Cg3" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="5" id="uuX-1t-4yX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="bIy-yR-lBu"/>
+            <size key="customSize" width="167" height="40"/>
+            <connections>
+                <outlet property="chipLabel" destination="mua-16-l0I" id="geZ-UI-Kct"/>
+                <outlet property="roundChip" destination="S0v-hO-Cg3" id="gd0-zJ-Cei"/>
+            </connections>
+            <point key="canvasLocation" x="64.492753623188406" y="-31.138392857142854"/>
+        </collectionViewCell>
+    </objects>
+</document>

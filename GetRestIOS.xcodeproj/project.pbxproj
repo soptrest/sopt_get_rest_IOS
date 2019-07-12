@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		101C8AB8252B5C2981990F9D /* Pods_GetRestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */; };
+		4B000C3D22D7D35500EB1CA6 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C3C22D7D35500EB1CA6 /* CategoryVC.swift */; };
+		4B000C3F22D7D37100EB1CA6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C3E22D7D37100EB1CA6 /* CategoryCell.swift */; };
+		4B000C4A22D7D49600EB1CA6 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C4522D7D49500EB1CA6 /* SearchVC.swift */; };
+		4B000C4B22D7D49600EB1CA6 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C4622D7D49500EB1CA6 /* DatePickerVC.swift */; };
+		4B000C4C22D7D49600EB1CA6 /* RecruitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C4722D7D49500EB1CA6 /* RecruitListCell.swift */; };
+		4B000C4D22D7D49600EB1CA6 /* RecruitDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C4822D7D49500EB1CA6 /* RecruitDetailVC.swift */; };
+		4B000C4E22D7D49600EB1CA6 /* RecruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C4922D7D49600EB1CA6 /* RecruitViewController.swift */; };
+		4B000C5222D7D49E00EB1CA6 /* RecruitFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C4F22D7D49E00EB1CA6 /* RecruitFilterVC.swift */; };
+		4B000C5322D7D49E00EB1CA6 /* FIlterListCellCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5022D7D49E00EB1CA6 /* FIlterListCellCVC.swift */; };
+		4B000C5A22D7D4B100EB1CA6 /* SelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5522D7D4B100EB1CA6 /* SelectVC.swift */; };
+		4B000C5B22D7D4B100EB1CA6 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5622D7D4B100EB1CA6 /* QuestionCell.swift */; };
+		4B000C5C22D7D4B100EB1CA6 /* SelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5722D7D4B100EB1CA6 /* SelectCell.swift */; };
+		4B000C5D22D7D4B100EB1CA6 /* PortfolioSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5822D7D4B100EB1CA6 /* PortfolioSelectVC.swift */; };
+		4B000C6022D7D4D000EB1CA6 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5F22D7D4D000EB1CA6 /* NotificationNameExtension.swift */; };
+		4B000C6222D7D50A00EB1CA6 /* RecruitListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6122D7D50A00EB1CA6 /* RecruitListModel.swift */; };
+		4B000C6622D81BC000EB1CA6 /* FilterTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6522D81BC000EB1CA6 /* FilterTabBarVC.swift */; };
+		4B000C6A22D8285D00EB1CA6 /* SelectTabBarVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6922D8285D00EB1CA6 /* SelectTabBarVC1.swift */; };
+		4B000C6C22D8286A00EB1CA6 /* SelectTabBarVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6B22D8286A00EB1CA6 /* SelectTabBarVC2.swift */; };
 		4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */; };
 		4B3F935122D08C21004919B1 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */; };
 		4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */; };
@@ -16,6 +34,7 @@
 		4B63B05B22D02E58005F52D7 /* ChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B05922D02E58005F52D7 /* ChipCollectionViewCell.swift */; };
 		4B63B05C22D02E58005F52D7 /* ChipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B63B05A22D02E58005F52D7 /* ChipCollectionViewCell.xib */; };
 		4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67C17F22D1D9C900B9F546 /* PortfolioModel.swift */; };
+		4B72541522D87BE700F0F34C /* DatepickerStartEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72541422D87BE700F0F34C /* DatepickerStartEndVC.swift */; };
 		4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EEE22C614E300930582 /* AppDelegate.swift */; };
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
@@ -62,6 +81,24 @@
 /* Begin PBXFileReference section */
 		00D5413CD194F992CD511BF0 /* Pods-GetRestIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRestIOS.debug.xcconfig"; path = "Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRestIOS.release.xcconfig"; path = "Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS.release.xcconfig"; sourceTree = "<group>"; };
+		4B000C3C22D7D35500EB1CA6 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		4B000C3E22D7D37100EB1CA6 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		4B000C4522D7D49500EB1CA6 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		4B000C4622D7D49500EB1CA6 /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
+		4B000C4722D7D49500EB1CA6 /* RecruitListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitListCell.swift; sourceTree = "<group>"; };
+		4B000C4822D7D49500EB1CA6 /* RecruitDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitDetailVC.swift; sourceTree = "<group>"; };
+		4B000C4922D7D49600EB1CA6 /* RecruitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitViewController.swift; sourceTree = "<group>"; };
+		4B000C4F22D7D49E00EB1CA6 /* RecruitFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitFilterVC.swift; sourceTree = "<group>"; };
+		4B000C5022D7D49E00EB1CA6 /* FIlterListCellCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIlterListCellCVC.swift; sourceTree = "<group>"; };
+		4B000C5522D7D4B100EB1CA6 /* SelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectVC.swift; sourceTree = "<group>"; };
+		4B000C5622D7D4B100EB1CA6 /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		4B000C5722D7D4B100EB1CA6 /* SelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCell.swift; sourceTree = "<group>"; };
+		4B000C5822D7D4B100EB1CA6 /* PortfolioSelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioSelectVC.swift; sourceTree = "<group>"; };
+		4B000C5F22D7D4D000EB1CA6 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
+		4B000C6122D7D50A00EB1CA6 /* RecruitListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitListModel.swift; sourceTree = "<group>"; };
+		4B000C6522D81BC000EB1CA6 /* FilterTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTabBarVC.swift; sourceTree = "<group>"; };
+		4B000C6922D8285D00EB1CA6 /* SelectTabBarVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTabBarVC1.swift; sourceTree = "<group>"; };
+		4B000C6B22D8286A00EB1CA6 /* SelectTabBarVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTabBarVC2.swift; sourceTree = "<group>"; };
 		4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
 		4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +107,7 @@
 		4B63B05922D02E58005F52D7 /* ChipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B63B05A22D02E58005F52D7 /* ChipCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChipCollectionViewCell.xib; sourceTree = "<group>"; };
 		4B67C17F22D1D9C900B9F546 /* PortfolioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioModel.swift; sourceTree = "<group>"; };
+		4B72541422D87BE700F0F34C /* DatepickerStartEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatepickerStartEndVC.swift; sourceTree = "<group>"; };
 		4BB47EEB22C614E300930582 /* GetRestIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRestIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB47EEE22C614E300930582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB47EF322C614E300930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +174,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4B000C3B22D7D31600EB1CA6 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */,
+				4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */,
+				4B63B05122CFFFF7005F52D7 /* PortfolioDetailVC1.swift */,
+				4B63B05322D011A1005F52D7 /* PortfolioDetailVC2.swift */,
+				4B000C3C22D7D35500EB1CA6 /* CategoryVC.swift */,
+				4B000C3E22D7D37100EB1CA6 /* CategoryCell.swift */,
+				4B72541422D87BE700F0F34C /* DatepickerStartEndVC.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		4B000C4222D7D44D00EB1CA6 /* Recruit */ = {
+			isa = PBXGroup;
+			children = (
+				4B000C6422D8174000EB1CA6 /* New Group */,
+				4B000C4622D7D49500EB1CA6 /* DatePickerVC.swift */,
+				4B000C4822D7D49500EB1CA6 /* RecruitDetailVC.swift */,
+				4B000C4722D7D49500EB1CA6 /* RecruitListCell.swift */,
+				4B000C4922D7D49600EB1CA6 /* RecruitViewController.swift */,
+				4B000C4522D7D49500EB1CA6 /* SearchVC.swift */,
+				4B000C4422D7D46700EB1CA6 /* Filter */,
+				4B000C4322D7D46000EB1CA6 /* Selelct */,
+			);
+			path = Recruit;
+			sourceTree = "<group>";
+		};
+		4B000C4322D7D46000EB1CA6 /* Selelct */ = {
+			isa = PBXGroup;
+			children = (
+				4B000C5822D7D4B100EB1CA6 /* PortfolioSelectVC.swift */,
+				4B000C5622D7D4B100EB1CA6 /* QuestionCell.swift */,
+				4B000C5722D7D4B100EB1CA6 /* SelectCell.swift */,
+				4B000C5522D7D4B100EB1CA6 /* SelectVC.swift */,
+				4B000C6922D8285D00EB1CA6 /* SelectTabBarVC1.swift */,
+				4B000C6B22D8286A00EB1CA6 /* SelectTabBarVC2.swift */,
+			);
+			path = Selelct;
+			sourceTree = "<group>";
+		};
+		4B000C4422D7D46700EB1CA6 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				4B000C5022D7D49E00EB1CA6 /* FIlterListCellCVC.swift */,
+				4B000C4F22D7D49E00EB1CA6 /* RecruitFilterVC.swift */,
+				4B000C6522D81BC000EB1CA6 /* FilterTabBarVC.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		4B000C6322D7F45100EB1CA6 /* PortfoiloCardChip */ = {
+			isa = PBXGroup;
+			children = (
+				4B63B05922D02E58005F52D7 /* ChipCollectionViewCell.swift */,
+				4B63B05A22D02E58005F52D7 /* ChipCollectionViewCell.xib */,
+				4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */,
+				4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */,
+			);
+			path = PortfoiloCardChip;
+			sourceTree = "<group>";
+		};
+		4B000C6422D8174000EB1CA6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		4BB47EE222C614E300930582 = {
 			isa = PBXGroup;
 			children = (
@@ -183,10 +291,10 @@
 			children = (
 				4BB47EF222C614E300930582 /* Main.storyboard */,
 				C5ACDCA122C8A4F200837653 /* Recruit.storyboard */,
+				C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */,
 				C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */,
 				4BB47EF722C614E400930582 /* LaunchScreen.storyboard */,
 				C5ACDC9722C89B4300837653 /* Home.storyboard */,
-				C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */,
 				C598B3E422D7CCA2009D2D13 /* SignInUp.storyboard */,
 			);
 			path = Storyboards;
@@ -195,6 +303,7 @@
 		4BB47F0822C6192700930582 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4B000C5F22D7D4D000EB1CA6 /* NotificationNameExtension.swift */,
 				C5ACDCA522C8DC5600837653 /* UIView+Extensions.swift */,
 				C5ACDCA322C8D73900837653 /* UIColor+Extensions.swift */,
 			);
@@ -212,6 +321,7 @@
 		4BB47F0A22C6193A00930582 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4B000C6122D7D50A00EB1CA6 /* RecruitListModel.swift */,
 				C5FD1B8F22D76C3B0044ECAF /* Network */,
 				C568D17622D68BA100C5E1F3 /* Home */,
 				C5DD750F22D61B4500402FF8 /* myResume */,
@@ -224,15 +334,12 @@
 		4BB47F0B22C6194400930582 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4B000C6322D7F45100EB1CA6 /* PortfoiloCardChip */,
 				C568D17522D68B8C00C5E1F3 /* Home */,
 				C5DD751422D61C0900402FF8 /* myResume */,
 				C5DC86D322CBF8D4000C247F /* CardView.swift */,
 				C5D6DE9C22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift */,
 				C56EE50F22CCE5F50062F072 /* HashTagView */,
-				4B63B05922D02E58005F52D7 /* ChipCollectionViewCell.swift */,
-				4B63B05A22D02E58005F52D7 /* ChipCollectionViewCell.xib */,
-				4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */,
-				4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,14 +347,12 @@
 		4BB47F0C22C6194A00930582 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B000C4222D7D44D00EB1CA6 /* Recruit */,
+				4B000C3B22D7D31600EB1CA6 /* Portfolio */,
 				C5F90ACD22D7945F00C360B4 /* SignIn */,
 				C568D17422D68B7B00C5E1F3 /* Home */,
 				C5C6279B22D37C7A0045298D /* MyResume */,
 				C5D6DE9622CE021800A7EB0E /* PortfolioDetailViewController.swift */,
-				4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */,
-				4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */,
-				4B63B05122CFFFF7005F52D7 /* PortfolioDetailVC1.swift */,
-				4B63B05322D011A1005F52D7 /* PortfolioDetailVC2.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -463,9 +568,26 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -482,7 +604,9 @@
 				C568D17822D68C2400C5E1F3 /* MyPageMainViewController.swift in Sources */,
 				C5D6DE9922CE0A9700A7EB0E /* PortfolioDetailModel.swift in Sources */,
 				C5D6DE9D22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift in Sources */,
+				4B000C6622D81BC000EB1CA6 /* FilterTabBarVC.swift in Sources */,
 				C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */,
+				4B72541522D87BE700F0F34C /* DatepickerStartEndVC.swift in Sources */,
 				C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */,
 				C5C6279D22D37CD20045298D /* MyResumeListViewController.swift in Sources */,
 				C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */,
@@ -491,32 +615,49 @@
 				4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */,
 				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
 				C5DD751122D61B5500402FF8 /* MyResumeDetailModel.swift in Sources */,
+				4B000C4E22D7D49600EB1CA6 /* RecruitViewController.swift in Sources */,
+				4B000C4C22D7D49600EB1CA6 /* RecruitListCell.swift in Sources */,
 				4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */,
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
 				C568D18022D6A2AF00C5E1F3 /* MyPageRuleViewController.swift in Sources */,
+				4B000C5D22D7D4B100EB1CA6 /* PortfolioSelectVC.swift in Sources */,
 				C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */,
+				4B000C4B22D7D49600EB1CA6 /* DatePickerVC.swift in Sources */,
 				C5FD1B9522D76E2E0044ECAF /* ResponseArray.swift in Sources */,
 				C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */,
 				C5D6DE9722CE021800A7EB0E /* PortfolioDetailViewController.swift in Sources */,
+				4B000C5A22D7D4B100EB1CA6 /* SelectVC.swift in Sources */,
+				4B000C3F22D7D37100EB1CA6 /* CategoryCell.swift in Sources */,
+				4B000C6222D7D50A00EB1CA6 /* RecruitListModel.swift in Sources */,
 				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
 				C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */,
+				4B000C6022D7D4D000EB1CA6 /* NotificationNameExtension.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
 				C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */,
+				4B000C4A22D7D49600EB1CA6 /* SearchVC.swift in Sources */,
 				C5FD1B9122D76C650044ECAF /* NetworkResult.swift in Sources */,
 				C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */,
+				4B000C5222D7D49E00EB1CA6 /* RecruitFilterVC.swift in Sources */,
+				4B000C6A22D8285D00EB1CA6 /* SelectTabBarVC1.swift in Sources */,
 				C598B3E722D7CD5B009D2D13 /* SignInViewController.swift in Sources */,
+				4B000C6C22D8286A00EB1CA6 /* SelectTabBarVC2.swift in Sources */,
+				4B000C5322D7D49E00EB1CA6 /* FIlterListCellCVC.swift in Sources */,
 				C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */,
 				C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */,
 				C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */,
 				C5FD1B9322D76C890044ECAF /* APIConstants.swift in Sources */,
+				4B000C3D22D7D35500EB1CA6 /* CategoryVC.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
 				C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */,
 				4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */,
 				4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */,
+				4B000C5C22D7D4B100EB1CA6 /* SelectCell.swift in Sources */,
+				4B000C4D22D7D49600EB1CA6 /* RecruitDetailVC.swift in Sources */,
 				C5F90ACF22D7948300C360B4 /* SignUpViewController.swift in Sources */,
+				4B000C5B22D7D4B100EB1CA6 /* QuestionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

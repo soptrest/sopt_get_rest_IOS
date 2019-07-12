@@ -30,7 +30,7 @@ class SignInViewController: UIViewController {
     @IBAction func autoLoginButton(_ sender: UIButton) {
         sender.backgroundColor = UIColor(red: 93.0/255.0, green: 139.0/255.0, blue: 49.0/255.0, alpha: 1.0)
         sender.tintColor = UIColor.white
-        let homeView = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeView")
+        let homeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView")
         self.present(homeView, animated: true, completion: nil)
     }
 }

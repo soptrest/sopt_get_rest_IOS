@@ -65,6 +65,7 @@ class MainHomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         setNavigationBar()
         graphDetailTableView.reloadData()
 //        tableView.deselectRow(at: indexPath, animated: true)

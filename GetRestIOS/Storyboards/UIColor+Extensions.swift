@@ -70,4 +70,18 @@ extension UIColor {
     @nonobjc class var buttonInactiveColor: UIColor {
         return UIColor(red: 195.0/255.0, green: 195.0/255.0, blue: 195.0/255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var lightGray: UIColor {
+        return UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var bottomGray: UIColor {
+        return UIColor(red: 216.0/255.0, green: 216.0/255.0, blue: 216.0/255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var datePickerGray: UIColor {
+        return UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+    }
+    
+    
 }

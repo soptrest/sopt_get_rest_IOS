@@ -35,11 +35,12 @@ class PortfolioDetailTableViewController: UITableViewController {
         setNavigationBar()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarWithLogo"), for: .default)
-        
-    }
+    
+//    override func viewWillA(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarWithLogo"), for: .default)
+//
+//    }
     
     func setNavigationBar() {
         self.navigationItem.title = "기록보기"

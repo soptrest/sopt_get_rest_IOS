@@ -48,7 +48,7 @@
                 <outlet property="hashTagLabel" destination="m7g-mJ-GKA" id="E6w-Tm-RaP"/>
                 <outlet property="hashTagView" destination="gZW-St-hhR" id="8jD-1u-pWx"/>
             </connections>
-            <point key="canvasLocation" x="375.36231884057975" y="132.92410714285714"/>
+            <point key="canvasLocation" x="190" y="105"/>
         </collectionReusableView>
     </objects>
 </document>
