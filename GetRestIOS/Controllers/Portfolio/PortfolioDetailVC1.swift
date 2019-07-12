@@ -82,12 +82,13 @@ extension PortfolioDetailVC1: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = portfolioTableView.dequeueReusableCell(withIdentifier: "PortfolioCell", for: indexPath) as! PortfolioTableViewCell
         
-        let image = UIImage(named: "icImg")
+//        let image = UIImage(named: "icImg")
         let data = list[indexPath.row]
+        
         
         cell.portfolioTitle.text = data.portfolioTitle
         cell.portfolioDate.text = "\(data.portfolioStartDate) ~ \(data.portfolioExpireDate)"
-        cell.portfolioImg.image = image
+        cell.portfolioImg.imageFromUrl(gsno(data.portfolioImg), defaultImgPath: "icImg")
 //        cell.dropShadow(color: .black, offSet: CGSize(width: 0,height: 0), opacity: 0.5, radius: 5)
 //        cell.layer.masksToBounds = true
         return cell
