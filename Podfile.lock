@@ -6,6 +6,7 @@ PODS:
   - Kingfisher (4.10.1)
   - ObjectMapper (3.4.2)
   - ScrollableGraphView (4.0.6)
+  - SwiftyJSON (5.0.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - Kingfisher (~> 4.10.1)
   - ObjectMapper (~> 3.4.2)
   - ScrollableGraphView
+  - SwiftyJSON
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - Kingfisher
     - ObjectMapper
     - ScrollableGraphView
+    - SwiftyJSON
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
@@ -31,8 +34,9 @@ SPEC CHECKSUMS:
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   ScrollableGraphView: 4af35d4ea9ecdec665d34a74da51da161ddff8ac
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 1b37073836683472ca008485d68210d5dc2b9d89
+PODFILE CHECKSUM: 0ef8043d3e09a875878ce515dc3e9527659d974e
 
 COCOAPODS: 1.7.4

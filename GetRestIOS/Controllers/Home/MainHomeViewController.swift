@@ -35,7 +35,6 @@ class MainHomeViewController: UIViewController {
         view.backgroundColor = UIColor.mainBackgroudGray
         setTableView()
         setTopSideView()
-        print("homeGraphData  :  " , homeGraphData)
         let attributedString = NSMutableAttributedString()
             .bold(username, fontSize: 23)
             .normal("님의 \n기록을 살펴 볼까요?", fontSize: 23)
@@ -76,8 +75,31 @@ class MainHomeViewController: UIViewController {
         topSideLabel.numberOfLines = 0
     }
     
-    func getGrapghDetailTable(){
-        
+    func setDetailTableView(){
+        print("quarterDate.text  : ", quarterDate.text! )
+        HomeMainService.shared.getDetailTableData(date: quarterDate.text!){
+            [weak self]
+            data in
+            guard let `self` = self else { return }
+            switch data {
+            case .success(let detailList):
+                self.graphDetailList = detailList as! [HomeGraphDetailModel]
+                self.graphDetailTableView.reloadData()
+                break
+            case .requestErr(let err):
+                print(".requestErr(\(err))")
+                break
+            case .pathErr:
+                print("경로 에러")
+                break
+            case .serverErr:
+                print("서버 에러")
+                break
+            case .networkFail:
+                self.alertTimerController(message: "통신 실패 - 네트워크 상태를 확인하세요.", timer: 2)
+                break
+            }
+        }
     }
     
     func getGraphData() {
@@ -89,6 +111,9 @@ class MainHomeViewController: UIViewController {
             case .success(let res):
                 self.homeGraphData = res as! [HomeGraphModel]
                 self.setGraph(containerView: self.graphView)
+                let length = self.homeGraphData.count
+                self.quarterDate.text = self.homeGraphData[length-1].date
+//                self.setDetailTableView()
                 break
             case .requestErr(let err):
                 print(".requestErr(\(err))")
@@ -114,9 +139,9 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
     
     func label(atIndex pointIndex: Int) -> String {
         let dateLabel = homeGraphData[pointIndex].date
-        if dateLabel != "" {
-            quarterDate.text = "\(dateLabel)분기"
-        }
+        //        if dateLabel != "" {
+        //            quarterDate.text = "\(dateLabel)분기"
+        //        }
         return "\(dateLabel)"
     }
     
@@ -136,8 +161,8 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         barPlot.barLineWidth = 0
         barPlot.barColor = UIColor.graphBarGray
         
-//        barPlot.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
-//        barPlot.animationDuration = 1.5
+        //        barPlot.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
+        //        barPlot.animationDuration = 1.5
         barGraphView.topMargin = 0
         barGraphView.bottomMargin = 16
         barGraphView.dataPointSpacing = setSpacing()
@@ -146,19 +171,19 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         barGraphView.leftmostPointPadding = 20
         let referenceLines = ReferenceLines()
         
-//        referenceLines.referenceLineLabelFont = UIFont.boldSystemFont(ofSize: 7)
+        //        referenceLines.referenceLineLabelFont = UIFont.boldSystemFont(ofSize: 7)
         referenceLines.dataPointLabelFont = UIFont.systemFont(ofSize: 14)
         referenceLines.referenceLineColor = UIColor.graphLineGray
         referenceLines.referenceLineLabelColor = UIColor.mainColorBlue
         referenceLines.dataPointLabelColor = UIColor.mainColorBlue
-//        referenceLines.shouldShowReferenceLines = false
+        //        referenceLines.shouldShowReferenceLines = false
         referenceLines.shouldAddLabelsToIntermediateReferenceLines = false
         referenceLines.shouldAddUnitsToIntermediateReferenceLineLabels = false
         
         barGraphView.backgroundFillColor = UIColor.graphBackgroundWhite
-//        barGraphView.shouldAnimateOnStartup = false
+        //        barGraphView.shouldAnimateOnStartup = false
         
-//        barGraphView.rangeMax = graphDetailList.count.max()!
+        //        barGraphView.rangeMax = graphDetailList.count.max()!
         barGraphView.rangeMax = 5
         barGraphView.rangeMin = 0
         
@@ -187,11 +212,12 @@ extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
         return graphDetailList.count
     }
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "graphDetailTableViewCell") as! HomeGraphDetailTableViewCell
         cell.contentView.backgroundColor = UIColor.white
-//        cell.portfolioTitle?.text = graphDetailList[indexPath.row].portfolioTitle!
-//        cell.portfolioDuration?.text = graphDetailList[indexPath.row].portfolioDuration!
+        let detailObject = graphDetailList[indexPath.row]
+        cell.portfolioTitle?.text = detailObject.portfolioTitle
+        cell.portfolioDuration?.text = "\(detailObject.portfolioStartDate) ~ \(detailObject.portfolioExpireDate)"
         return cell
     }
     

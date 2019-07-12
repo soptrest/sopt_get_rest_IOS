@@ -33,6 +33,7 @@
 		C598B3ED22D7D2B3009D2D13 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3EC22D7D2B3009D2D13 /* AuthService.swift */; };
 		C598B3EF22D7D2DF009D2D13 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3EE22D7D2DF009D2D13 /* ResponseString.swift */; };
 		C598B3F222D7E6FD009D2D13 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3F122D7E6FD009D2D13 /* SignInModel.swift */; };
+		C598B3F522D87B4D009D2D13 /* MyResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3F422D87B4D009D2D13 /* MyResumeService.swift */; };
 		C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9722C89B4300837653 /* Home.storyboard */; };
 		C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */; };
 		C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */; };
@@ -59,7 +60,6 @@
 		C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9622D76E530044ECAF /* DefaultRes.swift */; };
 		C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */; };
 		C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */; };
-		C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */; };
 		C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1BA322D787630044ECAF /* ResponseResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +93,7 @@
 		C598B3EC22D7D2B3009D2D13 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C598B3EE22D7D2DF009D2D13 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		C598B3F122D7E6FD009D2D13 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		C598B3F422D87B4D009D2D13 /* MyResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeService.swift; sourceTree = "<group>"; };
 		C5ACDC9822C89B4300837653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
 		C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyResume.storyboard; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 		C5FD1B9622D76E530044ECAF /* DefaultRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRes.swift; sourceTree = "<group>"; };
 		C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainService.swift; sourceTree = "<group>"; };
 		C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGraphModel.swift; sourceTree = "<group>"; };
-		C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableService.swift; sourceTree = "<group>"; };
 		C5FD1BA322D787630044ECAF /* ResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -212,6 +212,7 @@
 		4BB47F0922C6193000930582 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				C598B3F322D87B3B009D2D13 /* MyResume */,
 				C598B3EB22D7D222009D2D13 /* SignIn */,
 				C5FD1B9822D76EB30044ECAF /* HomeService */,
 			);
@@ -335,6 +336,14 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		C598B3F322D87B3B009D2D13 /* MyResume */ = {
+			isa = PBXGroup;
+			children = (
+				C598B3F422D87B4D009D2D13 /* MyResumeService.swift */,
+			);
+			path = MyResume;
+			sourceTree = "<group>";
+		};
 		C5C6279B22D37C7A0045298D /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */,
-				C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */,
 			);
 			path = HomeService;
 			sourceTree = "<group>";
@@ -527,6 +535,7 @@
 				4B63B05B22D02E58005F52D7 /* ChipCollectionViewCell.swift in Sources */,
 				4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */,
 				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
+				C598B3F522D87B4D009D2D13 /* MyResumeService.swift in Sources */,
 				C598B3E922D7CF3C009D2D13 /* CheckBox.swift in Sources */,
 				C5DD751122D61B5500402FF8 /* MyResumeDetailModel.swift in Sources */,
 				4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */,
@@ -538,7 +547,6 @@
 				C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */,
 				C5D6DE9722CE021800A7EB0E /* PortfolioDetailViewController.swift in Sources */,
 				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
-				C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
 				C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */,
