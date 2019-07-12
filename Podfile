@@ -10,7 +10,6 @@ target 'GetRestIOS' do
   pod 'AlamofireObjectMapper'
   pod 'Kingfisher', '~> 4.10.1'
   pod 'ObjectMapper', '~> 3.4.2' 
-  pod 'ScrollableGraphView'
+  pod 'ScrollableGraphView', :git => 'https://github.com/gngsn/ScrollableGraphView'
   pod 'XLPagerTabStrip', '~> 9.0'
-  pod 'SwiftyJSON'
 end
