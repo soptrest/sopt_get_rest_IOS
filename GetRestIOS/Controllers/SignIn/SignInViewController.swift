@@ -12,10 +12,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var IdTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var autoLoginBtn: CheckBox!
     
     @IBOutlet weak var loginAction: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        checkAutoLogin()
         loginAction.isEnabled = false
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"loginBackgroundImg")!)
         IdTextField.delegate = self
@@ -24,6 +27,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         loginAction.roundCorners(corners: [.allCorners], radius: 5)
         loginAction.setTitleColor(UIColor.lightGray, for: .disabled)
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if( !IdTextField.text!.isEmpty && !passwordTextField.text!.isEmpty) {
             loginAction.isEnabled = true
@@ -32,6 +36,17 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             loginAction.isEnabled = false
         }
     }
+    
+    
+    func checkAutoLogin(){
+        print("autoLogin  " ,UserDefaults.standard.bool(forKey: "autoLogin") )
+        print("token  " ,UserDefaults.standard.bool(forKey: "token") )
+        if UserDefaults.standard.bool(forKey: "autoLogin") && !UserDefaults.standard.string(forKey: "token")!.isEmpty {
+            let homeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView")
+            self.present(homeView, animated: true, completion: nil)
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -71,6 +86,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func autoLoginButton(_ sender: UIButton) {
         sender.backgroundColor = UIColor(red: 93.0/255.0, green: 139.0/255.0, blue: 49.0/255.0, alpha: 1.0)
         sender.tintColor = UIColor.white
+        if autoLoginBtn.isChecked {
+            UserDefaults.standard.set(true, forKey: "autoLogin")
+        }
         let homeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView")
         self.present(homeView, animated: true, completion: nil)
     }

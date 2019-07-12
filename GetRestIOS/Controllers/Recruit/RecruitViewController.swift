@@ -78,7 +78,6 @@ class RecruitViewController: UIViewController {
             case .success(let res):
                 self.list = res as! [RecruitListModel]
                 self.recruitListTableView.reloadData()
-                print("----------Done!!!---------")
                 break
             case .requestErr(let err):
                 print(".requestErr(\(err))")

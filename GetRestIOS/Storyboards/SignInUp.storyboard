@@ -121,6 +121,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="IdTextField" destination="e9n-5n-D7G" id="7Te-5f-tZj"/>
+                        <outlet property="autoLoginBtn" destination="wky-JP-7xX" id="0Ol-sL-Ut0"/>
                         <outlet property="loginAction" destination="c4n-VC-phm" id="mVF-Du-QxC"/>
                         <outlet property="passwordTextField" destination="95v-sK-Ip1" id="MZ2-zV-lW3"/>
                     </connections>

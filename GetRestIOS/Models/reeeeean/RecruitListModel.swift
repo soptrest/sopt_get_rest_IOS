@@ -16,10 +16,10 @@ struct RecruitListModel : Codable {
     
     enum CodingKeys: String, CodingKey {
         case recruitIdx = "recruitIdx"
-        case companyName = "companyName"
-        case companyImage = "companyImage"
         case recruitJobCategory = "recruitJobCategory"
         case recruitExpireDate = "recruitExpireDate"
+        case companyName = "companyName"
+        case companyImage = "companyImage"
     }
     
     init(from decoder: Decoder) throws {

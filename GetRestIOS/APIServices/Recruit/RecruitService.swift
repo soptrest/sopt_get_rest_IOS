@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 struct RecruitService {
-    let jwt = UserDefaults.standard.object(forKey: "token") as! String
+    let jwt = UserDefaults.standard.string(forKey: "token")!
     let userIdx = UserDefaults.standard.object(forKey: "userIdx") as! Int
     static let shared = RecruitService()
     
@@ -22,16 +22,15 @@ struct RecruitService {
         ]
         
         let data: Parameters = [
-            "date": "2019/4"
+            "date": "2019/07/14"
         ]
-        
-        print("채용정보 통신 시작")
-        Alamofire.request(URL, method: .post, parameters: data, headers: header)
+
+        print("채용정보 통신 시작 jwt : ", jwt,"   ", URL )
+        Alamofire.request(URL, method: .post, parameters: data, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 print("response  : ", response)
                 switch response.result {
                 case .success:
-                    print("채용정보 통신 response good")
                     print("response.result  : ", response.result)
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
@@ -41,7 +40,6 @@ struct RecruitService {
                                 do {
                                     let decoder = JSONDecoder()
                                     let result = try decoder.decode(ResponseArray<RecruitListModel>.self, from: value)
-                                    print("result :  ", result)
                                     switch result.success {
                                     case true:
                                         completion(.success(result.data!))
