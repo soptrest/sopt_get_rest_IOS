@@ -10,17 +10,8 @@ import UIKit
 import ScrollableGraphView
 
 class MainHomeViewController: UIViewController {
-    var barPlotData: [Double] = [ 7, 4, 7, 6, 3, 7, 3, 4, 3, 2, 7, 4]
-    var xAxisLabels: [String] = ["1" ,"2","3", "4", "1" ,"2","3", "4", "1" ,"2","3", "4",]
     var graphDetailList : [HomeGraphDetailModel] = []
-//        HomeGraphDetailModel("솝트", "2019.03", "2019.07"),
-//        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
-//        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
-//        HomeGraphDetailModel("매디", "2018.01", "2019.12"),
-//        HomeGraphDetailModel("매디", "2018.01", "2019.12")
-//    ]
     var homeGraphData: [HomeGraphModel] = []
-    let jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjozMSwidXNlckVtYWlsIjoiMDcxMUBuYXZlci5jb20iLCJpYXQiOjE1NjI4MzA4ODgsImV4cCI6MTU2MjkxNzI4OCwiaXNzIjoic2FuZ3l1bkxFRSJ9.xWjmBLrADRLggowhsa-dvfneuEnGLjdaUTl5bga9TYM"
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var topSideView: UIImageView!
@@ -29,30 +20,29 @@ class MainHomeViewController: UIViewController {
     @IBOutlet weak var graphDetailTableView: UITableView!
     @IBOutlet weak var firstSectionView: UIView!
     @IBOutlet weak var secondSectionView: UIView!
-    
+    @IBOutlet weak var quarterDate: UILabel!
     
     var scrollViewContentHeight = 1200 as CGFloat
     let navigationBarHeight = 64 as CGFloat
     var tableCellHeight = 64 as CGFloat
     var tableHeight = 1000 as CGFloat
+    var date: String = ""
     
     var username: String = "박경선"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("homeGraphData  :  " , homeGraphData)
         view.backgroundColor = UIColor.mainBackgroudGray
         setTableView()
         setTopSideView()
-        getGraphData()
-//        setGraph(containerView: graphView)
-        graphDetailTableView.reloadData()
+        print("homeGraphData  :  " , homeGraphData)
         let attributedString = NSMutableAttributedString()
             .bold(username, fontSize: 23)
             .normal("님의 \n기록을 살펴 볼까요?", fontSize: 23)
         topSideLabel.attributedText = attributedString
         firstSectionView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
         secondSectionView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
+        
     }
     
     func setTableView() {
@@ -66,8 +56,8 @@ class MainHomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setNavigationBar()
+        getGraphData()
         graphDetailTableView.reloadData()
-//        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func setNavigationBar(){
@@ -91,10 +81,9 @@ class MainHomeViewController: UIViewController {
     }
     
     func getGraphData() {
-        HomeMainService.shared.getGraphData(authorization: jwt) {
+        HomeMainService.shared.getGraphData() {
             [weak self]
             data in
-            
             guard let `self` = self else { return }
             switch data {
             case .success(let res):
@@ -105,17 +94,13 @@ class MainHomeViewController: UIViewController {
                 print(".requestErr(\(err))")
                 break
             case .pathErr:
-                // 대체로 경로를 잘못 쓴 경우입니다.
-                // 오타를 확인해보세요.
                 print("경로 에러")
                 break
             case .serverErr:
-                // 서버의 문제인 경우입니다.
-                // 여기에서 동작할 행동을 정의해주시면 됩니다.
                 print("서버 에러")
                 break
             case .networkFail:
-//                self.simpleAlert(title: "통신 실패", message: "네트워크 상태를 확인하세요.")
+                self.alertTimerController(message: "통신 실패 - 네트워크 상태를 확인하세요.", timer: 2)
                 break
             }
         }
@@ -124,15 +109,19 @@ class MainHomeViewController: UIViewController {
 
 extension MainHomeViewController : ScrollableGraphViewDataSource {
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        return Double(homeGraphData[pointIndex].count!)
+        return Double(homeGraphData[pointIndex].count)
     }
     
     func label(atIndex pointIndex: Int) -> String {
-        return homeGraphData[pointIndex].date!
+        let dateLabel = homeGraphData[pointIndex].date
+        if dateLabel != "" {
+            quarterDate.text = "\(dateLabel)분기"
+        }
+        return "\(dateLabel)"
     }
     
     func numberOfPoints() -> Int {
-        return xAxisLabels.count
+        return homeGraphData.count
     }
     
     func setGraph(containerView: UIView)  {
@@ -151,7 +140,7 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
 //        barPlot.animationDuration = 1.5
         barGraphView.topMargin = 0
         barGraphView.bottomMargin = 16
-        barGraphView.dataPointSpacing = 27
+        barGraphView.dataPointSpacing = setSpacing()
         barGraphView.isScrollEnabled = false
         
         barGraphView.leftmostPointPadding = 20
@@ -167,15 +156,24 @@ extension MainHomeViewController : ScrollableGraphViewDataSource {
         referenceLines.shouldAddUnitsToIntermediateReferenceLineLabels = false
         
         barGraphView.backgroundFillColor = UIColor.graphBackgroundWhite
-        barGraphView.shouldAnimateOnStartup = false
+//        barGraphView.shouldAnimateOnStartup = false
         
-        barGraphView.rangeMax = barPlotData.max()!
+//        barGraphView.rangeMax = graphDetailList.count.max()!
+        barGraphView.rangeMax = 5
         barGraphView.rangeMin = 0
         
         barGraphView.addReferenceLines(referenceLines: referenceLines)
         barGraphView.addPlot(plot: barPlot)
         
         containerView.addSubview(barGraphView)
+    }
+    
+    func setSpacing() -> CGFloat {
+        let graphViewWidth = graphView.frame.width
+        let barWidth: CGFloat = 12.0
+        let emptyWidth = graphViewWidth - barWidth * CGFloat(homeGraphData.count )
+        let space = emptyWidth / CGFloat( homeGraphData.count )
+        return space + barWidth
     }
 }
 

@@ -10,30 +10,32 @@ import Foundation
 import Alamofire
 
 struct HomeMainService {
+//    let jwt = UserDefaults.standard.string(forKey: "jwt")
+    let jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo3LCJ1c2VyRW1haWwiOiJ3aW5uZXJ5OTMzQGdtYWlsLmNvbSIsImlhdCI6MTU2MjgyNTg4MSwiZXhwIjoxNTYyOTEyMjgxLCJpc3MiOiJzYW5neXVuTEVFIn0.DrTFR2-ue4CmaGjWifdW6F_hjEOXKsKzn6Q95C1OzwQ"
     
     static let shared = HomeMainService()
     
-    func getGraphData(authorization: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+    func getGraphData( completion: @escaping (NetworkResult<Any>) -> Void) {
         let URL = APIConstants.HomeURL
         
         let header: HTTPHeaders = [
+            "Authorization" : jwt,
             "Content-Type" : "application/json"
         ]
         
-        print(URL)
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
-                print("response")
                 switch response.result {
                 case .success:
                     if let value = response.result.value {
                         print("value")
                         if let status = response.response?.statusCode {
+                            print("status : ", status)
                             switch status {
                             case 200:
                                 do {
+                                     print("hi")
                                     let decoder = JSONDecoder()
-//                                    print(ResponseArray<HomeGraphModel>.self)
                                     let result = try decoder.decode(ResponseArray<HomeGraphModel>.self, from: value)
                                     print("result")
                                     
@@ -48,9 +50,6 @@ struct HomeMainService {
                                 }
                             case 400:
                                 completion(.pathErr)
-                            case 500:
-                                completion(.serverErr)
-                                
                             default:
                                 break
                             }
