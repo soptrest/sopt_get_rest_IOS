@@ -22,7 +22,6 @@
 		4B000C5C22D7D4B100EB1CA6 /* SelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5722D7D4B100EB1CA6 /* SelectCell.swift */; };
 		4B000C5D22D7D4B100EB1CA6 /* PortfolioSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5822D7D4B100EB1CA6 /* PortfolioSelectVC.swift */; };
 		4B000C6022D7D4D000EB1CA6 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C5F22D7D4D000EB1CA6 /* NotificationNameExtension.swift */; };
-		4B000C6222D7D50A00EB1CA6 /* RecruitListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6122D7D50A00EB1CA6 /* RecruitListModel.swift */; };
 		4B000C6622D81BC000EB1CA6 /* FilterTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6522D81BC000EB1CA6 /* FilterTabBarVC.swift */; };
 		4B000C6A22D8285D00EB1CA6 /* SelectTabBarVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6922D8285D00EB1CA6 /* SelectTabBarVC1.swift */; };
 		4B000C6C22D8286A00EB1CA6 /* SelectTabBarVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6B22D8286A00EB1CA6 /* SelectTabBarVC2.swift */; };
@@ -40,6 +39,10 @@
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
 		4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */; };
 		C523ED9922D8B62400556E33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C523ED9822D8B62400556E33 /* Alamofire.framework */; };
+		C523EDA222D913A200556E33 /* PortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA122D913A200556E33 /* PortfolioService.swift */; };
+		C523EDA522D9147200556E33 /* PortfolioListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA422D9147200556E33 /* PortfolioListModel.swift */; };
+		C523EDA822D91E9300556E33 /* RecruitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA722D91E9300556E33 /* RecruitService.swift */; };
+		C523EDAA22D91F7200556E33 /* RecruitListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA922D91F7200556E33 /* RecruitListModel.swift */; };
 		C568D17822D68C2400C5E1F3 /* MyPageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */; };
 		C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */; };
 		C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */; };
@@ -100,7 +103,6 @@
 		4B000C5722D7D4B100EB1CA6 /* SelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCell.swift; sourceTree = "<group>"; };
 		4B000C5822D7D4B100EB1CA6 /* PortfolioSelectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioSelectVC.swift; sourceTree = "<group>"; };
 		4B000C5F22D7D4D000EB1CA6 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
-		4B000C6122D7D50A00EB1CA6 /* RecruitListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitListModel.swift; sourceTree = "<group>"; };
 		4B000C6522D81BC000EB1CA6 /* FilterTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTabBarVC.swift; sourceTree = "<group>"; };
 		4B000C6922D8285D00EB1CA6 /* SelectTabBarVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTabBarVC1.swift; sourceTree = "<group>"; };
 		4B000C6B22D8286A00EB1CA6 /* SelectTabBarVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTabBarVC2.swift; sourceTree = "<group>"; };
@@ -120,6 +122,10 @@
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		C523ED9822D8B62400556E33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C523EDA122D913A200556E33 /* PortfolioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioService.swift; sourceTree = "<group>"; };
+		C523EDA422D9147200556E33 /* PortfolioListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioListModel.swift; sourceTree = "<group>"; };
+		C523EDA722D91E9300556E33 /* RecruitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitService.swift; sourceTree = "<group>"; };
+		C523EDA922D91F7200556E33 /* RecruitListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitListModel.swift; sourceTree = "<group>"; };
 		C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainViewController.swift; sourceTree = "<group>"; };
 		C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageTheEndViewController.swift; path = GetRestIOS/Controllers/Home/MyPageTheEndViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -325,6 +331,8 @@
 		4BB47F0922C6193000930582 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				C523EDA622D91E7500556E33 /* Recruit */,
+				C523EDA022D9138500556E33 /* Portfolio */,
 				C598B3F322D87B3B009D2D13 /* MyResume */,
 				C598B3EB22D7D222009D2D13 /* SignIn */,
 				C5FD1B9822D76EB30044ECAF /* HomeService */,
@@ -335,7 +343,7 @@
 		4BB47F0A22C6193A00930582 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4B000C6122D7D50A00EB1CA6 /* RecruitListModel.swift */,
+				C523EDA322D9144F00556E33 /* reeeeean */,
 				C598B3F022D7E6DF009D2D13 /* SignIn */,
 				C5FD1B8F22D76C3B0044ECAF /* Network */,
 				C568D17622D68BA100C5E1F3 /* Home */,
@@ -380,6 +388,31 @@
 				48F387B77A4E8B89EB6CF466 /* Pods-GetRestIOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C523EDA022D9138500556E33 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				C523EDA122D913A200556E33 /* PortfolioService.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		C523EDA322D9144F00556E33 /* reeeeean */ = {
+			isa = PBXGroup;
+			children = (
+				C523EDA422D9147200556E33 /* PortfolioListModel.swift */,
+				C523EDA922D91F7200556E33 /* RecruitListModel.swift */,
+			);
+			path = reeeeean;
+			sourceTree = "<group>";
+		};
+		C523EDA622D91E7500556E33 /* Recruit */ = {
+			isa = PBXGroup;
+			children = (
+				C523EDA722D91E9300556E33 /* RecruitService.swift */,
+			);
+			path = Recruit;
 			sourceTree = "<group>";
 		};
 		C568D17422D68B7B00C5E1F3 /* Home */ = {
@@ -617,25 +650,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
-				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -653,6 +672,7 @@
 				C5D6DE9922CE0A9700A7EB0E /* PortfolioDetailModel.swift in Sources */,
 				C5D6DE9D22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift in Sources */,
 				4B000C6622D81BC000EB1CA6 /* FilterTabBarVC.swift in Sources */,
+				C523EDA522D9147200556E33 /* PortfolioListModel.swift in Sources */,
 				C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */,
 				4B72541522D87BE700F0F34C /* DatepickerStartEndVC.swift in Sources */,
 				C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */,
@@ -678,11 +698,10 @@
 				C5FD1B9522D76E2E0044ECAF /* ResponseArray.swift in Sources */,
 				C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */,
 				C5D6DE9722CE021800A7EB0E /* PortfolioDetailViewController.swift in Sources */,
+				C523EDA822D91E9300556E33 /* RecruitService.swift in Sources */,
 				4B000C5A22D7D4B100EB1CA6 /* SelectVC.swift in Sources */,
 				4B000C3F22D7D37100EB1CA6 /* CategoryCell.swift in Sources */,
-				4B000C6222D7D50A00EB1CA6 /* RecruitListModel.swift in Sources */,
 				C5DC86CC22CB8F1B000C247F /* HomeGraphDetailTableViewCell.swift in Sources */,
-				C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */,
 				4B000C6022D7D4D000EB1CA6 /* NotificationNameExtension.swift in Sources */,
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
@@ -692,6 +711,8 @@
 				C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */,
 				C5ACDCA622C8DC5600837653 /* UIView+Extensions.swift in Sources */,
 				C5DC86D422CBF8D4000C247F /* CardView.swift in Sources */,
+				C523EDA222D913A200556E33 /* PortfolioService.swift in Sources */,
+				C523EDAA22D91F7200556E33 /* RecruitListModel.swift in Sources */,
 				4B000C5222D7D49E00EB1CA6 /* RecruitFilterVC.swift in Sources */,
 				4B000C6A22D8285D00EB1CA6 /* SelectTabBarVC1.swift in Sources */,
 				C598B3E722D7CD5B009D2D13 /* SignInViewController.swift in Sources */,
@@ -866,6 +887,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92NKAC4JMU;
 				INFOPLIST_FILE = GetRestIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -884,6 +906,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92NKAC4JMU;
 				INFOPLIST_FILE = GetRestIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

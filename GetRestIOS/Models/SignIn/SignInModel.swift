@@ -11,11 +11,13 @@ import Foundation
 struct SignInModel: Codable {
     var userToken: String
     var userIdx: Int
+    var userName: String
     var timestamp: Float
     
     enum CodingKeys: String, CodingKey {
         case userToken = "userToken"
         case userIdx = "userIdx"
+        case userName = "userName"
         case timestamp = "timestamp"
     }
 
@@ -23,6 +25,7 @@ struct SignInModel: Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         userToken = try values.decodeIfPresent(String.self, forKey: .userToken)!
         userIdx = try values.decodeIfPresent(Int.self, forKey: .userIdx)!
+        userName = try values.decodeIfPresent(String.self, forKey: .userName)!
         timestamp = try values.decodeIfPresent(Float.self, forKey: .timestamp)!
     }
 }

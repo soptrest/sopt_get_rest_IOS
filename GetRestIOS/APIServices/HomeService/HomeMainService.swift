@@ -11,19 +11,18 @@ import Alamofire
 
 
 struct HomeMainService {
-//    let jwt = UserDefaults.standard.string(forKey: "jwt")
-    let jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0NCwidXNlckVtYWlsIjoidXNlcjEiLCJpYXQiOjE1NjI5MzYxNjQsImV4cCI6MTU2MzEwODk2NCwiaXNzIjoic2FuZ3l1bkxFRSJ9.l-yQn2Z1EvD30kPfFHVG0JsRiM93WWM8uGzxGzE33i4"
-    
+    let jwt = UserDefaults.standard.object(forKey: "token") as! String
     static let shared = HomeMainService()
     
     func getGraphData( completion: @escaping (NetworkResult<Any>) -> Void) {
         let URL = APIConstants.HomeURL
+//        guard let token: String = jwt as? String else { return }
         let header: HTTPHeaders = [
-            "Authorization" : jwt,
-            "Content-Type" : "application/json"
+            "Authorization" : jwt
+            ,"Content-Type" : "application/json"
         ]
         print("그래프 통신 시작")
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
+        Alamofire.request(URL, method: .get, parameters: nil, headers: header)
             .responseData { response in
                 print("그래프 response  : ", response)
                 switch response.result {
@@ -69,21 +68,20 @@ struct HomeMainService {
     
     
     func getDetailTableData(date: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+        print("sedfsd")
         let URL = APIConstants.HomeURL + "/portfolio"
-        
         let header: HTTPHeaders = [
             "Authorization" : jwt,
             "Content-Type" : "application/json"
         ]
-        
         let body: Parameters = [
-            "date" : date
+            "date" : "2019/3"
         ]
         
-        
+        print("body : ", "2019/3")
         Alamofire.request(URL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
-                print("response : ", response)
+                print("body : ", "2019/3")
                 switch response.result {
                 case .success:
                     if let value = response.result.value {

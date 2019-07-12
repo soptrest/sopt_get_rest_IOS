@@ -12,8 +12,14 @@ struct HomeGraphModel : Codable {
     let date : String
     let count : Int
     
-    init(_ date: String, _ count: Int){
-        self.date = date
-        self.count = count
+    enum CodingKeys: String, CodingKey {
+        case date = "date"
+        case count = "count"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        date = try values.decodeIfPresent(String.self, forKey: .date)!
+        count = try values.decodeIfPresent(Int.self, forKey: .count)!
     }
 }

@@ -56,8 +56,9 @@ class RecruitViewController: UIViewController {
         super.viewDidLoad()
         
         setNavigationBar()
+        loadData()
         setToday()
-        setData()
+//        setData()
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(RecruitViewController.goPage(sender:)))
         self.selectDatePickerBtn.addGestureRecognizer(gesture)
@@ -66,6 +67,34 @@ class RecruitViewController: UIViewController {
             let dateVc = notification.object as! DatePickerVC
             self.dateLabel.text = dateVc.formmatedDate
         }
+    }
+    
+    func loadData(){
+        RecruitService.shared.getAllRecruit(date: "dsdfsd") {
+            [weak self]
+            data in
+            guard let `self` = self else { return }
+            switch data {
+            case .success(let res):
+                self.list = res as! [RecruitListModel]
+                self.recruitListTableView.reloadData()
+                print("----------Done!!!---------")
+                break
+            case .requestErr(let err):
+                print(".requestErr(\(err))")
+                break
+            case .pathErr:
+                print("경로 에러")
+                break
+            case .serverErr:
+                print("서버 에러")
+                break
+            case .networkFail:
+                self.alertTimerController(message: "통신 실패 - 네트워크 상태를 확인하세요.", timer: 1)
+                break
+            }
+        }
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -96,11 +125,10 @@ extension RecruitViewController: UITableViewDelegate, UITableViewDataSource {
         
         let data = list[indexPath.row]
         
-        cell.recruitTitle.text = data.rcTitle
-        cell.recruitField.text = data.rcField
-        cell.recruitDate.text = data.rcDate
-        cell.recruitImg.image = data.rcImg
-        
+        cell.recruitTitle.text = data.companyName
+        cell.recruitField.text = data.recruitJobCategory
+        cell.recruitDate.text = data.recruitExpireDate
+        cell.recruitImg.image = UIImage(named: data.companyImage)
         
         return cell
     }
@@ -186,17 +214,17 @@ extension RecruitViewController {
     }
     
     func setData() {
-        let rc1 = RecruitListModel(img: "icDefaultImg", title: "솝트1", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
-        let rc2 = RecruitListModel(img: "icDefaultImg", title: "솝트2", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
-        let rc3 = RecruitListModel(img: "icDefaultImg", title: "솝트3", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
-        let rc4 = RecruitListModel(img: "icDefaultImg", title: "솝트4", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
-        let rc5 = RecruitListModel(img: "icDefaultImg", title: "솝트5", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
-        let rc6 = RecruitListModel(img: "icDefaultImg", title: "솝트6", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
-        let rc7 = RecruitListModel(img: "icDefaultImg", title: "솝트7", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
-        let rc8 = RecruitListModel(img: "icDefaultImg", title: "솝트8", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
+//        let rc1 = RecruitListModel(img: "icDefaultImg", title: "솝트1", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
+//        let rc2 = RecruitListModel(img: "icDefaultImg", title: "솝트2", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
+//        let rc3 = RecruitListModel(img: "icDefaultImg", title: "솝트3", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
+//        let rc4 = RecruitListModel(img: "icDefaultImg", title: "솝트4", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
+//        let rc5 = RecruitListModel(img: "icDefaultImg", title: "솝트5", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
+//        let rc6 = RecruitListModel(img: "icDefaultImg", title: "솝트6", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
+//        let rc7 = RecruitListModel(img: "icDefaultImg", title: "솝트7", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
+//        let rc8 = RecruitListModel(img: "icDefaultImg", title: "솝트8", field: "Web 디자이너 / 모바일. App 디자이너", date: "~06월 19일 18시 00분")
         
-        list = [rc1, rc2, rc3, rc4, rc5, rc6, rc7, rc8]
-        checkedList = [rc1, rc2, rc3, rc4, rc5, rc6, rc7, rc8]
+//        list = [rc1, rc2, rc3, rc4, rc5, rc6, rc7, rc8]
+//        checkedList = [rc1, rc2, rc3, rc4, rc5, rc6, rc7, rc8]
     }
 }
 

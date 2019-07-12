@@ -10,21 +10,21 @@ import Foundation
 import Alamofire
 
 struct MyResumeService {
-    //    let jwt = UserDefaults.standard.string(forKey: "jwt")
-    let jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0NCwidXNlckVtYWlsIjoidXNlcjEiLCJpYXQiOjE1NjI5MzYxNjQsImV4cCI6MTU2MzEwODk2NCwiaXNzIjoic2FuZ3l1bkxFRSJ9.l-yQn2Z1EvD30kPfFHVG0JsRiM93WWM8uGzxGzE33i4"
-    //    let userIdx = UserDefaults.standard.object(forKey: "userIdx")
-    let userIdx = 43
+    
+    let jwt = UserDefaults.standard.object(forKey: "token") as! String
+    let userIdx = UserDefaults.standard.object(forKey: "userIdx") as! Int
     static let shared = MyResumeService()
     
     func getAllResume( completion: @escaping (NetworkResult<Any>) -> Void) {
         let URL = APIConstants.ResumeURL + "/resume"
+        print("jwt  : ", jwt)
         let header: HTTPHeaders = [
-            "Authorization" : jwt,
+            "Authorization" : jwt ,
             "Content-Type" : "application/json"
         ]
         
         print("나의 자소서 통신 시작")
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default , headers: header)
+        Alamofire.request(URL, method: .get, parameters: nil, headers: header)
             .responseData { response in
                 print("response  : ", response)
                 switch response.result {
@@ -81,7 +81,7 @@ struct MyResumeService {
         ]
         
         print("나의 자소서 자세히 보기 통신 시작")
-        Alamofire.request(URL, method: .get, parameters: data, encoding: JSONEncoding.default , headers: header)
+        Alamofire.request(URL, method: .get, parameters: data, headers: header)
             .responseData { response in
                 switch response.result {
                 case .success:
@@ -125,6 +125,7 @@ struct MyResumeService {
     
     func modifyDetailResume(resumIdx: Int, questionIdx: Int, content: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         let URL = APIConstants.ResumeURL + "/resume/\(resumIdx)/\(questionIdx)"
+
         let header: HTTPHeaders = [
             "Authorization" : jwt,
             "Content-Type" : "application/json"

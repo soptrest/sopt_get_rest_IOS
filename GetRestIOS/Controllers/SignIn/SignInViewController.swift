@@ -47,8 +47,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 let model: SignInModel = rcvData as! SignInModel
                 UserDefaults.standard.set(model.userToken, forKey: "token")
                 UserDefaults.standard.set(model.userIdx, forKey: "userIdx")
-                print("token : ", UserDefaults.standard.object(forKey: "token"))
-                print("userIdx : ", UserDefaults.standard.object(forKey: "userIdx"))
+                UserDefaults.standard.set(model.userName, forKey: "userName")
                 sender.backgroundColor = UIColor(red: 93.0/255.0, green: 139.0/255.0, blue: 49.0/255.0, alpha: 1.0)
                 sender.tintColor = UIColor.white
                 let homeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView")
@@ -67,7 +66,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 break
             }
         }
-        
     }
     
     @IBAction func autoLoginButton(_ sender: UIButton) {

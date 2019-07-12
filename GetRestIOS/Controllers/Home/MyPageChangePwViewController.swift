@@ -129,7 +129,7 @@ extension UITextField {
 
 extension UIViewController {
     func alertTimerController(message: String, timer: Double) {
-        let alert = UIAlertController(title: "", message: "비밀번호가 성공적으로 변경되었어요!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
         // 알람 1초 뒤에 없애줌
         let when = DispatchTime.now() + timer

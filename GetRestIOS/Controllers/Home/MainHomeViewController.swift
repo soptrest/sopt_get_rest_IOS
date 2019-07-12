@@ -28,7 +28,7 @@ class MainHomeViewController: UIViewController {
     var tableHeight = 1000 as CGFloat
     var date: String = ""
     
-    var username: String = "박경선"
+    let username: String = UserDefaults.standard.object(forKey: "userName") as! String
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,6 @@ class MainHomeViewController: UIViewController {
         topSideLabel.attributedText = attributedString
         firstSectionView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
         secondSectionView.dropShadow(color: UIColor.shadow, offSet: CGSize.zero, opacity: 1.0, radius: 5)
-        
     }
     
     func setTableView() {
@@ -54,9 +53,9 @@ class MainHomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         setNavigationBar()
         getGraphData()
+//        setDetailTableView()
         graphDetailTableView.reloadData()
     }
     
@@ -97,7 +96,7 @@ class MainHomeViewController: UIViewController {
                 print("서버 에러")
                 break
             case .networkFail:
-                self.alertTimerController(message: "통신 실패 - 네트워크 상태를 확인하세요.", timer: 2)
+                self.alertTimerController(message: "통신 실패 - 네트워크 상태를 확인하세요.", timer: 1)
                 break
             }
         }
@@ -113,8 +112,8 @@ class MainHomeViewController: UIViewController {
                 self.homeGraphData = res as! [HomeGraphModel]
                 self.setGraph(containerView: self.graphView)
                 let length = self.homeGraphData.count
-                self.quarterDate.text = self.homeGraphData[length-1].date
-//                self.setDetailTableView()
+                self.quarterDate.text = self.homeGraphData[length-1].date + "분기"
+                self.setDetailTableView()
                 break
             case .requestErr(let err):
                 print(".requestErr(\(err))")
@@ -126,7 +125,7 @@ class MainHomeViewController: UIViewController {
                 print("서버 에러")
                 break
             case .networkFail:
-                self.alertTimerController(message: "통신 실패 - 네트워크 상태를 확인하세요.", timer: 2)
+                self.alertTimerController(message: "통신 실패 - 네트워크 상태를 확인하세요.", timer: 1)
                 break
             }
         }
@@ -250,6 +249,3 @@ extension NSMutableAttributedString {
         return self
     }
 }
-
-
-

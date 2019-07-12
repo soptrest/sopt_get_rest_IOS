@@ -11,13 +11,6 @@ import UIKit
 class MyResumeListViewController: UIViewController {
     
     var dataList: [MyResumeListModel] = []
-//        MyResumeListModel(3, "네이버", "Web 디자이너 / 모바일. App 디자이너"),
-//        MyResumeListModel(5, "네이버", "Web 디자이너 / 모바일. App 디자이너"),
-//        MyResumeListModel(2, "네이버", "Web 디자이너 / 모바일. App 디자이너"),
-//        MyResumeListModel(11, "가나다", "Web 디자이너 / 모바일. App 디자이너"),
-//        MyResumeListModel(34, "네이버", "Web 디자이너 / 모바일. App 디자이너"),
-//        MyResumeListModel(2, "네이버", "Web 디자이너 / 모바일. App 디자이너"),
-//    ]
     var isDeleteMode: Bool = false
     @IBOutlet weak var resumeTV: UITableView!
     
@@ -39,10 +32,10 @@ class MyResumeListViewController: UIViewController {
                 self.resumeTV.reloadData()
                 break
             case .requestErr( _):
-//                self.simpleAlert(title: "", message: "값을 입력해주세요!")
+                self.simpleAlert(title: "", message: "값을 입력해주세요!")
                 break
             case .pathErr:
-//                self.simpleAlert(title: "", message: "잘못 입력하셨습니다ㅜㅜ")
+                self.simpleAlert(title: "", message: "잘못 입력하셨습니다ㅜㅜ")
                 break
             case .serverErr:
                 print("서버 에러")
@@ -86,6 +79,7 @@ extension MyResumeListViewController : UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !isDeleteMode {
             let dvc = self.storyboard!.instantiateViewController(withIdentifier: "myResumeDetailView")
+//            dvc
             self.navigationController?.pushViewController(dvc, animated: true)
         }
     }
