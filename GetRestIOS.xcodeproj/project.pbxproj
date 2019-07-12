@@ -37,6 +37,8 @@
 		4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB47EEE22C614E300930582 /* AppDelegate.swift */; };
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
+		4BF86F0D22D927CF006AF7F1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF86F0C22D927CF006AF7F1 /* UIImageView+Extensions.swift */; };
+		4BF86F0F22D928D6006AF7F1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF86F0E22D928D6006AF7F1 /* UIViewController+Extensions.swift */; };
 		4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */; };
 		C523ED9922D8B62400556E33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C523ED9822D8B62400556E33 /* Alamofire.framework */; };
 		C523EDA222D913A200556E33 /* PortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA122D913A200556E33 /* PortfolioService.swift */; };
@@ -120,6 +122,8 @@
 		4BB47EF322C614E300930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BF86F0C22D927CF006AF7F1 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		4BF86F0E22D928D6006AF7F1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		C523ED9822D8B62400556E33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C523EDA122D913A200556E33 /* PortfolioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioService.swift; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 				4B000C5F22D7D4D000EB1CA6 /* NotificationNameExtension.swift */,
 				C5ACDCA522C8DC5600837653 /* UIView+Extensions.swift */,
 				C5ACDCA322C8D73900837653 /* UIColor+Extensions.swift */,
+				4BF86F0C22D927CF006AF7F1 /* UIImageView+Extensions.swift */,
+				4BF86F0E22D928D6006AF7F1 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -650,11 +656,25 @@
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			inputPaths = (
-				"",
+				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -668,6 +688,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF86F0D22D927CF006AF7F1 /* UIImageView+Extensions.swift in Sources */,
 				C568D17822D68C2400C5E1F3 /* MyPageMainViewController.swift in Sources */,
 				C5D6DE9922CE0A9700A7EB0E /* PortfolioDetailModel.swift in Sources */,
 				C5D6DE9D22CE3D5C00A7EB0E /* PortfolioDetailTableViewCell.swift in Sources */,
@@ -695,6 +716,7 @@
 				C598B3F222D7E6FD009D2D13 /* SignInModel.swift in Sources */,
 				C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */,
 				4B000C4B22D7D49600EB1CA6 /* DatePickerVC.swift in Sources */,
+				4BF86F0F22D928D6006AF7F1 /* UIViewController+Extensions.swift in Sources */,
 				C5FD1B9522D76E2E0044ECAF /* ResponseArray.swift in Sources */,
 				C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */,
 				C5D6DE9722CE021800A7EB0E /* PortfolioDetailViewController.swift in Sources */,

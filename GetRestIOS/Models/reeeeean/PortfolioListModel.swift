@@ -16,7 +16,7 @@ struct PortfolioListModel : Codable {
     var portfolioExpireDate: String
     var portfolioCategory: String
     var tag : [String]
-    var portfolioImage : String?
+    var portfolioImg : String?
     
     enum CodingKeys: String, CodingKey {
         case portfolioIdx = "portfolioIdx"
@@ -25,7 +25,7 @@ struct PortfolioListModel : Codable {
         case portfolioExpireDate = "portfolioExpireDate"
         case portfolioCategory = "portfolioCategory"
         case tag = "tag"
-        case portfolioImage = "portfolioImage"
+        case portfolioImg = "portfolioImg"
     }
     
     init(from decoder: Decoder) throws {
@@ -36,7 +36,7 @@ struct PortfolioListModel : Codable {
         portfolioExpireDate = try values.decodeIfPresent(String.self, forKey: .portfolioExpireDate)!
         portfolioCategory = try values.decodeIfPresent(String.self, forKey: .portfolioCategory)!
         tag = [""]
-        portfolioImage = ""
+        portfolioImg =  try values.decodeIfPresent(String.self, forKey: .portfolioImg)!
 //        tag = try values.decodeIfPresent([String].self, forKey: .tag)!
 //        portfolioImage = try values.decodeIfPresent(String.self, forKey: .portfolioImage)!
     }
