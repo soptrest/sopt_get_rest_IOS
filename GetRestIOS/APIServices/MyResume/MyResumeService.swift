@@ -12,7 +12,7 @@ import SwiftyJSON
 
 struct MyResumeService {
     //    let jwt = UserDefaults.standard.string(forKey: "jwt")
-    let jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0MywidXNlckVtYWlsIjoiamVhbiIsImlhdCI6MTU2MjkyMDc3NCwiZXhwIjoxNTYzMDkzNTc0LCJpc3MiOiJzYW5neXVuTEVFIn0._sjft7BEYL4bGG5jG5dSFATxhz5GWza-8mxNzD3IcTg"
+    let jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0NCwidXNlckVtYWlsIjoidXNlcjEiLCJpYXQiOjE1NjI5MzYxNjQsImV4cCI6MTU2MzEwODk2NCwiaXNzIjoic2FuZ3l1bkxFRSJ9.l-yQn2Z1EvD30kPfFHVG0JsRiM93WWM8uGzxGzE33i4"
     //    let userIdx = UserDefaults.standard.object(forKey: "userIdx")
     let userIdx = 43
     static let shared = MyResumeService()

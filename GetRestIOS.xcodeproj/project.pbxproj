@@ -20,6 +20,7 @@
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
 		4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */; };
+		C523ED9922D8B62400556E33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C523ED9822D8B62400556E33 /* Alamofire.framework */; };
 		C568D17822D68C2400C5E1F3 /* MyPageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */; };
 		C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */; };
 		C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */; };
@@ -80,6 +81,7 @@
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		C523ED9822D8B62400556E33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainViewController.swift; sourceTree = "<group>"; };
 		C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageTheEndViewController.swift; path = GetRestIOS/Controllers/Home/MyPageTheEndViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -129,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C523ED9922D8B62400556E33 /* Alamofire.framework in Frameworks */,
 				101C8AB8252B5C2981990F9D /* Pods_GetRestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +142,7 @@
 		193846A04E6E8BD8BFAECBFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C523ED9822D8B62400556E33 /* Alamofire.framework */,
 				EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */,
 			);
 			name = Frameworks;

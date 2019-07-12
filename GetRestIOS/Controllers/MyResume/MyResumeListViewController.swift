@@ -35,7 +35,7 @@ class MyResumeListViewController: UIViewController {
             data in
             switch data {
             case .success(let rcvData):
-                let dataList: [MyResumeListModel] = rcvData as! [MyResumeListModel]
+                self.dataList = rcvData as! [MyResumeListModel]
                 self.resumeTV.reloadData()
                 break
             case .requestErr( _):

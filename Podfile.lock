@@ -10,8 +10,8 @@ PODS:
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.8.2)
-  - AlamofireObjectMapper (~> 5.2.0)
+  - Alamofire
+  - AlamofireObjectMapper
   - Kingfisher (~> 4.10.1)
   - ObjectMapper (~> 3.4.2)
   - ScrollableGraphView
@@ -37,6 +37,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 0ef8043d3e09a875878ce515dc3e9527659d974e
+PODFILE CHECKSUM: c7ec5c13a50093ca180953dc98c3d714c412532f
 
 COCOAPODS: 1.7.4

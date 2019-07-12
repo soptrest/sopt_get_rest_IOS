@@ -12,20 +12,20 @@ import Alamofire
 
 struct HomeMainService {
 //    let jwt = UserDefaults.standard.string(forKey: "jwt")
-    let jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0MywidXNlckVtYWlsIjoiamVhbiIsImlhdCI6MTU2MjkyNzk3NiwiZXhwIjoxNTYzMTAwNzc2LCJpc3MiOiJzYW5neXVuTEVFIn0.uOSQKqYfgH7zj-1-M2l_YJUWywsz6S0HtTHWsjdc8Cs"
+    let jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4Ijo0NCwidXNlckVtYWlsIjoidXNlcjEiLCJpYXQiOjE1NjI5MzYxNjQsImV4cCI6MTU2MzEwODk2NCwiaXNzIjoic2FuZ3l1bkxFRSJ9.l-yQn2Z1EvD30kPfFHVG0JsRiM93WWM8uGzxGzE33i4"
     
     static let shared = HomeMainService()
     
     func getGraphData( completion: @escaping (NetworkResult<Any>) -> Void) {
         let URL = APIConstants.HomeURL
-        
         let header: HTTPHeaders = [
             "Authorization" : jwt,
             "Content-Type" : "application/json"
         ]
-        
-        Alamofire.request(URL, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: header)
+        print("그래프 통신 시작")
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
+                print("그래프 response  : ", response)
                 switch response.result {
                 case .success:
                     if let value = response.result.value {
@@ -81,7 +81,7 @@ struct HomeMainService {
         ]
         
         
-        Alamofire.request(URL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: nil)
+        Alamofire.request(URL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 print("response : ", response)
                 switch response.result {
