@@ -39,6 +39,7 @@
 		4BB47EF422C614E300930582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF222C614E300930582 /* Main.storyboard */; };
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
 		4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */; };
+		C523ED9922D8B62400556E33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C523ED9822D8B62400556E33 /* Alamofire.framework */; };
 		C568D17822D68C2400C5E1F3 /* MyPageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */; };
 		C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */; };
 		C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */; };
@@ -48,6 +49,11 @@
 		C56EE51322CD204B0062F072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56EE51222CD204B0062F072 /* Assets.xcassets */; };
 		C598B3E522D7CCA2009D2D13 /* SignInUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C598B3E422D7CCA2009D2D13 /* SignInUp.storyboard */; };
 		C598B3E722D7CD5B009D2D13 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3E622D7CD5B009D2D13 /* SignInViewController.swift */; };
+		C598B3E922D7CF3C009D2D13 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3E822D7CF3C009D2D13 /* CheckBox.swift */; };
+		C598B3ED22D7D2B3009D2D13 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3EC22D7D2B3009D2D13 /* AuthService.swift */; };
+		C598B3EF22D7D2DF009D2D13 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3EE22D7D2DF009D2D13 /* ResponseString.swift */; };
+		C598B3F222D7E6FD009D2D13 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3F122D7E6FD009D2D13 /* SignInModel.swift */; };
+		C598B3F522D87B4D009D2D13 /* MyResumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C598B3F422D87B4D009D2D13 /* MyResumeService.swift */; };
 		C5ACDC9922C89B4300837653 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9722C89B4300837653 /* Home.storyboard */; };
 		C5ACDC9B22C89B7E00837653 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */; };
 		C5ACDC9D22C8A3C300837653 /* MyResume.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */; };
@@ -74,7 +80,6 @@
 		C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9622D76E530044ECAF /* DefaultRes.swift */; };
 		C5FD1B9A22D76ECE0044ECAF /* HomeMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */; };
 		C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */; };
-		C5FD1BA222D783600044ECAF /* HomeDetailTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */; };
 		C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD1BA322D787630044ECAF /* ResponseResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +119,7 @@
 		4BB47EF822C614E400930582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		C523ED9822D8B62400556E33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainViewController.swift; sourceTree = "<group>"; };
 		C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageTheEndViewController.swift; path = GetRestIOS/Controllers/Home/MyPageTheEndViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -123,6 +129,11 @@
 		C56EE51222CD204B0062F072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C598B3E422D7CCA2009D2D13 /* SignInUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInUp.storyboard; sourceTree = "<group>"; };
 		C598B3E622D7CD5B009D2D13 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C598B3E822D7CF3C009D2D13 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		C598B3EC22D7D2B3009D2D13 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C598B3EE22D7D2DF009D2D13 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		C598B3F122D7E6FD009D2D13 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		C598B3F422D87B4D009D2D13 /* MyResumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeService.swift; sourceTree = "<group>"; };
 		C5ACDC9822C89B4300837653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C5ACDC9A22C89B7E00837653 /* Portfolio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
 		C5ACDC9C22C8A3C300837653 /* MyResume.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyResume.storyboard; sourceTree = "<group>"; };
@@ -149,7 +160,6 @@
 		C5FD1B9622D76E530044ECAF /* DefaultRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRes.swift; sourceTree = "<group>"; };
 		C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainService.swift; sourceTree = "<group>"; };
 		C5FD1B9B22D770670044ECAF /* HomeGraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGraphModel.swift; sourceTree = "<group>"; };
-		C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableService.swift; sourceTree = "<group>"; };
 		C5FD1BA322D787630044ECAF /* ResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
 		EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRestIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C523ED9922D8B62400556E33 /* Alamofire.framework in Frameworks */,
 				101C8AB8252B5C2981990F9D /* Pods_GetRestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +180,7 @@
 		193846A04E6E8BD8BFAECBFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C523ED9822D8B62400556E33 /* Alamofire.framework */,
 				EFDBF9252B0AFEB18C69E835 /* Pods_GetRestIOS.framework */,
 			);
 			name = Frameworks;
@@ -313,6 +325,8 @@
 		4BB47F0922C6193000930582 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				C598B3F322D87B3B009D2D13 /* MyResume */,
+				C598B3EB22D7D222009D2D13 /* SignIn */,
 				C5FD1B9822D76EB30044ECAF /* HomeService */,
 			);
 			path = APIServices;
@@ -322,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				4B000C6122D7D50A00EB1CA6 /* RecruitListModel.swift */,
+				C598B3F022D7E6DF009D2D13 /* SignIn */,
 				C5FD1B8F22D76C3B0044ECAF /* Network */,
 				C568D17622D68BA100C5E1F3 /* Home */,
 				C5DD750F22D61B4500402FF8 /* myResume */,
@@ -335,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				4B000C6322D7F45100EB1CA6 /* PortfoiloCardChip */,
+				C598B3EA22D7CF47009D2D13 /* SignIn */,
 				C568D17522D68B8C00C5E1F3 /* Home */,
 				C5DD751422D61C0900402FF8 /* myResume */,
 				C5DC86D322CBF8D4000C247F /* CardView.swift */,
@@ -405,6 +421,38 @@
 			path = HashTagView;
 			sourceTree = "<group>";
 		};
+		C598B3EA22D7CF47009D2D13 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C598B3E822D7CF3C009D2D13 /* CheckBox.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		C598B3EB22D7D222009D2D13 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C598B3EC22D7D2B3009D2D13 /* AuthService.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		C598B3F022D7E6DF009D2D13 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C598B3F122D7E6FD009D2D13 /* SignInModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		C598B3F322D87B3B009D2D13 /* MyResume */ = {
+			isa = PBXGroup;
+			children = (
+				C598B3F422D87B4D009D2D13 /* MyResumeService.swift */,
+			);
+			path = MyResume;
+			sourceTree = "<group>";
+		};
 		C5C6279B22D37C7A0045298D /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +496,7 @@
 				C5FD1B9422D76E2E0044ECAF /* ResponseArray.swift */,
 				C5FD1B9622D76E530044ECAF /* DefaultRes.swift */,
 				C5FD1BA322D787630044ECAF /* ResponseResult.swift */,
+				C598B3EE22D7D2DF009D2D13 /* ResponseString.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -456,7 +505,6 @@
 			isa = PBXGroup;
 			children = (
 				C5FD1B9922D76ECE0044ECAF /* HomeMainService.swift */,
-				C5FD1BA122D783600044ECAF /* HomeDetailTableService.swift */,
 			);
 			path = HomeService;
 			sourceTree = "<group>";
@@ -610,10 +658,13 @@
 				C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */,
 				C5C6279D22D37CD20045298D /* MyResumeListViewController.swift in Sources */,
 				C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */,
+				C598B3ED22D7D2B3009D2D13 /* AuthService.swift in Sources */,
 				4B63B05222CFFFF7005F52D7 /* PortfolioDetailVC1.swift in Sources */,
 				4B63B05B22D02E58005F52D7 /* ChipCollectionViewCell.swift in Sources */,
 				4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */,
 				C5ACDCA822C8E04900837653 /* MainHomeViewController.swift in Sources */,
+				C598B3F522D87B4D009D2D13 /* MyResumeService.swift in Sources */,
+				C598B3E922D7CF3C009D2D13 /* CheckBox.swift in Sources */,
 				C5DD751122D61B5500402FF8 /* MyResumeDetailModel.swift in Sources */,
 				4B000C4E22D7D49600EB1CA6 /* RecruitViewController.swift in Sources */,
 				4B000C4C22D7D49600EB1CA6 /* RecruitListCell.swift in Sources */,
@@ -621,6 +672,7 @@
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
 				C568D18022D6A2AF00C5E1F3 /* MyPageRuleViewController.swift in Sources */,
 				4B000C5D22D7D4B100EB1CA6 /* PortfolioSelectVC.swift in Sources */,
+				C598B3F222D7E6FD009D2D13 /* SignInModel.swift in Sources */,
 				C56EE50D22CCE5540062F072 /* HashTagCollectionViewCell.swift in Sources */,
 				4B000C4B22D7D49600EB1CA6 /* DatePickerVC.swift in Sources */,
 				C5FD1B9522D76E2E0044ECAF /* ResponseArray.swift in Sources */,
@@ -648,6 +700,7 @@
 				C5FD1B9722D76E530044ECAF /* DefaultRes.swift in Sources */,
 				C5DD751322D61B6700402FF8 /* MyResumeListModel.swift in Sources */,
 				C5FD1B9C22D770670044ECAF /* HomeGraphModel.swift in Sources */,
+				C598B3EF22D7D2DF009D2D13 /* ResponseString.swift in Sources */,
 				C5FD1B9322D76C890044ECAF /* APIConstants.swift in Sources */,
 				4B000C3D22D7D35500EB1CA6 /* CategoryVC.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,

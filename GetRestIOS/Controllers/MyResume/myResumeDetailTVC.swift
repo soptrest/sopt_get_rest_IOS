@@ -44,7 +44,7 @@ class myResumeDetailTVC: UITableViewController {
         setCountLabel()
         countQuestionNum = 1
         questionLabel.numberOfLines = 0
-        setData(title: data.jobTitle!, form: data.jobType!, content: data.content!)
+        setData(title: data.jobTitle, form: data.jobType, content: data.content)
         answerContent.isEditable = false
         editingContainerView.roundCorners(corners: [.allCorners], radius: 13)
         editingLabel.text = ""

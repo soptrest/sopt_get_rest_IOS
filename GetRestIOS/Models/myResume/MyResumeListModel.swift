@@ -7,10 +7,15 @@
 //
 
 struct MyResumeListModel : Codable {
-    var date : Int?
-    var jobTitle : String?
-    var jobType : String?
-    var expireCheck: Bool?
+    var resumeIdx : Int
+    var recruitIdx : Int
+    var companyIdx : Int
+    var recruitJobType: String
+    var recruitStartDate: String
+    var recruitExpireDate : String
+    var leftDate : Int
+    var companyName : String
+    var expireCheck : Bool
     
     //    enum CodingKeys: String, CodingKey {
     //        case userIdx = "userIdx"
@@ -24,10 +29,16 @@ struct MyResumeListModel : Codable {
     //        portfolioDuration = try values.decodeIfPresent(String.self, forKey: .portfolioDuration)
     //        portfolioHashTags = try values.decodeIfPresent(String.self, forKey: .portfolioHashTags)
     //    }
-    init(_ date: Int, _ title: String, _ type: String){
-        self.date = date
-        self.jobTitle = title
-        self.jobType = type
+    init(_ resumeIdx: Int, _ recruitIdx: Int, _ companyIdx: Int,_ recruitJobType: String,_ startDate: String,_ expireDate: String, _ leftDate: Int, _ companyName: String, expireCheck: Bool){
+        self.resumeIdx = resumeIdx
+        self.recruitIdx = recruitIdx
+        self.companyIdx = companyIdx
+        self.recruitJobType = recruitJobType
+        self.recruitStartDate = startDate
+        self.recruitExpireDate = expireDate
+        self.leftDate = leftDate
+        self.companyName = companyName
+        self.expireCheck = expireCheck
     }
     
 }

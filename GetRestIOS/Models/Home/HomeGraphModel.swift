@@ -9,8 +9,8 @@
 import Foundation
 
 struct HomeGraphModel : Codable {
-    let date : String?
-    let count : Int?
+    let date : String
+    let count : Int
     
     init(_ date: String, _ count: Int){
         self.date = date

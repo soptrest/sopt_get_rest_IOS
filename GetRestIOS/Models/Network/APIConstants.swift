@@ -8,7 +8,7 @@
 
 struct APIConstants {
     static let BaseURL = "http://52.78.119.153:4000"
-    static let UserURL = BaseURL + "/users"
+    static let SignUpURL = BaseURL + "/users"
     static let HomeURL = BaseURL + "/home"
     static let LoginURL = BaseURL + "/login"
     static let PortfolioURL = BaseURL + "/portfolio"

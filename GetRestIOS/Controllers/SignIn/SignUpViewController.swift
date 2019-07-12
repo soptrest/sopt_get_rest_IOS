@@ -73,13 +73,15 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func DoneButton(_ sender: UIButton) {
-        let completeAlert = UIAlertController(title: "", message: "회원가입이 완료되었어요.", preferredStyle: .alert)
-        var action = UIAlertAction(title: "확인", style: .default) {
-            UIAlertAction in
+
+        AuthService.shared.signup(id: idTextField.text!, name: nameTextField.text!, password: passwordTextField.text!) { _ in
+            let completeAlert = UIAlertController(title: "", message: "회원가입이 완료되었어요.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "확인", style: .default) { UIAlertAction in
+                self.navigationController?.popViewController(animated: true)
+            }
+            completeAlert.addAction(action)
+            self.present(completeAlert, animated: true, completion: nil)
         }
-        completeAlert.addAction(action)
-        self.present(completeAlert, animated: true, completion: nil)
-        
     }
     
     func isPasswordValid(_ password : String) -> Bool{
@@ -131,16 +133,16 @@ extension SignUpViewController: UITextFieldDelegate {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if( textField == pwCheckTextField || textField == passwordTextField) {
             keyboardShown = true
         } else {
             keyboardShown = false
         }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
     
     @objc func keyboardWillShow(_ notification: NSNotification) {

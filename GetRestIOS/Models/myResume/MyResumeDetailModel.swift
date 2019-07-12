@@ -10,9 +10,10 @@ import Foundation
 
 
 struct MyResumeDetailModel : Codable {
-    var jobTitle : String?
-    var jobType : String?
-    var content: String?
+    var questionIdx: Int = 0
+    var jobTitle : String
+    var jobType : String
+    var content: String
     
     
     init(_ jobTitle: String, _ jobType: String, _ content: String){

@@ -65,8 +65,6 @@ class MyPageChangePwViewController: UIViewController, UITextFieldDelegate {
     
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("passwordTF.text  : " + passwordTF.text!)
-        print("pwCheckTF  : " + pwCheckTF.text!)
         if(passwordTF.text != ""){
             passwordDeleteBtn.setImage(UIImage(named: "btnTextDelete"), for: .normal)
             passwordDeleteBtn.isEnabled = true

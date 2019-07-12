@@ -48,8 +48,8 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5A-JU-GiJ" customClass="GraphView" customModule="GetRestIOS" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="213" width="343" height="116"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="28" y="213" width="319" height="116"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="116" id="tWZ-LE-bby"/>
                                                 </constraints>
@@ -57,8 +57,8 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="a5A-JU-GiJ" secondAttribute="trailing" constant="16" id="0rg-hs-AKv"/>
-                                            <constraint firstItem="a5A-JU-GiJ" firstAttribute="leading" secondItem="uyu-OL-Tt8" secondAttribute="leading" constant="16" id="iv5-nh-I7E"/>
+                                            <constraint firstAttribute="trailing" secondItem="a5A-JU-GiJ" secondAttribute="trailing" constant="28" id="0rg-hs-AKv"/>
+                                            <constraint firstItem="a5A-JU-GiJ" firstAttribute="leading" secondItem="uyu-OL-Tt8" secondAttribute="leading" constant="28" id="iv5-nh-I7E"/>
                                             <constraint firstItem="a5A-JU-GiJ" firstAttribute="top" secondItem="dbh-T3-jyo" secondAttribute="bottom" constant="24" id="o8d-GM-lmP"/>
                                             <constraint firstItem="dbh-T3-jyo" firstAttribute="width" secondItem="uyu-OL-Tt8" secondAttribute="width" id="xbA-aJ-zTY"/>
                                             <constraint firstAttribute="height" constant="345" id="y0m-iS-PdA"/>
@@ -195,14 +195,12 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrt-tz-TYK">
                                         <rect key="frame" x="0.0" y="421" width="375" height="41"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFC-tY-w2I">
-                                                <rect key="frame" x="108" y="26" width="251" height="1"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFC-tY-w2I">
+                                                <rect key="frame" x="107.5" y="26" width="251.5" height="1"/>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2019 1분기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2r-mt-PWP">
-                                                <rect key="frame" x="16" y="17" width="84" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2019 1분기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2r-mt-PWP">
+                                                <rect key="frame" x="16" y="17" width="93" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -210,7 +208,14 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="R2r-mt-PWP" firstAttribute="top" secondItem="xrt-tz-TYK" secondAttribute="top" constant="17" id="0Dz-9n-9ea"/>
+                                            <constraint firstAttribute="trailing" secondItem="lFC-tY-w2I" secondAttribute="trailing" constant="16" id="2gO-Jw-HHG"/>
+                                            <constraint firstItem="R2r-mt-PWP" firstAttribute="leading" secondItem="xrt-tz-TYK" secondAttribute="leading" constant="16" id="3kr-HV-maC"/>
+                                            <constraint firstAttribute="bottom" secondItem="R2r-mt-PWP" secondAttribute="bottom" constant="3" id="B7x-W8-ylK"/>
                                             <constraint firstAttribute="height" constant="41" id="KJ9-pY-Cfj"/>
+                                            <constraint firstItem="lFC-tY-w2I" firstAttribute="leading" secondItem="R2r-mt-PWP" secondAttribute="trailing" constant="8" id="MtL-sP-Ewp"/>
+                                            <constraint firstAttribute="bottom" secondItem="lFC-tY-w2I" secondAttribute="bottom" constant="14" id="kyB-qP-wUb"/>
+                                            <constraint firstItem="lFC-tY-w2I" firstAttribute="top" secondItem="xrt-tz-TYK" secondAttribute="top" constant="26" id="pV1-fN-e4X"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -256,6 +261,7 @@
                         <outlet property="firstSectionView" destination="uyu-OL-Tt8" id="WAA-v4-jvx"/>
                         <outlet property="graphDetailTableView" destination="dwC-Zy-ChJ" id="xqO-eI-ThJ"/>
                         <outlet property="graphView" destination="a5A-JU-GiJ" id="O7w-Dy-deL"/>
+                        <outlet property="quarterDate" destination="R2r-mt-PWP" id="Sn4-gp-WnN"/>
                         <outlet property="scrollView" destination="yi3-Qp-rVj" id="5dO-kj-dtI"/>
                         <outlet property="secondSectionView" destination="xrt-tz-TYK" id="Hjo-lC-IF6"/>
                         <outlet property="topSideLabel" destination="Ozv-Mi-7BV" id="C64-hy-Rdz"/>
@@ -265,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGz-H1-BZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-340" y="-770"/>
+            <point key="canvasLocation" x="-340" y="-770.46476761619192"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e4N-KO-9Hm">
@@ -979,7 +985,7 @@
                                     <fragment content="또한">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -993,7 +999,7 @@
                                     <fragment content="쉬자">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1007,7 +1013,7 @@
                                     <fragment content="서비스를">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1021,7 +1027,7 @@
                                     <fragment content="가입">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1035,7 +1041,7 @@
                                     <fragment content="사용">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1049,7 +1055,7 @@
                                     <fragment content="하면서">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1063,7 +1069,7 @@
                                     <fragment content="축적된">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1077,7 +1083,7 @@
                                     <fragment content="정보">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1091,7 +1097,7 @@
                                     <fragment content="및">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1105,7 +1111,7 @@
                                     <fragment content="기록은">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1119,7 +1125,7 @@
                                     <fragment content="모두">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1133,7 +1139,7 @@
                                     <fragment content="삭제되며">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1147,7 +1153,7 @@
                                     <fragment content="복구가">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1161,7 +1167,7 @@
                                     <fragment content="불가능">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1175,7 +1181,7 @@
                                     <fragment content="합니다">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" usesAppearanceFont="YES"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
