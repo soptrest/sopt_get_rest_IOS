@@ -39,10 +39,10 @@ class MyResumeListViewController: UIViewController {
                 self.resumeTV.reloadData()
                 break
             case .requestErr( _):
-                self.simpleAlert(title: "", message: "값을 입력해주세요!")
+//                self.simpleAlert(title: "", message: "값을 입력해주세요!")
                 break
             case .pathErr:
-                self.simpleAlert(title: "", message: "잘못 입력하셨습니다ㅜㅜ")
+//                self.simpleAlert(title: "", message: "잘못 입력하셨습니다ㅜㅜ")
                 break
             case .serverErr:
                 print("서버 에러")

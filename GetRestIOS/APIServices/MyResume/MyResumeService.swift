@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 struct MyResumeService {
     //    let jwt = UserDefaults.standard.string(forKey: "jwt")

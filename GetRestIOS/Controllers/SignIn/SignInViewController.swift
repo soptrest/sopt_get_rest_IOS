@@ -75,6 +75,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         sender.tintColor = UIColor.white
         let homeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView")
         self.present(homeView, animated: true, completion: nil)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
