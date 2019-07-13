@@ -9,7 +9,7 @@
 import Foundation
 
 struct HomeGraphDetailModel : Codable {
-    let portfolioIdx: String
+    let portfolioIdx: Int
     let portfolioTitle : String
     let portfolioStartDate : String
     let portfolioExpireDate: String
@@ -23,9 +23,15 @@ struct HomeGraphDetailModel : Codable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        portfolioIdx = try values.decodeIfPresent(String.self, forKey: .portfolioIdx)!
+        portfolioIdx = try values.decodeIfPresent(Int.self, forKey: .portfolioIdx)!
         portfolioTitle = try values.decodeIfPresent(String.self, forKey: .portfolioTitle)!
         portfolioStartDate = try values.decodeIfPresent(String.self, forKey: .portfolioStartDate)!
         portfolioExpireDate = try values.decodeIfPresent(String.self, forKey: .portfolioExpireDate)!
+    }
+    init(_ idx: Int, _ title: String,_ start: String,_ expire: String){
+        self.portfolioIdx = idx
+        self.portfolioTitle = title
+        self.portfolioStartDate = start
+        self.portfolioExpireDate = expire
     }
 }

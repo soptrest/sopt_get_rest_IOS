@@ -13,7 +13,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper
   - Kingfisher (~> 4.10.1)
   - ObjectMapper (~> 3.4.2)
-  - ScrollableGraphView (from `https://github.com/gngsn/ScrollableGraphView`)
+  - ScrollableGraphView
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
@@ -22,25 +22,17 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - Kingfisher
     - ObjectMapper
+    - ScrollableGraphView
     - XLPagerTabStrip
-
-EXTERNAL SOURCES:
-  ScrollableGraphView:
-    :git: https://github.com/gngsn/ScrollableGraphView
-
-CHECKOUT OPTIONS:
-  ScrollableGraphView:
-    :commit: 41cfb6066a0f63930c62959eb5233d9c8f262477
-    :git: https://github.com/gngsn/ScrollableGraphView
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
-  ScrollableGraphView: 918fdfe5c9af95c936c504dd0f20469cdfe9e391
+  ScrollableGraphView: 4af35d4ea9ecdec665d34a74da51da161ddff8ac
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 9c5f7e96629795df99943c3ca4fb915ac0cba5ec
+PODFILE CHECKSUM: 582f121cf717f77510b143cbe79a39c78350b27e
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.4

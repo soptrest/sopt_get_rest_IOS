@@ -75,7 +75,7 @@ class SignUpViewController: UIViewController {
     @IBAction func DoneButton(_ sender: UIButton) {
 
         AuthService.shared.signup(id: idTextField.text!, name: nameTextField.text!, password: passwordTextField.text!) { _ in
-            let completeAlert = UIAlertController(title: "", message: "회원가입이 완료되었어요.", preferredStyle: .alert)
+            let completeAlert = UIAlertController(title: "개인정보 수집 동의", message: "회원 가입 시 또는 서비스 이용 과정에서 홈페이지 또는 개별 어플리케이션이나 프로그램 등을 통해 아래와 같은 서비스 제공을 위해 필요한 최소한의 개인정보를 수집하고 있습니다.", preferredStyle: .alert)
             let action = UIAlertAction(title: "확인", style: .default) { UIAlertAction in
                 self.navigationController?.popViewController(animated: true)
             }
