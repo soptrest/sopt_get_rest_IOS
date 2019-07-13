@@ -55,6 +55,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
+        if autoLoginBtn.isChecked {
+            UserDefaults.standard.set(true, forKey: "autoLogin")
+        }
         AuthService.shared.login(IdTextField.text!, passwordTextField.text!) {
             data in
             switch data {
@@ -86,9 +89,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func autoLoginButton(_ sender: UIButton) {
         sender.backgroundColor = UIColor(red: 93.0/255.0, green: 139.0/255.0, blue: 49.0/255.0, alpha: 1.0)
         sender.tintColor = UIColor.white
-        if autoLoginBtn.isChecked {
-            UserDefaults.standard.set(true, forKey: "autoLogin")
-        }
+        
         let homeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView")
         self.present(homeView, animated: true, completion: nil)
     }

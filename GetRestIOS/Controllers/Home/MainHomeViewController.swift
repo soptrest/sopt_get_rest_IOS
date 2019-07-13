@@ -10,8 +10,15 @@ import UIKit
 import ScrollableGraphView
 
 class MainHomeViewController: UIViewController {
-    var graphDetailList : [HomeGraphDetailModel] = []
-    var homeGraphData: [HomeGraphModel] = []
+    var homeGraphData : [HomeGraphModel] = []
+    var graphDetailList : [HomeGraphDetailModel] = [
+        HomeGraphDetailModel(71, "sopt", "2019/05/10","2019/08/11"),
+        HomeGraphDetailModel(72, "(주) 쉬자 it 마케터 인턴", "2019/05/10","2019/08/11"),
+        HomeGraphDetailModel(73, "한국 상사 공모전", "2019/05/10","2019/08/11"),
+        HomeGraphDetailModel(78, "디지털 융합 마케터 인턴", "2019/06/11","2019/09/15"),
+        HomeGraphDetailModel(83, "쉬자턴", "2019/07/01"," 2019/07/13"),
+        HomeGraphDetailModel(84, "컨퍼런스", "2019/07/07","2019/07/08"),
+    ]
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var topSideView: UIImageView!
@@ -55,7 +62,6 @@ class MainHomeViewController: UIViewController {
         super.viewDidAppear(animated)
         setNavigationBar()
         getGraphData()
-//        setDetailTableView()
         graphDetailTableView.reloadData()
     }
     
@@ -113,7 +119,8 @@ class MainHomeViewController: UIViewController {
                 self.setGraph(containerView: self.graphView)
                 let length = self.homeGraphData.count
                 self.quarterDate.text = self.homeGraphData[length-1].date + "분기"
-                self.setDetailTableView()
+//                self.setDetailTableView()
+//                self.setData()
                 break
             case .requestErr(let err):
                 print(".requestErr(\(err))")
@@ -134,7 +141,11 @@ class MainHomeViewController: UIViewController {
 
 extension MainHomeViewController : ScrollableGraphViewDataSource {
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        return Double(homeGraphData[pointIndex].count)
+        var count: Double = Double( homeGraphData[pointIndex].count)
+        if count == 0.0  {
+            count = 0.2
+        }
+        return count
     }
     
     func label(atIndex pointIndex: Int) -> String {
@@ -226,6 +237,17 @@ extension MainHomeViewController : UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.pushViewController(dvc, animated: true)
         
     }
+    
+//    func setData() {
+//        self.graphDetailList = [
+//            portfolioData( 71, "sopt", "2019/05/10", "2019/08/11"),
+//            portfolioData( 72, "(주) 쉬자 it 마케터 인턴", "2019/05/10", "2019/08/11"),
+//            portfolioData( 73, "한국 상사 공모전", "2019/05/10", "2019/08/11"),
+//            portfolioData( 78, "디지털 융합 마케터 인턴", "2019/06/11", "2019/09/15"),
+//            portfolioData( 71, "쉬자", "2019/07/01", "2019/07/13"),
+//            portfolioData( 84, "컨퍼런스", "2019/07/07", "2019/07/08")
+//        ]
+//    }
 }
 
 extension NSMutableAttributedString {
@@ -247,5 +269,19 @@ extension NSMutableAttributedString {
         attrs[.foregroundColor] = color
         self.append(NSMutableAttributedString(string: text, attributes: attrs))
         return self
+    }
+
+}
+
+class portfolioData {
+    var portfolioIdx: Int
+    var portfolioTitle: String
+    var portfolioStartDate: String
+    var portfolioExpireDate: String
+    init(_ idx: Int, _ title: String, _ startDate: String, _ expireDate: String){
+        self.portfolioIdx = idx
+        self.portfolioTitle = title
+        self.portfolioStartDate = startDate
+        self.portfolioExpireDate = expireDate
     }
 }

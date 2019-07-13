@@ -45,6 +45,7 @@
 		C523EDA522D9147200556E33 /* PortfolioListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA422D9147200556E33 /* PortfolioListModel.swift */; };
 		C523EDA822D91E9300556E33 /* RecruitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA722D91E9300556E33 /* RecruitService.swift */; };
 		C523EDAA22D91F7200556E33 /* RecruitListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA922D91F7200556E33 /* RecruitListModel.swift */; };
+		C52AB23622D9363500B70A40 /* MyPageRule2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52AB23522D9363500B70A40 /* MyPageRule2ViewController.swift */; };
 		C568D17822D68C2400C5E1F3 /* MyPageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */; };
 		C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */; };
 		C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */; };
@@ -130,6 +131,7 @@
 		C523EDA422D9147200556E33 /* PortfolioListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioListModel.swift; sourceTree = "<group>"; };
 		C523EDA722D91E9300556E33 /* RecruitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitService.swift; sourceTree = "<group>"; };
 		C523EDA922D91F7200556E33 /* RecruitListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitListModel.swift; sourceTree = "<group>"; };
+		C52AB23522D9363500B70A40 /* MyPageRule2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRule2ViewController.swift; sourceTree = "<group>"; };
 		C568D17722D68C2400C5E1F3 /* MyPageMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainViewController.swift; sourceTree = "<group>"; };
 		C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		C568D17D22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageTheEndViewController.swift; path = GetRestIOS/Controllers/Home/MyPageTheEndViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -430,6 +432,7 @@
 				C5F93ADB22D715DE004CDAB8 /* MyPageChangePwViewController.swift */,
 				C568D17F22D6A2AF00C5E1F3 /* MyPageRuleViewController.swift */,
 				C568D17B22D69C5800C5E1F3 /* MyPageSettingViewController.swift */,
+				C52AB23522D9363500B70A40 /* MyPageRule2ViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -655,26 +658,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
-				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GetRestIOS/Pods-GetRestIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -748,6 +734,7 @@
 				4B000C3D22D7D35500EB1CA6 /* CategoryVC.swift in Sources */,
 				4BB47EEF22C614E300930582 /* AppDelegate.swift in Sources */,
 				C5FD1BA422D787630044ECAF /* ResponseResult.swift in Sources */,
+				C52AB23622D9363500B70A40 /* MyPageRule2ViewController.swift in Sources */,
 				4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */,
 				4B67C18022D1D9C900B9F546 /* PortfolioModel.swift in Sources */,
 				4B000C5C22D7D4B100EB1CA6 /* SelectCell.swift in Sources */,
