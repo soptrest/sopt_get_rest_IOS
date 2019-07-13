@@ -38,7 +38,6 @@ struct PortfolioService {
                                 do {
                                     let decoder = JSONDecoder()
                                     let result = try decoder.decode(ResponseArray<PortfolioListModel>.self, from: value)
-                                    print("result  : ", result)
                                     switch result.success {
                                     case true:
                                         completion(.success(result.data!))

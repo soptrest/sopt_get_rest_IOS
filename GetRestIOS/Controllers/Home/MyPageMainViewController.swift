@@ -16,7 +16,7 @@ class MyPageMainViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var idTextField: UILabel!
     
-    let username: String = "박경선"
+    let username: String = UserDefaults.standard.object(forKey: "userName") as! String
     let userID: String = "gngsn"
     let border = CALayer()
     let width = CGFloat(1.0)

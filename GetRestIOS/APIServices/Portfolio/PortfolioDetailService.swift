@@ -12,24 +12,21 @@ import Alamofire
 
 struct PortfolioDetailService {
     
-    let jwt = UserDefaults.standard.object(forKey: "token") as! String
-    let userIdx = UserDefaults.standard.object(forKey: "userIdx") as! Int
+    let jwt = UserDefaults.standard.string(forKey: "token")!
+    let userIdx = UserDefaults.standard.integer(forKey: "userIdx")
     static let shared = PortfolioDetailService()
     
     func getPortfolioDetail(rcvIdx: Int,  completion: @escaping (NetworkResult<Any>) -> Void) {
         let URL = APIConstants.PortfolioURL + "/portfolio/\(rcvIdx)"
-        print("jwt  : ", jwt)
         let header: HTTPHeaders = [
             "Authorization" : jwt ,
             "Content-Type" : "application/json"
         ]
-        let body: Parameters = [
-            "portfolioIdx" : "\(rcvIdx)"
-        ]
+        print("URL : ", URL)
+        print("jwt  : ", jwt)
         print("포트폴리오 디테일 뷰 시작")
         print(rcvIdx)
-        Alamofire.request(URL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header)
-            .responseData { response in
+        Alamofire.request(URL, method: .get, parameters: nil, headers: header).responseData { response in
                 print("response  : ", response)
                 switch response.result {
                 case .success:
@@ -41,7 +38,7 @@ struct PortfolioDetailService {
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
-                                    let result = try decoder.decode(ResponseResult<PortfolioDetail>.self, from: value)
+                                    let result = try decoder.decode(ResponseArray<PortfolioDetail>.self, from: value)
                                     print("result  : ", result)
                                     switch result.success {
                                     case true:

@@ -25,7 +25,6 @@ class PortfolioDetailTableViewController: UITableViewController {
         super.viewDidLoad()
         print("으이구", detailIdx)
         loadData()
-        setTableData()
         setCollectionView()
         height = contentTextView.contentSize.height
         setHeight()
@@ -43,7 +42,7 @@ class PortfolioDetailTableViewController: UITableViewController {
             switch data {
             case .success(let rcvData):
                 self.portfolioDetail = rcvData as? PortfolioDetail
-//                self.tableView.reloadData()
+                self.setTableData()
                 break
             case .requestErr( _):
                 self.simpleAlert(title: "", message: "값을 입력해주세요!")
@@ -77,10 +76,10 @@ class PortfolioDetailTableViewController: UITableViewController {
     }
     
     func setTableData(){
-        self.categoryLabel.text = portfolioDetail.portfolioCategory
-        self.titleLabel.text = portfolioDetail.portfolioTitle
-        self.durationLabel.text = "\(portfolioDetail.portfolioStartDate) ~ \(portfolioDetail.portfolioExpireDate)"
-        self.contentTextView.text = portfolioDetail.portfolioBody
+//        self.categoryLabel.text = portfolioDetail.portfolioCategory
+//        self.titleLabel.text = portfolioDetail.portfolioTitle
+//        self.durationLabel.text = "\(portfolioDetail.portfolioStartDate) ~ \(portfolioDetail.portfolioExpireDate)"
+//        self.contentTextView.text = portfolioDetail.portfolioBody
         
         
         // 내용에 따라 테이블 셀 높이 지정  ( 40은 gap )
