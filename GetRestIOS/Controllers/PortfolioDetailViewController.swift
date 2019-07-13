@@ -9,8 +9,8 @@
 import UIKit
 
 class PortfolioDetailTableViewController: UITableViewController {
-    var portfolioDetail : PortfolioDetailModel =
-        PortfolioDetailModel("동아리", "솝트", "2019.03 ~ 2019.07", ["UI디자인", "동아리"], "여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나여행이 취미인 트리플 직원들은 어디로 가야하나 허허허허ㅓ허허ㅓㅇ여행이 취미인 트리플 직원들은 어디로 가야하나")
+    var portfolioDetail : PortfolioDetail!
+    var detailIdx: Int = 0
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,7 +23,8 @@ class PortfolioDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("으이구", detailIdx)
+        loadData()
         setTableData()
         setCollectionView()
         height = contentTextView.contentSize.height
@@ -35,6 +36,29 @@ class PortfolioDetailTableViewController: UITableViewController {
         setNavigationBar()
     }
     
+    func loadData(){
+        PortfolioDetailService.shared.getPortfolioDetail(rcvIdx: detailIdx) {
+            data in
+            print("data?",data)
+            switch data {
+            case .success(let rcvData):
+                self.portfolioDetail = rcvData as? PortfolioDetail
+//                self.tableView.reloadData()
+                break
+            case .requestErr( _):
+                self.simpleAlert(title: "", message: "값을 입력해주세요!")
+                break
+            case .pathErr:
+                self.simpleAlert(title: "", message: "잘못 입력하셨습니다ㅜㅜ")
+                break
+            case .serverErr:
+                print("서버 에러")
+                break
+            case .networkFail:
+                break
+            }
+        }
+    }
     
 //    override func viewWillA(_ animated: Bool) {
 //        super.viewWillDisappear(animated)
@@ -55,8 +79,9 @@ class PortfolioDetailTableViewController: UITableViewController {
     func setTableData(){
         self.categoryLabel.text = portfolioDetail.portfolioCategory
         self.titleLabel.text = portfolioDetail.portfolioTitle
-        self.durationLabel.text = portfolioDetail.portfolioDuration
-        self.contentTextView.text = portfolioDetail.portfolioContent
+        self.durationLabel.text = "\(portfolioDetail.portfolioStartDate) ~ \(portfolioDetail.portfolioExpireDate)"
+        self.contentTextView.text = portfolioDetail.portfolioBody
+        
         
         // 내용에 따라 테이블 셀 높이 지정  ( 40은 gap )
         contentView.frame.size.height = contentTextView.frame.height + 40
@@ -68,6 +93,7 @@ class PortfolioDetailTableViewController: UITableViewController {
         
         // 테이블 뷰 크기 조정
         let tableViewImageView = UIImageView(image: UIImage(named: "portfolioTestImg"))
+        tableViewImageView.imageFromUrl(gsno(portfolioDetail.portfolioImg), defaultImgPath: "portfolioTestImg")
         tableViewImageView.contentMode = .top
         self.tableView.backgroundView = tableViewImageView
         self.tableView.estimatedRowHeight = 174
@@ -122,12 +148,12 @@ extension PortfolioDetailTableViewController : UITextViewDelegate {
 
 extension PortfolioDetailTableViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return portfolioDetail.portfolioHashTags!.count
+        return portfolioDetail.portfolioTag.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hashTagCell", for: indexPath) as! HashTagCollectionViewCell
-        let tagString = (portfolioDetail.portfolioHashTags![indexPath.row]) + "        "
+        let tagString = (portfolioDetail.portfolioTag[indexPath.row]) + "        "
         cell.hashTagLabel?.text = tagString
         return cell
     }

@@ -39,6 +39,8 @@
 		4BB47EF922C614E400930582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB47EF722C614E400930582 /* LaunchScreen.storyboard */; };
 		4BF86F0D22D927CF006AF7F1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF86F0C22D927CF006AF7F1 /* UIImageView+Extensions.swift */; };
 		4BF86F0F22D928D6006AF7F1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF86F0E22D928D6006AF7F1 /* UIViewController+Extensions.swift */; };
+		4BF86F1122D940CD006AF7F1 /* PortfolioDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF86F1022D940CD006AF7F1 /* PortfolioDetail.swift */; };
+		4BF86F1322D94320006AF7F1 /* PortfolioDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF86F1222D94320006AF7F1 /* PortfolioDetailService.swift */; };
 		4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */; };
 		C523ED9922D8B62400556E33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C523ED9822D8B62400556E33 /* Alamofire.framework */; };
 		C523EDA222D913A200556E33 /* PortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523EDA122D913A200556E33 /* PortfolioService.swift */; };
@@ -124,6 +126,8 @@
 		4BB47EFA22C614E400930582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BF86F0C22D927CF006AF7F1 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		4BF86F0E22D928D6006AF7F1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		4BF86F1022D940CD006AF7F1 /* PortfolioDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetail.swift; sourceTree = "<group>"; };
+		4BF86F1222D94320006AF7F1 /* PortfolioDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailService.swift; sourceTree = "<group>"; };
 		4BFE157822CC1D4E008369B9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		C523ED9822D8B62400556E33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C523EDA122D913A200556E33 /* PortfolioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioService.swift; sourceTree = "<group>"; };
@@ -400,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				C523EDA122D913A200556E33 /* PortfolioService.swift */,
+				4BF86F1222D94320006AF7F1 /* PortfolioDetailService.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 			children = (
 				C523EDA422D9147200556E33 /* PortfolioListModel.swift */,
 				C523EDA922D91F7200556E33 /* RecruitListModel.swift */,
+				4BF86F1022D940CD006AF7F1 /* PortfolioDetail.swift */,
 			);
 			path = reeeeean;
 			sourceTree = "<group>";
@@ -697,6 +703,7 @@
 				C568D17C22D69C5800C5E1F3 /* MyPageSettingViewController.swift in Sources */,
 				4B72541522D87BE700F0F34C /* DatepickerStartEndVC.swift in Sources */,
 				C5F93ADC22D715DE004CDAB8 /* MyPageChangePwViewController.swift in Sources */,
+				4BF86F1322D94320006AF7F1 /* PortfolioDetailService.swift in Sources */,
 				C5C6279D22D37CD20045298D /* MyResumeListViewController.swift in Sources */,
 				C5DD751622D61C7400402FF8 /* MyResumeTableViewCell.swift in Sources */,
 				C598B3ED22D7D2B3009D2D13 /* AuthService.swift in Sources */,
@@ -728,6 +735,7 @@
 				C5DC86D222CBDC4B000C247F /* HomeGraphDetailModel.swift in Sources */,
 				4BFE157922CC1D4E008369B9 /* PortfolioViewController.swift in Sources */,
 				C568D17E22D69F2C00C5E1F3 /* MyPageTheEndViewController.swift in Sources */,
+				4BF86F1122D940CD006AF7F1 /* PortfolioDetail.swift in Sources */,
 				4B000C4A22D7D49600EB1CA6 /* SearchVC.swift in Sources */,
 				C5FD1B9122D76C650044ECAF /* NetworkResult.swift in Sources */,
 				C5DD751822D622EA00402FF8 /* myResumeDetailTVC.swift in Sources */,

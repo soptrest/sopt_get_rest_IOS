@@ -1,28 +1,30 @@
 //
-//  PortfolioListModel.swift
+//  PortfolioDetail.swift
 //  GetRestIOS
 //
-//  Created by 박경선 on 13/07/2019.
+//  Created by 최리안 on 13/07/2019.
 //  Copyright © 2019 최리안. All rights reserved.
 //
 
 import Foundation
 
 
-struct PortfolioListModel : Codable {
-    var portfolioIdx: Int
+struct PortfolioDetail : Codable {
+//    var portfolioIdx: Int
     var portfolioTitle: String
     var portfolioStartDate: String
     var portfolioExpireDate: String
     var portfolioCategory: String
-    var portfolioTag : [String]?
-    var portfolioImg : String?
+    var portfolioBody :String
+    var portfolioTag :[String]
+    var portfolioImg :String?
     
     enum CodingKeys: String, CodingKey {
-        case portfolioIdx = "portfolioIdx"
+//        case portfolioIdx = "portfolioIdx"
         case portfolioTitle = "portfolioTitle"
         case portfolioStartDate = "portfolioStartDate"
         case portfolioExpireDate = "portfolioExpireDate"
+        case portfolioBody = "portfolioBody"
         case portfolioCategory = "portfolioCategory"
         case portfolioTag = "portfolioTag"
         case portfolioImg = "portfolioImg"
@@ -30,17 +32,16 @@ struct PortfolioListModel : Codable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        portfolioIdx = try values.decodeIfPresent(Int.self, forKey: .portfolioIdx)!
+//        portfolioIdx = try values.decodeIfPresent(Int.self, forKey: .portfolioIdx)!
         portfolioTitle = try values.decodeIfPresent(String.self, forKey: .portfolioTitle)!
         portfolioStartDate = try values.decodeIfPresent(String.self, forKey: .portfolioStartDate)!
         portfolioExpireDate = try values.decodeIfPresent(String.self, forKey: .portfolioExpireDate)!
         portfolioCategory = try values.decodeIfPresent(String.self, forKey: .portfolioCategory)!
-        portfolioTag = try values.decodeIfPresent([String].self, forKey: .portfolioTag)!
-//        tag = ["경선", "리안", "ios"]
+        portfolioBody = try values.decodeIfPresent(String.self, forKey: .portfolioBody)!
+        //    tag = try values.decodeIfPresent([String].self, forKey: .tag)!
+        portfolioTag = ["경선", "리안", "ios"]
         portfolioImg =  try values.decodeIfPresent(String.self, forKey: .portfolioImg)!
-//        tag = try values.decodeIfPresent([String].self, forKey: .tag)!
-//        portfolioImage = try values.decodeIfPresent(String.self, forKey: .portfolioImage)!
     }
-
+    
 }
 

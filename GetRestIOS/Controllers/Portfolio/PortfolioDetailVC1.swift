@@ -82,13 +82,13 @@ extension PortfolioDetailVC1: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = portfolioTableView.dequeueReusableCell(withIdentifier: "PortfolioCell", for: indexPath) as! PortfolioTableViewCell
         
-//        let image = UIImage(named: "icImg")
         let data = list[indexPath.row]
         
         
         cell.portfolioTitle.text = data.portfolioTitle
         cell.portfolioDate.text = "\(data.portfolioStartDate) ~ \(data.portfolioExpireDate)"
         cell.portfolioImg.imageFromUrl(gsno(data.portfolioImg), defaultImgPath: "icImg")
+        cell.tagList = data.portfolioTag!
 //        cell.dropShadow(color: .black, offSet: CGSize(width: 0,height: 0), opacity: 0.5, radius: 5)
 //        cell.layer.masksToBounds = true
         return cell
@@ -97,61 +97,10 @@ extension PortfolioDetailVC1: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let dvc = storyboard.instantiateViewController(withIdentifier: "homeDetailView") as! PortfolioDetailTableViewController
-        
-//                dvc.albumImg = music.albumImg
-//                dvc.musicTitle = music.musicTitle
-//                dvc.singer = music.singer
+        dvc.detailIdx =  list[indexPath.row].portfolioIdx
         navigationController?.pushViewController(dvc, animated: true)
     }
     
     
 }
 
-extension PortfolioDetailVC1 {
-//    func setData() {
-//        let pf1 = PortfoliolModel(img: "icImg", title: "솝트1", date: "2019.03 ~ 2019.07")
-//        let pf2 = PortfoliolModel(img: "icImg", title: "솝트2", date: "2019.03 ~ 2019.07")
-//        let pf3 = PortfoliolModel(img: "icImg", title: "솝트3", date: "2019.03 ~ 2019.07")
-//        let pf4 = PortfoliolModel(img: "icImg", title: "솝트4", date: "2019.03 ~ 2019.07")
-//        let pf5 = PortfoliolModel(img: "icImg", title: "솝트5", date: "2019.03 ~ 2019.07")
-//        let pf6 = PortfoliolModel(img: "icImg", title: "솝트6", date: "2019.03 ~ 2019.07")
-//        let pf7 = PortfoliolModel(img: "icImg", title: "솝트7", date: "2019.03 ~ 2019.07")
-//        let pf8 = PortfoliolModel(img: "icImg", title: "솝트8", date: "2019.03 ~ 2019.07")
-//
-//        list = [pf1, pf2, pf3, pf4, pf5, pf6, pf7, pf8]
-//    }
-}
-
-
-
-//extension UIImageView {
-//    func downloadImageFrom(_ link:String, contentMode: UIView.ContentMode) {
-//        URLSession.shared.dataTask( with: URL(string:link)!, completionHandler: {
-//            (data, response, error) -> Void in
-//            DispatchQueue.main.async {
-//                self.contentMode =  contentMode
-//                if let data = data { self.image = UIImage(data: data) }
-//            }
-//        }).resume()
-//    }
-//
-//    func downloadAndResizeImageFrom(_ link:String, contentMode: UIView.ContentMode ,newWidth:CGFloat) {
-//        URLSession.shared.dataTask( with: URL(string:link)!, completionHandler: {
-//            (data, response, error) -> Void in
-//            DispatchQueue.main.async {
-//                self.contentMode =  contentMode
-//                if let data = data {
-//                    if let tempImage = UIImage(data: data){
-//                        let scale = newWidth / tempImage.size.width
-//                        let newHeight = tempImage.size.height * scale
-//                        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-//                        tempImage.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
-//                        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-//                        UIGraphicsEndImageContext()
-//                        self.image = newImage
-//                    }
-//                }
-//            }
-//        }).resume()
-//    }
-//}
