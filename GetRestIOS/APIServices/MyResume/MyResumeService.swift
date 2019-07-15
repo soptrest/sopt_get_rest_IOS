@@ -38,7 +38,6 @@ struct MyResumeService {
                                 do {
                                     let decoder = JSONDecoder()
                                     let result = try decoder.decode(ResponseArray<MyResumeListModel>.self, from: value)
-                                    print("result  : ", result)
                                     switch result.success {
                                     case true:
                                         completion(.success(result.data!))
@@ -75,14 +74,11 @@ struct MyResumeService {
             "Content-Type" : "application/json"
         ]
         
-        let data: Parameters = [
-            "resumIdx": resumIdx,
-            "questionIdx" : questionIdx
-        ]
-        
         print("나의 자소서 자세히 보기 통신 시작")
-        Alamofire.request(URL, method: .get, parameters: data, headers: header)
+        print(URL)
+        Alamofire.request(URL, method: .get, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
+                print("response  : ", response)
                 switch response.result {
                 case .success:
                     print("나의 자소서 자세히 보기 response good")

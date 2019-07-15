@@ -112,7 +112,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7l-Xx-JnX">
-                                                    <rect key="frame" x="141" y="10" width="45" height="18"/>
+                                                    <rect key="frame" x="141" y="10" width="187" height="18"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <color key="textColor" red="0.12549019610000001" green="0.1215686275" blue="0.1019607843" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -159,7 +159,7 @@
                                                 <constraint firstItem="zan-h3-MMi" firstAttribute="leading" secondItem="HZO-h9-Lp8" secondAttribute="leading" constant="16" id="lXe-xm-4Ey"/>
                                                 <constraint firstItem="3vz-bj-YLu" firstAttribute="top" secondItem="HZO-h9-Lp8" secondAttribute="top" constant="18" id="qwc-cC-Khn"/>
                                                 <constraint firstAttribute="bottom" secondItem="zan-h3-MMi" secondAttribute="bottom" constant="9.5" id="tyx-b6-6fL"/>
-                                                <constraint firstItem="3vz-bj-YLu" firstAttribute="leading" secondItem="Y7l-Xx-JnX" secondAttribute="trailing" constant="147" id="uDl-7k-lIQ"/>
+                                                <constraint firstItem="3vz-bj-YLu" firstAttribute="leading" secondItem="Y7l-Xx-JnX" secondAttribute="trailing" constant="5" id="uDl-7k-lIQ"/>
                                                 <constraint firstItem="ErS-bc-GXP" firstAttribute="top" secondItem="HZO-h9-Lp8" secondAttribute="top" constant="10" id="yWs-5Y-sUT"/>
                                             </constraints>
                                         </tableViewCellContentView>

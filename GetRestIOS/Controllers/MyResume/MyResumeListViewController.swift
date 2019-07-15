@@ -78,8 +78,9 @@ extension MyResumeListViewController : UITableViewDelegate, UITableViewDataSourc
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !isDeleteMode {
-            let dvc = self.storyboard!.instantiateViewController(withIdentifier: "myResumeDetailView")
-//            dvc
+            let dvc = self.storyboard!.instantiateViewController(withIdentifier: "myResumeDetailView") as! myResumeDetailTVC
+            dvc.myResumeIdx = dataList[indexPath.row].resumeIdx
+            print("dvc로 넘겨준 데이터 : ", dataList[indexPath.row].resumeIdx)
             self.navigationController?.pushViewController(dvc, animated: true)
         }
     }

@@ -11,15 +11,15 @@ import Foundation
 
 struct MyResumeDetailModel : Codable {
     var questionIdx: Int = 0
-    var jobTitle : String
-    var jobType : String
-    var content: String
-    
-    
-    init(_ jobTitle: String, _ jobType: String, _ content: String){
-        self.jobTitle = jobTitle
-        self.jobType = jobType
-        self.content = content
+    var questionTitle : String
+    var recruitJobType : String
+    var resumeContent: String
+
+    init(_ Idx: Int, _ jobTitle: String, _ jobType: String, _ content: String){
+        self.questionIdx = Idx
+        self.questionTitle = jobTitle
+        self.recruitJobType = jobType
+        self.resumeContent = content
     }
     
 }

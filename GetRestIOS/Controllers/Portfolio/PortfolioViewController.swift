@@ -19,6 +19,10 @@ class PortfolioViewController:  ButtonBarPagerTabStripViewController {
         
         // Do any additional setup after loading the view.
     }
+//    override func viewDidAppear(_ animated: Bool) {
+//        setNavigationBar()
+//    }
+//    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

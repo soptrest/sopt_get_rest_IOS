@@ -127,7 +127,7 @@ extension RecruitViewController: UITableViewDelegate, UITableViewDataSource {
         cell.recruitTitle.text = data.companyName
         cell.recruitField.text = data.recruitJobCategory
         cell.recruitDate.text = data.recruitExpireDate
-        cell.recruitImg.image = UIImage(named: data.companyImage)
+        cell.recruitImg.imageFromUrl(gsno(data.companyImage), defaultImgPath: "icDefaultImg")
         
         return cell
     }
