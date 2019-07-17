@@ -15,6 +15,7 @@ class PortfolioDetailVC1: UIViewController, IndicatorInfoProvider {
     
     var tabTitle: String = ""
     var list: [PortfolioListModel] = []
+    var categoryList: [Int] = []
 
     
     override func viewDidLoad() {
@@ -28,6 +29,9 @@ class PortfolioDetailVC1: UIViewController, IndicatorInfoProvider {
         portfolioTableView.register(nibName, forCellReuseIdentifier: "PortfolioCell")
         
         loadData()
+        print("로드")
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,32 +70,73 @@ class PortfolioDetailVC1: UIViewController, IndicatorInfoProvider {
                 break
             }
         }
+        print("로드데이터")
+        print(list.count)
+        
+        if tabTitle == "전체" {
+            
+        } else {
+            for i in 0 ... (list.count-1) {
+                if tabTitle == list[i].portfolioCategory {
+                    categoryList.append(i)
+                    print("카테고리", i)
+                }
+            }
+            
+        }
     }
 }
 
 extension PortfolioDetailVC1: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        print("셀의 갯수 ??")
+        if tabTitle == "전체" {
+            return list.count
+        } else {
+            return categoryList.count
+        }
     }
     
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 145
-        }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let data = list[indexPath.row]
+//
+//        if tabTitle == "전체" {
+//            return 145
+//        } else {
+//            if data.portfolioCategory == tabTitle {
+//                return 145
+//            } else {
+//                return 0
+//            }
+//        }
+        print("각 셀의 높이 조정")
+        return 145
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = portfolioTableView.dequeueReusableCell(withIdentifier: "PortfolioCell", for: indexPath) as! PortfolioTableViewCell
+        print("테이블 셀 구성하기")
+        if tabTitle == "전체" {
+            let data_ = list[indexPath.row]
+            cell.portfolioTitle.text = data_.portfolioTitle
+            cell.portfolioDate.text = "\(data_.portfolioStartDate) ~ \(data_.portfolioExpireDate)"
+            cell.portfolioImg.imageFromUrl(gsno(data_.portfolioImg), defaultImgPath: "icImg")
+            cell.tagList = data_.portfolioTag!
+            return cell
+        } else {
+            let data = list[categoryList[indexPath.row]]
+            cell.portfolioTitle.text = data.portfolioTitle
+            cell.portfolioDate.text = "\(data.portfolioStartDate) ~ \(data.portfolioExpireDate)"
+            cell.portfolioImg.imageFromUrl(gsno(data.portfolioImg), defaultImgPath: "icImg")
+            cell.tagList = data.portfolioTag!
+            return cell
+        }
         
-        let data = list[indexPath.row]
-        
-        
-        cell.portfolioTitle.text = data.portfolioTitle
-        cell.portfolioDate.text = "\(data.portfolioStartDate) ~ \(data.portfolioExpireDate)"
-        cell.portfolioImg.imageFromUrl(gsno(data.portfolioImg), defaultImgPath: "icImg")
-        cell.tagList = data.portfolioTag!
-//        cell.dropShadow(color: .black, offSet: CGSize(width: 0,height: 0), opacity: 0.5, radius: 5)
-//        cell.layer.masksToBounds = true
         return cell
+        
+////        cell.dropShadow(color: .black, offSet: CGSize(width: 0,height: 0), opacity: 0.5, radius: 5)
+////        cell.layer.masksToBounds = true
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

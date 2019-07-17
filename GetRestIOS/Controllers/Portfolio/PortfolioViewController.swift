@@ -33,13 +33,13 @@ class PortfolioViewController:  ButtonBarPagerTabStripViewController {
         let tab1 = UIStoryboard.init(name: "Portfolio", bundle: nil).instantiateViewController(withIdentifier: "PortfolioDetailVC1") as! PortfolioDetailVC1
         tab1.tabTitle = "전체"
         
-        let tab2 = UIStoryboard.init(name: "Portfolio", bundle: nil).instantiateViewController(withIdentifier: "PortfolioDetailVC2") as! PortfolioDetailVC2
+        let tab2 = UIStoryboard.init(name: "Portfolio", bundle: nil).instantiateViewController(withIdentifier: "PortfolioDetailVC1") as! PortfolioDetailVC1
         tab2.tabTitle = "대외활동"
         
         let tab3 = UIStoryboard.init(name: "Portfolio", bundle: nil).instantiateViewController(withIdentifier: "PortfolioDetailVC1") as! PortfolioDetailVC1
         tab3.tabTitle = "학교활동"
         
-        let tab4 = UIStoryboard.init(name: "Portfolio", bundle: nil).instantiateViewController(withIdentifier: "PortfolioDetailVC2") as! PortfolioDetailVC2
+        let tab4 = UIStoryboard.init(name: "Portfolio", bundle: nil).instantiateViewController(withIdentifier: "PortfolioDetailVC1") as! PortfolioDetailVC1
         tab4.tabTitle = "공모전"
         
         let tab5 = UIStoryboard.init(name: "Portfolio", bundle: nil).instantiateViewController(withIdentifier: "PortfolioDetailVC1") as! PortfolioDetailVC1
@@ -117,48 +117,4 @@ class PortfolioViewController:  ButtonBarPagerTabStripViewController {
     
     
 }
-
-
-
-//class PortfolioViewController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        setNavigationBar()
-//
-//
-//        // Do any additional setup after loading the view.
-//    }
-//    @IBAction func addBtn(_ sender: Any) {
-//
-//        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "AddPortfolio") as? AddPortfolioViewController
-//            else {
-//                return
-//        }
-//
-//        //네비게이션 컨트롤러를 이용하여 push를 해줍니다.
-//        navigationController?.pushViewController(dvc, animated: true)
-//    }
-//
-//    func setNavigationBar(){
-//        navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 44)
-//        navigationController?.navigationBar.isTranslucent = false
-//
-//
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 78, height: 17))
-//        imageView.contentMode = .scaleAspectFit
-//
-//        let image = UIImage(named: "icPortfolio")
-//        imageView.image = image
-//
-//        self.navigationItem.titleView = imageView
-//        self.navigationController?.navigationBar.tintColor = .white
-//        self.navigationController?.navigationBar.barTintColor = UIColor.mainGreen
-//
-//        let backBarButtton = UIBarButtonItem(title: "기록보기", style: .plain, target: nil, action: nil)
-//        navigationItem.backBarButtonItem = backBarButtton
-//    }
-//
-//
-//}
 
