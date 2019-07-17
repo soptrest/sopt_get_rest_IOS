@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E697E5BFC005C672BD7AAD5A0D7C8769"
+               BlueprintIdentifier = "5296183D8230537571DB73081BD69C76"
                BuildableName = "Pods_GetRestIOS.framework"
                BlueprintName = "Pods-GetRestIOS"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E697E5BFC005C672BD7AAD5A0D7C8769"
+            BlueprintIdentifier = "5296183D8230537571DB73081BD69C76"
             BuildableName = "Pods_GetRestIOS.framework"
             BlueprintName = "Pods-GetRestIOS"
             ReferencedContainer = "container:Pods.xcodeproj">

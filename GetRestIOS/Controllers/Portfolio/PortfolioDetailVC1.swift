@@ -76,12 +76,12 @@ class PortfolioDetailVC1: UIViewController, IndicatorInfoProvider {
         if tabTitle == "전체" {
             
         } else {
-            for i in 0 ... (list.count-1) {
-                if tabTitle == list[i].portfolioCategory {
-                    categoryList.append(i)
-                    print("카테고리", i)
-                }
-            }
+//            for i in 0 ... (list.count-1) {
+//                if tabTitle == list[i].portfolioCategory {
+//                    categoryList.append(i)
+//                    print("카테고리", i)
+//                }
+//            }
             
         }
     }

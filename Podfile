@@ -12,4 +12,5 @@ target 'GetRestIOS' do
   pod 'ObjectMapper', '~> 3.4.2' 
   pod 'ScrollableGraphView', :git => 'https://github.com/gngsn/ScrollableGraphView'
   pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'SZTextView'
 end
