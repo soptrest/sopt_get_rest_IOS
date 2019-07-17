@@ -117,31 +117,30 @@ extension PortfolioDetailVC1: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = portfolioTableView.dequeueReusableCell(withIdentifier: "PortfolioCell", for: indexPath) as! PortfolioTableViewCell
         print("테이블 셀 구성하기")
-        if tabTitle == "전체" {
-            let data_ = list[indexPath.row]
-            cell.portfolioTitle.text = data_.portfolioTitle
-            cell.portfolioDate.text = "\(data_.portfolioStartDate) ~ \(data_.portfolioExpireDate)"
-            cell.portfolioImg.imageFromUrl(gsno(data_.portfolioImg), defaultImgPath: "icImg")
-            cell.tagList = data_.portfolioTag!
-            return cell
-        } else {
-            let data = list[categoryList[indexPath.row]]
-            cell.portfolioTitle.text = data.portfolioTitle
-            cell.portfolioDate.text = "\(data.portfolioStartDate) ~ \(data.portfolioExpireDate)"
-            cell.portfolioImg.imageFromUrl(gsno(data.portfolioImg), defaultImgPath: "icImg")
-            cell.tagList = data.portfolioTag!
-            return cell
-        }
+
+//        if tabTitle == "전체" {
+//            let data_ = list[indexPath.row]
+//            cell.portfolioTitle.text = data_.portfolioTitle
+//            cell.portfolioDate.text = "\(data_.portfolioStartDate) ~ \(data_.portfolioExpireDate)"
+//            cell.portfolioImg.imageFromUrl(gsno(data_.portfolioImg), defaultImgPath: "icImg")
+//            cell.tagList = data_.portfolioTag!
+//            return cell
+//        } else {
+//            let data = list[categoryList[indexPath.row]]
+//            cell.portfolioTitle.text = data.portfolioTitle
+//            cell.portfolioDate.text = "\(data.portfolioStartDate) ~ \(data.portfolioExpireDate)"
+//            cell.portfolioImg.imageFromUrl(gsno(data.portfolioImg), defaultImgPath: "icImg")
+//            cell.tagList = data.portfolioTag!
+//            return cell
+//        }
         
         let data = list[indexPath.row]
-        
-        
+
+
         cell.portfolioTitle.text = data.portfolioTitle
         cell.portfolioDate.text = "\(data.portfolioStartDate) ~ \(data.portfolioExpireDate)"
         cell.portfolioImg.imageFromUrl(gsno(data.portfolioImg), defaultImgPath: "icImg")
         cell.tagList = ["대학생","쉬자","SOPT"]
-//        cell.dropShadow(color: .black, offSet: CGSize(width: 0,height: 0), opacity: 0.5, radius: 5)
-//        cell.layer.masksToBounds = true
         return cell
         
 ////        cell.dropShadow(color: .black, offSet: CGSize(width: 0,height: 0), opacity: 0.5, radius: 5)
