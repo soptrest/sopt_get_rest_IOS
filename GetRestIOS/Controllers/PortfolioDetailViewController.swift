@@ -207,7 +207,7 @@ class PortfolioDetailTableViewController: UITableViewController {
 //        navigationController?.navigationBar.barTintColor = UIColor.mainGreen
 //        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 //        navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationItem.title = "기록보기"
+        self.navigationItem.title = ""
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.mainGreen]
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.navigationBar.tintColor = UIColor.mainGreen

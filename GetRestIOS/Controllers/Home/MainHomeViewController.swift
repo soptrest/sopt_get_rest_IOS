@@ -73,6 +73,9 @@ class MainHomeViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBarWithLogo"), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
+        let backBarButtton = UIBarButtonItem(title: "기록보기", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backBarButtton
+        
     }
     
     func setTopSideView(){

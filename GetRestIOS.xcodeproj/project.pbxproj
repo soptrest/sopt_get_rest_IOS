@@ -27,6 +27,7 @@
 		4B000C6C22D8286A00EB1CA6 /* SelectTabBarVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B000C6B22D8286A00EB1CA6 /* SelectTabBarVC2.swift */; };
 		4B3F935022D08C21004919B1 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */; };
 		4B3F935122D08C21004919B1 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */; };
+		4B45D91322DF3FF700F4F0C8 /* AddPortfolioDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B45D91222DF3FF700F4F0C8 /* AddPortfolioDetailVC.swift */; };
 		4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */; };
 		4B63B05222CFFFF7005F52D7 /* PortfolioDetailVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B05122CFFFF7005F52D7 /* PortfolioDetailVC1.swift */; };
 		4B63B05422D011A1005F52D7 /* PortfolioDetailVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B63B05322D011A1005F52D7 /* PortfolioDetailVC2.swift */; };
@@ -113,6 +114,7 @@
 		4B000C6B22D8286A00EB1CA6 /* SelectTabBarVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTabBarVC2.swift; sourceTree = "<group>"; };
 		4B3F934E22D08C21004919B1 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		4B3F934F22D08C21004919B1 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
+		4B45D91222DF3FF700F4F0C8 /* AddPortfolioDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioDetailVC.swift; sourceTree = "<group>"; };
 		4B63B04F22CFA523005F52D7 /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
 		4B63B05122CFFFF7005F52D7 /* PortfolioDetailVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailVC1.swift; sourceTree = "<group>"; };
 		4B63B05322D011A1005F52D7 /* PortfolioDetailVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDetailVC2.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				4B000C3C22D7D35500EB1CA6 /* CategoryVC.swift */,
 				4B000C3E22D7D37100EB1CA6 /* CategoryCell.swift */,
 				4B72541422D87BE700F0F34C /* DatepickerStartEndVC.swift */,
+				4B45D91222DF3FF700F4F0C8 /* AddPortfolioDetailVC.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				4B000C4C22D7D49600EB1CA6 /* RecruitListCell.swift in Sources */,
 				4B63B05022CFA523005F52D7 /* AddPortfolioViewController.swift in Sources */,
 				C5ACDCA422C8D73900837653 /* UIColor+Extensions.swift in Sources */,
+				4B45D91322DF3FF700F4F0C8 /* AddPortfolioDetailVC.swift in Sources */,
 				C568D18022D6A2AF00C5E1F3 /* MyPageRuleViewController.swift in Sources */,
 				4B000C5D22D7D4B100EB1CA6 /* PortfolioSelectVC.swift in Sources */,
 				C598B3F222D7E6FD009D2D13 /* SignInModel.swift in Sources */,
