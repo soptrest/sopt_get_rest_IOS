@@ -22,11 +22,10 @@ struct PortfolioDetailService {
             "Authorization" : jwt ,
             "Content-Type" : "application/json"
         ]
-        print("URL : ", URL)
-        print("jwt  : ", jwt)
         print("포트폴리오 디테일 뷰 시작")
         print(rcvIdx)
-        Alamofire.request(URL, method: .get, parameters: nil, headers: header).responseData { response in
+        Alamofire.request(URL, method: .get, parameters: nil, headers: header)
+            .responseData { response in
                 print("response  : ", response)
                 switch response.result {
                 case .success:
@@ -38,7 +37,7 @@ struct PortfolioDetailService {
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
-                                    let result = try decoder.decode(ResponseArray<PortfolioDetail>.self, from: value)
+                                    let result = try decoder.decode(ResponseResult<PortfolioDetail>.self, from: value)
                                     print("result  : ", result)
                                     switch result.success {
                                     case true:

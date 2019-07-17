@@ -183,6 +183,7 @@ import UIKit
         // Add the x-axis labels view.
         self.insertSubview(labelsView, aboveSubview: drawingView)
         
+        
         // 2.
         // Calculate the total size of the graph, need to know this for the scrollview.
         
@@ -249,7 +250,7 @@ import UIKit
         if(referenceLines != nil) {
             addReferenceViewDrawingView()
         }
-        
+
         // 7.
         // We're now done setting up, update the offsets and change the flag.
         
@@ -383,54 +384,20 @@ import UIKit
         drawingView.frame.origin.x = offsetWidth
         drawingView.bounds.origin.x = offsetWidth
         
-        updateOffsetsForGradients(offsetWidth: offsetWidth)
-        
         referenceLineView?.frame.origin.x = offsetWidth
     }
     
-    private func updateOffsetsForGradients(offsetWidth: CGFloat) {
-        guard let sublayers = drawingView.layer.sublayers else {
-            return
-        }
-        
-        for layer in sublayers {
-            switch(layer) {
-            case let layer as GradientDrawingLayer:
-                layer.offset = offsetWidth
-            default: break
-            }
-        }
-    }
     
     private func updateFrames() {
         // Drawing view needs to always be the same size as the scrollview.
         drawingView.frame.size.width = viewportWidth
         drawingView.frame.size.height = viewportHeight
-        
-        // Gradient should extend over the entire viewport
-        updateFramesForGradientLayers(viewportWidth: viewportWidth, viewportHeight: viewportHeight)
-        
         // Reference lines should extend over the entire viewport
         referenceLineView?.set(viewportWidth: viewportWidth, viewportHeight: viewportHeight)
         
         self.contentSize.height = viewportHeight
     }
     
-    private func updateFramesForGradientLayers(viewportWidth: CGFloat, viewportHeight: CGFloat) {
-        
-        guard let sublayers = drawingView.layer.sublayers else {
-            return
-        }
-        
-        for layer in sublayers {
-            switch(layer) {
-            case let layer as GradientDrawingLayer:
-                layer.frame.size.width = viewportWidth
-                layer.frame.size.height = viewportHeight
-            default: break
-            }
-        }
-    }
     
     // MARK: - Public Methods
     // ######################

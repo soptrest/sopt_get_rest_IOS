@@ -133,6 +133,15 @@ extension PortfolioDetailVC1: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         
+        let data = list[indexPath.row]
+        
+        
+        cell.portfolioTitle.text = data.portfolioTitle
+        cell.portfolioDate.text = "\(data.portfolioStartDate) ~ \(data.portfolioExpireDate)"
+        cell.portfolioImg.imageFromUrl(gsno(data.portfolioImg), defaultImgPath: "icImg")
+        cell.tagList = ["대학생","쉬자","SOPT"]
+//        cell.dropShadow(color: .black, offSet: CGSize(width: 0,height: 0), opacity: 0.5, radius: 5)
+//        cell.layer.masksToBounds = true
         return cell
         
 ////        cell.dropShadow(color: .black, offSet: CGSize(width: 0,height: 0), opacity: 0.5, radius: 5)
@@ -142,7 +151,7 @@ extension PortfolioDetailVC1: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let dvc = storyboard.instantiateViewController(withIdentifier: "homeDetailView") as! PortfolioDetailTableViewController
-        dvc.detailIdx =  list[indexPath.row].portfolioIdx
+//        dvc.detailIdx =  list[indexPath.row].portfolioIdx
         navigationController?.pushViewController(dvc, animated: true)
     }
     
